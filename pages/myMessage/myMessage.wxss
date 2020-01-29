@@ -1,0 +1,47 @@
+/* pages/myMessage/myMessage.wxss */
+.myMessageWrap{
+  padding: 0 30rpx;
+}
+.myMessageWrap .itemBox{
+  height: 206rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  padding: 0 10rpx;
+  position: relative;
+}
+.myMessageWrap .itemBox .first{
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #333;
+  padding-top: 60rpx;
+}
+.myMessageWrap .itemBox .second{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #959595;
+  padding-top: 15rpx;
+}
+.myMessageWrap .itemBox .three{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+  text-align: right;
+  padding-top: 20rpx;
+}
+.myMessageWrap .itemBox .checkBtn{
+  position: absolute;
+  right: 0;
+  top: 70rpx;
+	width: 154rpx;
+	height: 56rpx;
+  line-height: 56rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #4c85fb;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #4c85fb;
+  text-align: center;
+}
+.myMessageWrap .itemBox .checkBtn.checkBtn2{
+	border: solid 1rpx #f0f0f0;
+  color: #666
+}

@@ -1,0 +1,79 @@
+/* pages/releaseGangwei/releaseGangwei.wxss */
+.releaseProjectWrap .showCompanyListWrap{
+	width:50vw;
+	height: 100vh;
+	background:#fff;
+  position: relative;
+}
+.releaseProjectWrap .showCompanyListWrap .companyItem{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.releaseProjectWrap .hallRowWrap{
+  padding: 0 30rpx;
+}
+.releaseProjectWrap .hallRow{
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #ddd;
+  position: relative;
+}
+.releaseProjectWrap .hallRow .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  height: 120rpx;
+  line-height: 120rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.releaseProjectWrap .hallRow .rightInput{
+  float: right;
+	font-size: 30rpx;
+  margin-right: 50rpx;
+  text-align: right;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #333
+}
+.releaseProjectWrap .hallRow .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 46rpx;
+}
+.releaseProjectWrap .itemWrap{
+  padding: 0 30rpx;
+  border-top: 16rpx solid #f8f8f8;
+}
+.releaseProjectWrap .bottomBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 100rpx auto 0
+}
+.releaseProjectWrap .inputBox{
+  text-align: left;
+}
+.releaseProjectWrap .inputBox > input{
+	border-radius: 4rpx;
+	border: solid 1rpx #d5d6d8;
+  padding: 0 10rpx;
+}

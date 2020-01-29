@@ -1,0 +1,59 @@
+<!--pages/checkTime/checkTime.wxml-->
+<view class='checkTimeWrap'>
+  <view class='hallRowWrap'>
+    <view class='hallRow'>
+      <view class='leftName'>公司名称</view>
+      <input class='rightInput' placeholder='请输入公司名称' value='{{ company }}' disabled></input>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>项目名称</view>
+      <input class='rightInput' placeholder='请输入项目名称' value='{{ name }}' disabled></input>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>开始时间</view>
+      <picker bindchange="startTimeChange" mode="date">
+        <input class='rightInput' placeholder="请选择" disabled value='{{ startTime }}'/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>预计结束时间</view>
+      <picker bindchange="endTimeChange" mode="date">
+        <input class='rightInput' placeholder="请选择" disabled value='{{ endTime }}'/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+  </view>
+  <view class='addBoxWrap'>
+    <view class='title'>上传凭证</view>
+    <view class='bottomBox'>
+      <view class='addBox' bindtap='chooseImg'>
+        <image class='camera' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/camera.png'></image>
+        <text class='addText'>添加</text>
+      </view>
+      <view class='addBox addBox2'>
+        <image class='imgBox' wx:if="{{imgBox !== ''}}" src='{{ imgBox }}'></image>
+      </view>
+    </view>
+  </view>
+  <!-- <button class='bottomBtn' form-type="submit">提交</button> -->
+  <view class='bottomBtn' bindtap='confirm'>提交</view>
+  <view class='checkMask' wx:if="{{ checkMaskBtn }}">
+    <view class='checkBox'>
+      <view class='firstRow'>
+        <image class='loading' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/loading.png'></image>
+        后台审核中...
+      </view>
+      <view class='secondRow'>
+        <view>审核结果将会微信通知你</view>
+        <view>(审核通过后即可查看工时核对进度)</view> 
+      </view>
+      <view class='threeRow'>
+        <view class='btn fl' bindtap='goHome'>返回首页</view>
+        <view class='btn fr' bindtap='backBtn'>我的任务</view>
+      </view>
+      <view class='fourRow'>如有疑问请联系<button class='kefuBtn' open-type="contact" bindcontact="handleContact">客服</button></view>
+    </view>
+  </view>
+</view>
+

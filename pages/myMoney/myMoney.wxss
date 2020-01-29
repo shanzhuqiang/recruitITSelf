@@ -1,0 +1,103 @@
+/* pages/myGold/myGold.wxss */
+.myGoldWrap .topImg{
+  width: 718rpx;
+  height: 271rpx;
+  position: relative;
+  margin: 0 auto;
+}
+.myGoldWrap .topImg .goldBg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+.myGoldWrap .topImg .first{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #fff;
+  position: relative;
+  z-index: 1;
+  top: 55rpx;
+  left: 65rpx;
+  width: 200rpx;
+}
+.myGoldWrap .topImg .secondNum{
+	font-family: Tensentype-LingHeiJ;
+	font-size: 63rpx;
+	color: #fff;
+  position: relative;
+  z-index: 1;
+  top: 80rpx;
+  left: 60rpx;
+  width: 400rpx;
+}
+.myGoldWrap .topImg  .rightBtn{
+	width: 168rpx;
+	height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+	background-color: #fff;
+	border-radius: 30rpx;
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+	color: #2e70f9;
+  position: absolute;
+  right: 80rpx;
+  top: 130rpx;
+}
+.myGoldWrap .middleBtnBox{
+  display: flex;
+  padding: 0 50rpx 10rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.myGoldWrap .middleBtnBox > view{
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #666;
+  height: 90rpx;
+  text-align: center;
+  width: 50%;
+}
+.myGoldWrap .middleBtnBox > view.active{
+	font-family: PingFangSC-Medium;
+	color: #333;
+  position: relative;
+}
+.myGoldWrap .middleBtnBox > view.active::after{
+  content: "";
+  position: absolute;
+  width: 40rpx;
+  height: 6rpx;
+  background: #2e70f9;
+  left: 145rpx;
+  bottom: 0rpx
+}
+/* 内容 */
+.myGoldWrap .itemBox{
+  height: 165rpx;
+  border-bottom: 1rpx solid #eee;
+  padding: 0 35rpx;
+}
+.myGoldWrap .itemBox .first{
+	font-family: PingFangSC-Medium;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  padding:  35rpx 0 30rpx;
+	color: #595959;
+}
+.myGoldWrap .itemBox  .second{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #818181;
+  text-align: right;
+}
+.myGoldWrap .itemBox  .second .itemNum{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #2e70f9;
+  float: left;
+}

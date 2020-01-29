@@ -1,0 +1,202 @@
+/* pages/resumeDetail/resumeDetail.wxss */
+.resumeDetailWrap .resumeDetailBox{
+  padding: 0 30rpx;
+  position: relative;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.resumeDetailWrap .resumeDetailBox .jingyanBox{
+  border-bottom: 1rpx solid #f8f8f8;
+  padding-bottom: 30rpx;
+}
+.resumeDetailWrap .resumeDetailBox > .touxiang{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 120rpx;
+}
+.resumeDetailWrap .resumeDetailBox > .title{
+  height: 90rpx;
+  line-height: 90rpx;
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #333;
+  border-bottom: 1rpx solid #eee;
+}
+.resumeDetailWrap .resumeDetailBox .first{
+  padding: 20rpx 0 10rpx;
+}
+.resumeDetailWrap .resumeDetailBox .first .name{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+	color: #333;
+  max-width: 200rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.resumeDetailWrap .resumeDetailBox .first .profession{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+  margin-left: 24rpx;
+}
+.resumeDetailWrap .resumeDetailBox .second{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+}
+.resumeDetailWrap .resumeDetailBox .second text{
+  padding: 0 15rpx;
+  border-right: 1rpx solid #999;
+}
+.resumeDetailWrap .resumeDetailBox .three{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	letter-spacing: 1rpx;
+	color: #7a91d5;
+}
+.resumeDetailWrap .resumeDetailBox .three {
+  padding-top: 20rpx;
+}
+.resumeDetailWrap .resumeDetailBox .three text{
+  padding: 0 20rpx;
+  text-align: center;
+  margin-right: 20rpx;
+	background-color: #e8eeff;
+	border-radius: 2rpx;
+  display: inline-block;
+}
+.resumeDetailWrap .resumeDetailBox .iconWrap{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  text-align: center;
+}
+.resumeDetailWrap .resumeDetailBox .four{
+  padding-top: 50rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.resumeDetailWrap .resumeDetailBox .four .phone{
+  width: 21rpx;
+  height: 29rpx;
+  vertical-align: middle;
+}
+.resumeDetailWrap .resumeDetailBox .five{
+  padding-top: 20rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.resumeDetailWrap .resumeDetailBox .five .email{
+  width: 29rpx;
+  height: 21rpx;
+  vertical-align: middle;
+}
+.resumeDetailWrap .resumeDetailBox .strBox{
+  margin-left: 50rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333;
+}
+.resumeDetailWrap .resumeDetailBox .contentBox{
+  padding: 30rpx 0;
+}
+.resumeDetailWrap .resumeDetailBox .contentBox .content{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999;
+}
+.resumeDetailWrap .resumeDetailBox .oneBox{
+  padding-top: 30rpx;
+}
+.resumeDetailWrap .resumeDetailBox .oneBox .left{
+  width: 82rpx;
+  height: 82rpx;
+  float: left;
+  padding-top: 20rpx;
+}
+.resumeDetailWrap .resumeDetailBox .oneBox .left .gongsiImg{
+  width: 82rpx;
+  height: 82rpx;
+}
+.resumeDetailWrap .resumeDetailBox .oneBox .right{
+  margin-left: 120rpx;
+}
+.resumeDetailWrap .resumeDetailBox .oneBox .right .name1{
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+	color: #333;
+}
+.resumeDetailWrap .resumeDetailBox .oneBox .right .gongsi1{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  padding-top: 10rpx;
+}
+.resumeDetailWrap .resumeDetailBox .oneBox .right .gongsi1 .endText{
+  border-left: 1rpx solid #666;
+  margin-left: 20rpx;
+  padding-left: 20rpx;
+  display: inline-block;
+}
+.resumeDetailWrap .resumeDetailBox .oneBox .right .time1{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  padding-top: 5rpx;
+}
+.resumeDetailWrap .resumeDetailBox .contentTitle{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+  padding: 30rpx 0 20rpx;
+}
+.resumeDetailWrap .resumeDetailBox  .content2{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999;
+}
+.resumeDetailWrap .bottomBtn{
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+}
+.resumeDetailWrap .bottomBtn .leftBtn{
+  width: 140rpx;
+  text-align: center;
+  float: left;
+  height: 100rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+}
+.resumeDetailWrap .bottomBtn .leftBtn .shoucang{
+  width: 33rpx;
+  height: 33rpx;
+}
+.resumeDetailWrap .bottomBtn .rightBtn{
+  margin-left: 140rpx;
+  text-align: center;
+  background: #4c85fb;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.resumeDetailWrap .bottomBtn .rightBtn.none{
+  background: #ccc;
+  color: #fff;
+}

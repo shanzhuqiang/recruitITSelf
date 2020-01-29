@@ -1,0 +1,142 @@
+/* pages/checkTimeStep/checkTimeStep.wxss */
+.checkTimeStepWrap .topBox{
+  padding: 30rpx 30rpx 40rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.checkTimeStepWrap .topBox > .title{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+}
+.checkTimeStepWrap .topBox .stepWrap{
+  padding-top: 50rpx
+}
+.checkTimeStepWrap .topBox .imgBox{
+  text-align: center;
+  padding-top: 60rpx;
+}
+.checkTimeStepWrap .topBox .imgBox .okImg{
+  width: 145rpx;
+  height: 184rpx;
+}
+.checkTimeStepWrap .topBox .imgBox .bottomWord{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #2e70f9;
+}
+.checkTimeStepWrap .topBox .imgBox .result{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+	color: #666;
+  padding-top: 30rpx;
+}
+.checkTimeStepWrap .bottomBox{
+  padding: 40rpx 30rpx 0;
+}
+.checkTimeStepWrap .bottomBox .scrollWrap{
+  height: 230rpx;
+}
+.checkTimeStepWrap .bottomBox .scrollWrap .scrollView{
+  height: 230rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.checkTimeStepWrap .bottomBox .scrollWrap .scrollView .itemBox{
+  height: 230rpx;
+  width: 230rpx;
+  margin-right: 10rpx;
+  display: inline-block
+}
+.checkTimeStepWrap .bottomBox .scrollWrap .scrollView .itemBox .desImg{
+  height: 230rpx;
+  width: 230rpx;
+}
+/* 第一步 */
+.checkTimeStepWrap .bottomBox .stepOneWrap{
+  padding: 50rpx 30rpx;
+}
+.checkTimeStepWrap .bottomBox .stepOneWrap .row{
+  height: 30rpx;
+  line-height: 32rpx;
+  padding-bottom: 90rpx;
+}
+.checkTimeStepWrap .bottomBox .stepOneWrap .row .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #333;
+  height: 30rpx;
+  line-height: 32rpx;
+  width: 200rpx;
+  float: left;
+}
+.checkTimeStepWrap .bottomBox .stepOneWrap .row .rightVal{
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #999;
+  height: 30rpx;
+  line-height: 32rpx;
+  margin-left: 250rpx;
+}
+.checkTimeStepWrap .bottomBox .stepOneWrap .finishHalf{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 0 auto;
+}
+.checkTimeStepWrap .bottomBox .stepOneWrap .lianxikefu{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #4c85fb;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  padding-top: 30rpx;
+  overflow: inherit;
+  background: transparent;
+}
+.checkTimeStepWrap .bottomBox .stepOneWrap .lianxikefu::after{
+  border: none;
+}
+/* 第二步 */
+.checkTimeStepWrap .bottomBox .stepTwoWrap > .title{
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+	color: #333333;
+  padding: 50rpx 30rpx 40rpx;
+}
+.checkTimeStepWrap .bottomBox .stepTwoWrap > .content{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999;
+}
+.checkTimeStepWrap .bottomBox .stepTwoWrap .finishHalf{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 50rpx auto;
+}

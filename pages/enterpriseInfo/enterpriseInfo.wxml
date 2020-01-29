@@ -1,0 +1,78 @@
+<!--pages/enterpriseInfo/enterpriseInfo.wxml-->
+<view class='enterpriseInfoWrap'>
+  <view class='topInfo'>
+      <image class='logoImg' src='{{ company_info.icon }}'></image>
+      <view class='topInfoRight'>
+        <view class='topTitle'>
+          {{ company_info.name }}
+        </view>
+        <view class='guanzhuGag' wx:if="{{ userType != 'hr' }}" bindtap='guanzhuClick'>{{ guanzhuOnOff ? '已关注' : '+关注' }}</view>
+        <view class='bottomTag'>
+          <text style='padding-left: 0' wx:if="{{ company_info.label1 }}">{{ company_info.label1 }}</text>
+          <text class='borderLeft' wx:if="{{ company_info.label2 }}">{{ company_info.label2 }}</text>
+          <text class='borderBoth' wx:if="{{ company_info.label3 }}">{{ company_info.label3 }}</text>
+          <text>{{ company_info.label4 }}</text>
+        </view>
+        <view class='okBox' wx:if="{{ company_info.status === 1 }}">
+          <image class='okImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/ok.png'></image>
+          已认证
+        </view>
+      </view>
+  </view>
+  <view class='chooseBtnWrap'>
+    <view class='btnWrod {{ tabCurrent === "gongsi" ? "active" : "" }}' bindtap='changeTabs' data-id='gongsi'>公司信息</view>
+    <view class='btnWrod {{ tabCurrent === "zhiwei" ? "active" : "" }}' bindtap='changeTabs' data-id='zhiwei'>在招职位</view>
+    <view class='btnWrod {{ tabCurrent === "xiangmu" ? "active" : "" }}' bindtap='changeTabs' data-id='xiangmu'>在招项目</view>
+  </view>
+  <!-- 公司 -->
+  <view class='gongsiWrap' wx:if='{{ tabCurrent === "gongsi" }}'>
+    <view class='title'>公司地址</view>
+    <view class='addressWrap'>
+      <view class='addressOne'>
+      <image class='localImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/local.png'></image>
+        {{ company_info.area }}
+      </view>
+      <view class='addressTwo'>{{ company_info.address }}</view>
+    </view>
+    <view class='title'>公司介绍</view>
+    <view class='xianqgingImgWrap'>
+      <image class='xianqgingImg' src='{{ company_info.image }}'></image>
+    </view>
+    <view class='content'>
+      {{ company_info.instruction }}
+    </view>
+  </view>
+  <!-- 职位 -->
+  <view class='zhiweiWrap' wx:if='{{ tabCurrent === "zhiwei" }}'>
+    <view class='zhiweiItemWrap' wx:for="{{ quartersList }}" wx:key="" data-id="{{ item.id }}" bindtap='goPostDetail'>
+      <view class='zhiweiItem'>
+        <view class='title'>{{ item.name }}</view>
+        <view class='tagWrap'>
+          <text style='padding-left: 0'>{{ item.city_name }}</text>
+          <text class='middleTag'>{{ item.job_experience }}</text>
+          <text>{{ item.education }}</text>
+        </view>
+        <view class='money'>{{ item.salaryStr }}</view>
+        <view class='time'>今天发布</view>
+      </view>
+    </view>
+    <i-load-more tip="没有更多了" loading="{{ false }}" />
+  </view>
+  <!-- 项目 -->
+  <view class='zhiweiWrap' wx:if='{{ tabCurrent === "xiangmu" }}'>
+    <view class='zhiweiItemWrap' wx:for="{{ projectList }}" wx:key="" data-id="{{ item.id }}" bindtap='goProjectDetail'>
+      <view class='zhiweiItem'>
+        <view class='title'>{{ item.name }}</view>
+        <view class='tagWrap'>
+          <text style='padding-left: 0'>{{ item.job_label1 }}</text>
+          <text class='middleTag'>{{ item.job_label2 }}</text>
+          <text>{{ item.job_label3 }}</text>
+        </view>
+        <view class='money'>{{ item.salaryStr }}</view>
+        <view class='time'>{{ item.sign_num }}人已投递</view>
+      </view>
+    </view>
+    <i-load-more tip="没有更多了" loading="{{ false }}" />
+  </view>
+</view>
+ 

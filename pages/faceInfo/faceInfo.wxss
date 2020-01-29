@@ -1,0 +1,261 @@
+/* pages/postDetail/postDetail.wxss */
+.faceInfoWrap{
+  padding-bottom: 100rpx;
+}
+.faceInfoWrap .topBox{
+  border-bottom: 16rpx solid #f8f8f8;
+  padding: 20rpx 30rpx 0;
+}
+.faceInfoWrap .topBox .first{
+  position: relative;
+}
+.faceInfoWrap .topBox .first .leftTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #333;
+  padding-right: 150rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.faceInfoWrap .topBox .first .rightTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 28rpx;
+	color: #f34848;
+  position: absolute;
+  right: 0rpx;
+  top: 0;
+}
+.faceInfoWrap .topBox .second {
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding-top: 25rpx;
+}
+.faceInfoWrap .topBox .second .line{
+  margin: 0 10rpx;
+}
+.faceInfoWrap .topBox .three{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	letter-spacing: 1rpx;
+	color: #7a91d5;
+  padding: 25rpx 0 40rpx;
+}
+.faceInfoWrap .topBox .three text{
+	height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  padding: 0 20rpx;
+	background-color: #e8eeff;
+	border-radius: 2px;
+  margin-right: 35rpx;
+}
+.faceInfoWrap .topBox .fourBox{
+  border-top: 1rpx solid #eee;
+  height: 128rpx;
+}
+.faceInfoWrap .topBox .fourBox .leftImg{
+  float: left;
+  width: 58rpx;
+  height: 128rpx;
+  line-height: 128rpx;
+}
+.faceInfoWrap .topBox .fourBox .leftImg .touxiang{
+  width: 58rpx;
+  height: 58rpx;
+  vertical-align: middle;
+}
+.faceInfoWrap .topBox .fourBox .rightBox{
+  margin-left: 80rpx;
+  padding-top: 30rpx;
+}
+.faceInfoWrap .topBox .fourBox .rightBox .firstRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333;
+}
+.faceInfoWrap .topBox .fourBox .rightBox .firstRow text{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  margin-left: 20rpx;
+}
+.faceInfoWrap .topBox .fourBox .rightBox .secondRow{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+  padding-top: 10rpx;
+}
+/* 岗位详情 */
+.faceInfoWrap .detailBox{
+  padding: 0 30rpx 30rpx;
+  border-bottom: 16rpx solid #faf8f8;
+}
+.faceInfoWrap .detailBox .rowBox{
+  padding-top: 30rpx;
+}
+.faceInfoWrap .detailBox .rowBox .leftName{
+  float: left;
+  width: 120rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  color: #333;
+  font-size: 24rpx;
+	font-family: PingFangSC-Regular;
+}
+.faceInfoWrap .detailBox .rowBox .rightVal{
+  margin-left: 140rpx;
+  line-height: 24rpx;
+  color: #999;
+  font-size: 24rpx;
+	font-family: PingFangSC-Regular;
+}
+.faceInfoWrap .detailBox .titleOne{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  padding-top: 35rpx;
+}
+.faceInfoWrap .detailBox .titleSmall{
+	font-family: PingFangSC-Medium;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+	color: #333;
+  padding: 30rpx 0 15rpx;
+}
+.faceInfoWrap .detailBox .contentRow{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #666;
+  width: 100%;
+}
+/* 公司 */
+.faceInfoWrap .companyBox{
+  border-bottom: 16rpx solid #f8f8f8;
+  padding: 40rpx 30rpx 0;
+}
+.faceInfoWrap .companyBox .leftImgBox{
+  float: left;
+  width: 82rpx;
+  height: 82rpx;
+  margin-left: 10rpx;
+}
+.faceInfoWrap .companyBox .leftImgBox .logoImg{
+  width: 82rpx;
+  height: 82rpx;
+}
+.faceInfoWrap .companyBox .rightImgBox{
+  margin-left: 132rpx;
+  padding-bottom: 40rpx;
+}
+.faceInfoWrap .companyBox .rightImgBox .rowOne{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+}
+.faceInfoWrap .companyBox .rightImgBox .rowTwo{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  line-height: 26rpx;
+	color: #666;
+  padding-top: 20rpx;
+}
+.faceInfoWrap .companyBox .rightImgBox .rowTwo .line{
+  margin: 0 10rpx;
+}
+.faceInfoWrap .companyBox .rightImgBox  .rowThree{
+	height: 28rpx;
+  line-height: 28rpx;
+	background: #2e70f9;
+	border-radius: 14rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #fff;
+  display: inline-block;
+  padding-right: 20rpx;
+}
+.faceInfoWrap .companyBox .rightImgBox  .rowThree .okImg{
+  width: 15rpx;
+  height: 14rpx;
+  vertical-align: middle;
+  margin: -1rpx 10rpx 0;
+}
+.faceInfoWrap .companyBox .bottomAddressBox{
+  border-top: 1rpx solid #eee;
+}
+.faceInfoWrap .companyBox .bottomAddressBox .addressTest{
+  position: relative;
+}
+.faceInfoWrap .companyBox .bottomAddressBox .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 30rpx;
+}
+.faceInfoWrap .companyBox .bottomAddressBox .titleAddress{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  padding: 30rpx 0 37rpx;
+}
+.faceInfoWrap .companyBox .bottomAddressBox .firstText{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+}
+.faceInfoWrap .companyBox .bottomAddressBox .firstText .local{
+  width: 22rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.faceInfoWrap .companyBox .bottomAddressBox .secondText{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding: 22rpx 0 40rpx;
+}
+.faceInfoWrap .bottomBtn{
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+}
+.faceInfoWrap .bottomBtn .leftBtn{
+  width: 140rpx;
+  text-align: center;
+  float: left;
+  height: 100rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+}
+.faceInfoWrap .bottomBtn .leftBtn .share{
+  width: 28rpx;
+  height: 28rpx;
+}
+.faceInfoWrap .bottomBtn .rightBtn{
+  /* margin-left: 140rpx; */
+  text-align: center;
+  background: #4c85fb;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.faceInfoWrap .bottomBtn .rightBtn.none{
+  background: #ccc;
+  color: #fff;
+}

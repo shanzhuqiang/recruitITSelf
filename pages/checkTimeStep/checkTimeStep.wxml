@@ -1,0 +1,67 @@
+<!--pages/checkTimeStep/checkTimeStep.wxml-->
+<view class='checkTimeStepWrap'>
+  <view class='topBox'>
+    <view class='title'>工时核对</view>
+    <view class='stepWrap'>
+      <i-steps current="{{ current }}">
+        <i-step>
+          <view slot="title">项目开始</view>
+        </i-step>
+        <i-step>
+          <view slot="title">已完成1/2</view>
+        </i-step>
+        <i-step>
+          <view slot="title">项目结束</view>
+        </i-step>
+      </i-steps>
+    </view>
+    <view class='imgBox'>
+      <view>
+        <image class='okImg' wx:if="{{imgSrc !== ''}}" src='{{ success ? imgSrc + "/okImg.png" : imgSrc + "/noOkImg.png" }}'></image>
+      </view>
+      <view class='bottomWord'>{{ success ? "审核已通过" : "审核未通过" }}</view>
+      <view class='result' wx:if="{{ !success }}">原因：XXXXXX</view>
+    </view>
+  </view>
+  <view class='bottomBox'>
+    <view class='scrollWrap'>
+      <scroll-view class="scrollView" scroll-x>
+        <view class='itemBox' wx:for="{{ images }}" wx:key="">
+          <image class='desImg' src='{{ item }}'></image>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='stepOneWrap' wx:if="{{ current == 0 }}">
+      <view class='row'>
+        <view class='leftName'>公司名称</view>
+        <view class='rightVal'>{{ company }}</view>
+      </view>
+      <view class='row'>
+        <view class='leftName'>项目名称</view>
+        <view class='rightVal'>{{ name }}</view>
+      </view>
+      <view class='row'>
+        <view class='leftName'>开始时间</view>
+        <view class='rightVal'>{{ start_time }}</view>
+      </view>
+      <view class='row'>
+        <view class='leftName'>预计结束时间</view>
+        <view class='rightVal'>{{ end_time }}</view>
+      </view>
+      <view class='finishHalf' bindtap='finishHalf' wx:if="{{ success && userType != 'hr' }}">完成1/2</view>
+      <view class='finishHalf' bindtap='stepOneFail' wx:if="{{ !success && userType != 'hr' }}">修改</view>
+      <button class='lianxikefu' open-type="contact" bindcontact="handleContact">联系客服</button>
+      <view style='height: 30rpx'></view>
+    </view>
+    <view class='stepTwoWrap' wx:if="{{ current == 1 || current == 2 }}">
+      <view class='title'>{{ current == 1 ? "内容描述" : "补充说明" }}</view>
+      <!-- <view class='content'>1、用户推荐的前60位设计师进入评委投票阶段; 2、获得过68Design专访、推荐的设计师可直接进入评委投票阶段； 3、评委1、用户推荐的前60位设计师进入评委投票阶段; 2、获得过68Design专访、推荐的设计师可直接进入评委投票阶段； 3、评委</view> -->
+      <view class='content'>{{ content }}</view>
+      <view wx:if="{{ current == 1 }}">
+        <view class='finishHalf' bindtap='stepTwoFail' wx:if="{{ !success && userType != 'hr' }}">修改</view>
+        <view class='finishHalf' bindtap='finishHalfLast' wx:if="{{ userType != 'hr' }}">项目结束</view>
+      </view>
+      <view class='finishHalf' bindtap='stepLastFail' wx:if="{{ !success && current == 2}}">修改</view>
+    </view>
+  </view>
+</view>

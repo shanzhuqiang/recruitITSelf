@@ -1,0 +1,63 @@
+<!--pages/goldVote/goldVote.wxml-->
+<view class='oldGoldVoteWrap'>
+  <view style='height: 30rpx;'></view>
+  <view class='topTitle'>
+    往期话题投票结果
+    <image class='question' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/question.png' bindtap='openRule'></image>
+  </view>
+  <view class='itemBox' wx:for="{{ listData }}" wx:key="">
+    <view class='firstBox'>
+      {{ item.title }}
+      <view class='lastTime'>
+        <image class='huatiImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/huati2.png'></image>
+        <text>剩余时间：00:00:00</text>
+      </view>
+    </view>
+    <view class='secondBox'>
+      <view class='topText'>
+        <view class='leftText'>信 <text class='yaMoeny' wx:if="{{ item.vote == 1 }}">压{{ item.coin }}个金币</text></view>
+        <view class='rightText'><text class='yaMoeny2' wx:if="{{ item.vote == 2 }}">压{{ item.coin }}个金币</text>不信</view>
+      </view>
+      <view class='progressWrap'> 
+        <text class='leftPre'>{{ item.blue_percent }}%</text>
+        <text class='rightPre'>{{ item.red_percent }}%</text>
+        <view class='progress' style='width: {{ item.blue_percent }}%'></view>
+      </view>
+    </view>
+    <view class='bottomLeft' wx:if="{{ item.coin_gain != 0 }}">{{ item.coin_gain }}</view>
+    <view class='peopleNum'>{{ item.total_num }}人已参与</view>
+  </view>
+  <!-- <view class='itemBox'>
+    <view class='firstBox'>
+      #你相信第六感吗？
+      <view class='lastTime'>
+        <image class='huatiImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/huati2.png'></image>
+        <text>剩余时间：00:00:00</text>
+      </view>
+    </view>
+    <view class='secondBox'>
+      <view class='topText'>
+        <view class='leftText'>信 <text class='yaMoeny'>压XX个金币</text></view>
+        <view class='rightText'>不信</view>
+      </view>
+      <view class='progressWrap'> 
+        <text class='leftPre'>60%</text>
+        <text class='rightPre'>40%</text>
+        <view class='progress' style='width: 60%'></view>
+      </view>
+    </view>
+    <view class='bottomLeft blue'>消耗XX个银币</view>
+    <view class='peopleNum'>500人已参与</view>
+  </view> -->
+  <view class='maskWrap' wx:if="{{ maskOnOff }}">
+    <view class='maskBox'>
+      <view class='title'>投票规则</view>
+      <view class='text'>1、用户推荐的前60位设计师进入评委投票阶段</view>
+      <view class='text'>2、获得过68Design专访、推荐的设计师可直接进入评委投票阶段</view>
+      <view class='text'>3、评委推荐的前10名为年度十佳设计师，如票数相同，将根据设计师的影响力排名、被关注</view>
+      <view class='bottomBtnWrap'>
+        <view class='bottomBtn' bindtap='closeRule'>我知道了</view>
+      </view>
+    </view>
+  </view>
+</view>

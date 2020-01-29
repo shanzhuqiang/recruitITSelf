@@ -1,0 +1,171 @@
+/* pages/goldVote/goldVote.wxss */
+page{
+  height: 100%;
+}
+.goldVoteWrap{
+  background: #101845;
+  padding: 0 30rpx;
+  height: 100%;
+}
+.goldVoteWrap .topTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #fff;
+  border-left: 6rpx solid #2e70f9;
+  padding-left: 12rpx;
+  position: relative;
+}
+.goldVoteWrap .topTitle .question{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 15rpx;
+  vertical-align: middle;
+}
+.goldVoteWrap .topTitle .rightTitle{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	line-height: 32rpx;
+	color: #ef4933;
+  position: absolute;
+  right: 0;
+  top: 5rpx;
+}
+.goldVoteWrap .itemBox{
+  width: 620rpx;
+  height: 262rpx;
+  margin: 30rpx auto 0;
+  padding: 0 35rpx;
+  background: #fff;
+	border-style: solid;
+	border-image-source: linear-gradient(-24deg, #1849bb 0%, #4bb8f1 100%);
+	border-image-slice:1;
+  border-radius: 4rpx;
+  position: relative;
+}
+.goldVoteWrap .itemBox .firstBox{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  position: relative;
+  padding-top: 39rpx;
+}
+.goldVoteWrap .itemBox .firstBox .lastTime{
+	width: 235rpx;
+	height: 37rpx;
+	line-height: 37rpx;
+  position: absolute;
+  right: -30rpx;
+  top: 39rpx;
+	font-size: 22rpx;
+	color: #fff;
+  text-align: center;
+}
+.goldVoteWrap .itemBox .firstBox .lastTime .huatiImg{
+  width: 235rpx;
+  height: 37rpx;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+.goldVoteWrap .itemBox .firstBox .lastTime text{
+  position: absolute;
+  left: 20rpx;
+  top: 0;
+  z-index: 1;
+}
+.goldVoteWrap .itemBox .firstBox .lastTime .countDown{
+  position: absolute;
+  top: -13rpx;
+  left: 130rpx;
+  z-index: 9;
+  color: #fff;
+  line-height: 1;
+}
+.goldVoteWrap .itemBox .secondBox{
+  height: 74rpx;
+  line-height: 74rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #ffffff;
+  padding-top: 50rpx;
+}
+.goldVoteWrap .itemBox .secondBox .leftBtn{
+  float: left;
+	background-color: #4c85fb;
+	border-radius: 4rpx;
+  height: 74rpx;
+	width: 298rpx;
+}
+.goldVoteWrap .itemBox .secondBox .rightBtn{
+  float: right;
+	background-color: #f34f47;
+	border-radius: 4rpx;
+  height: 74rpx;
+	width: 298rpx;
+}
+.goldVoteWrap .itemBox .peopleNum{
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #999;
+  position: absolute;
+  right: 36rpx;
+  bottom: 20rpx;
+}
+.goldVoteWrap .maskWrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.goldVoteWrap .maskWrap .maskBox{
+  width: 650rpx;
+  margin: 120rpx auto 0;
+  background: #fff;
+	border-radius: 16rpx;
+}
+.goldVoteWrap .maskWrap .maskBox .title{
+	font-family: PingFangSC-Medium;
+	font-size: 36rpx;
+	line-height: 36rpx;
+	color: #333;
+  padding: 50rpx 0;
+  text-align: center;
+}
+.goldVoteWrap .maskWrap .maskBox .text{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 48rpx;
+	color: #333;
+  padding: 0 50rpx;
+}
+.goldVoteWrap .maskWrap .maskBox .bottomBtnWrap {
+  padding-top: 50rpx;
+}
+.goldVoteWrap .maskWrap .maskBox .bottomBtnWrap .bottomBtn{
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 36rpx;
+	color: #2e70f9;
+  border-top: 1rpx solid #d5d6d8;
+}
+.goldVoteWrap .modealImg{
+  width: 110rpx;
+  height: 110rpx;
+}
+.goldVoteWrap .jinbi{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	line-height: 36rpx;
+	color: #333;
+}
+.goldVoteWrap .jinbi .num{
+	color: #2e70f9;
+}

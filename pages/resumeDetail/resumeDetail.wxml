@@ -1,0 +1,100 @@
+<!--pages/resumeDetail/resumeDetail.wxml-->
+<view class='resumeDetailWrap'>
+  <view class='resumeDetailBox' wx:if="{{ resumeInfo.user_info }}">
+    <image class='touxiang' wx:if="{{ resumeInfo.user_info.avatar }}" src='{{ resumeInfo.user_info.avatar }}'></image>
+    <view class='title'>基本信息</view>
+    <view class='first'>
+      <text class='name'>{{ resumeInfo.user_info.username }}</text>
+      <text class='profession'>{{ resumeInfo.user_info.job_name }}</text>
+    </view>
+    <view class='second'>
+      <text style='padding-left: 0'>{{ resumeInfo.user_info.gender == 1 ? '男' : resumeInfo.user_info.gender == 2 ? '女' : '未知' }}</text>
+      <text>{{ resumeInfo.user_info.birthday2 }}</text>
+      <text>{{ resumeInfo.user_info.city_name }}</text>
+      <text>{{ resumeInfo.user_info.workTime }}</text>
+      <text style='border-right: none'>{{ resumeInfo.user_info.identity == 1 ? '职场人士' : '应届毕业生' }}</text>
+    </view>
+    <view class='three'>
+      <text wx:if="{{ resumeInfo.user_info.label1 !== '' }}">{{ resumeInfo.user_info.label1 }}</text>
+      <text wx:if="{{ resumeInfo.user_info.label2 !== '' }}">{{ resumeInfo.user_info.label2 }}</text>
+      <text wx:if="{{ resumeInfo.user_info.label3 !== '' }}">{{ resumeInfo.user_info.label3 }}</text>
+    </view>
+    <view class='four'>
+      <view class='iconWrap'>
+        <image class='phone' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/phone.png'></image>
+      </view>
+      <view class='strBox {{ download || resumeInfo.user_info.apply_status == 2 ? "" : "mosaic" }}'>{{resumeInfo.user_info.mobile }}</view>
+    </view>
+    <view class='five'>
+      <view class='iconWrap'>
+        <image class='email' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/email.png'></image>
+      </view>
+      <view class='strBox {{ download || resumeInfo.user_info.apply_status == 2 ? "" : "mosaic" }}'>{{ resumeInfo.user_info.email }}</view>
+    </view>
+    <view style='height: 30rpx'></view>
+  </view>
+  <view class='resumeDetailBox' wx:if="{{ resumeInfo.user_info }}">
+    <view class='title'>自我描述</view>
+    <view class='contentBox'>
+      <view class='content'>{{ resumeInfo.user_info.self_introduction }}</view>
+    </view>
+  </view>
+  <view class='resumeDetailBox' wx:if="{{ resumeInfo.work.length > 0 }}">
+    <view class='title'>工作经历</view>
+    <view class='jingyanBox' wx:for="{{ resumeInfo.work }}" wx:key="">
+      <view class='oneBox'>
+        <view class='left'>
+          <image class='gongsiImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/imgC.png'></image>
+        </view>
+        <view class='right'>
+          <view class='name1'>{{ item.major }}</view>
+          <view class='gongsi1'>{{ item.name }}</view>
+          <view class='time1'>{{ item.start_time }}-{{ item.end_time }}</view>
+        </view>
+      </view>
+      <view class='contentTitle'>工作内容</view>
+      <view class='content2'>{{ item.content }}</view>
+    </view>
+  </view>
+  <view class='resumeDetailBox' wx:if="{{ resumeInfo.education.length > 0 }}">
+    <view class='title'>教育经历</view>
+    <view class='oneBox jingyanBox' wx:for="{{ resumeInfo.education }}" wx:key="">
+      <view class='left'>
+        <image class='gongsiImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/imgR.png'></image>
+      </view>
+      <view class='right'>
+        <view class='name1'>{{ item.name }}</view>
+        <view class='gongsi1'>
+          <text>{{ item.level == 1 ? '不限' : item.level == 4 ? '高中' : item.level == 5 ? '本科' : item.level == 6 ? '硕士' : '无'  }}</text>
+          <text class='endText'>{{ item.major }}</text>
+        </view>
+        <view class='time1'>{{ item.start_time }}{{ item.end_time }}</view>
+      </view>
+    </view>
+  </view>
+  <view class='resumeDetailBox' wx:if="{{ resumeInfo.project.length > 0 }}">
+    <view class='title'>项目经验</view>
+    <view class='jingyanBox' wx:for="{{ resumeInfo.project }}" wx:key="">
+      <view class='oneBox'>
+        <view class='right' style='margin-left: 0'>
+          <view class='name1'>{{ item.name }}</view>
+          <view class='gongsi1'>{{ item.major }}</view>
+          <view class='time1'>{{ item.start_time }}{{ item.end_time }}</view>
+        </view>
+      </view>
+      <view class='contentTitle'>工作内容</view>
+      <view class='content2'>{{ item.content }}</view>
+    </view>
+  </view>
+  <view style='height: 100rpx;'></view>
+  <view class='bottomBtn'>
+    <view class='leftBtn' wx:if="{{ userType == 'agent' }}" bindtap='guanzhu' data-id="{{ resumeInfo.user_info.user_id }}" data-ida="{{ resumeInfo.user_info.re_resume_id }}">
+      <view style='padding-top:18rpx;'><image class='shoucang' wx:if="{{imgSrc !== ''}}" src='{{ collect ? imgSrc + "/shoucang2.png" : imgSrc + "/shoucang.png" }}'></image></view>
+      <view>{{ collect ? '已关注' : '关注' }}</view>
+    </view>
+    <view class='rightBtn' style="margin-left: 0" bindtap='bottomBtn' wx:if="{{ userType == 'hr' }}">联系管理员</view>
+    <view class='rightBtn' wx:if="{{ userType == 'agent' && !download }}" bindtap='downResume'>下载简历</view>
+    <view class='rightBtn none' wx:if="{{ userType == 'agent' && download }}">已下载</view>
+  </view>
+</view>
+

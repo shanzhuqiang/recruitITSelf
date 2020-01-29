@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-input": "../../dist/input/index",
+    "i-panel": "../../dist/panel/index"
+  },
+  "navigationBarTitleText": "实名认证",
+  "navigationBarBackgroundColor": "#fff"
+}

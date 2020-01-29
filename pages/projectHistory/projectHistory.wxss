@@ -1,0 +1,82 @@
+/* pages/projectHistory/projectHistory.wxss */
+.projectHistoryWrap .hallRowWrap{
+  padding: 0 30rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.projectHistoryWrap .hallRow{
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #ddd;
+  position:  relative;
+}
+.projectHistoryWrap .hallRow .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  height: 120rpx;
+  line-height: 120rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.projectHistoryWrap .hallRow .rightInput{
+  float: right;
+	font-size: 30rpx;
+  margin-right: 50rpx;
+  text-align: right;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #333
+}
+.projectHistoryWrap .hallRow .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 46rpx;
+}
+.projectHistoryWrap .workContent{
+  padding: 30rpx;
+}
+.projectHistoryWrap .workContent .title{
+  padding: 30rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+}
+.projectHistoryWrap .workContent .textareaWrap{
+  height: 200rpx;
+  padding: 0 10rpx 30rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.projectHistoryWrap .workContent .textareaWrap .textareaBox{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	letter-spacing: 0px;
+	color: #333;
+  width: 100%;
+  height: 100%;
+}
+.projectHistoryWrap .bottomBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 30rpx auto 30rpx
+}
+.projectHistoryWrap .delBtn{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+  text-align: center;
+	color: #666;
+  padding-top: 30rpx;
+}

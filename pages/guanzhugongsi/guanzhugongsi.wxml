@@ -1,0 +1,22 @@
+<!--pages/guanzhugongsi/guanzhugongsi.wxml-->
+<view class='guanzhugongsiWrap'>
+  <view class='listItem' wx:for="{{ listData }}" data-id="{{ item.id }}" wx:key="" bindtap='goEnterpriseInfo'>
+    <view class='left'>
+      <image class='logo' src='{{ item.icon }}'></image>
+    </view>
+    <view class='right'>
+      <view class='first'>{{ item.name }}</view>
+      <view class='second'>
+        <text style='padding-left: 0'>{{ item.label1 }}</text>
+        <text>{{ item.label2 }}</text>
+        <text>{{ item.label3 }}</text>
+        <text style='border-right: none'>{{ item.label4 }}</text>
+      </view>
+      <view class='three'>在找职位(<text>{{ item.job_num }}</text>)</view>
+    </view>
+  </view>
+  <view wx:if="{{ listData.length == 0 }}" class='noDataWrap'>
+    <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+    <view class='textWord'>暂无关注公司</view>
+  </view>
+</view>

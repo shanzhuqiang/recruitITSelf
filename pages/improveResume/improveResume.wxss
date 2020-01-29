@@ -1,0 +1,223 @@
+/* pages/improveResume/improveResume.wxss */
+page{
+  height: 100%;
+}
+.improveResumeWrap{
+  height: 100%;
+  background: #f8f8f8;
+}
+.improveResumeWrap .resumeDetailBox{
+  padding: 0 30rpx;
+  position: relative;
+  border-bottom: 16rpx solid #f8f8f8;
+  background: #fff;
+}
+.improveResumeWrap .resumeDetailBox .oneBoxWrap{
+  border-bottom: 1rpx solid #eee;
+  padding-bottom: 30rpx;
+}
+.improveResumeWrap .resumeDetailBox .addBtn{
+  height: 88rpx;
+  line-height: 88rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+  text-align: center;
+}
+.improveResumeWrap .resumeDetailBox .addBtn .addIcon{
+  font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #4c85fb;
+}
+.improveResumeWrap .resumeDetailBox > .touxiang{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 120rpx;
+}
+.improveResumeWrap .resumeDetailBox > .title{
+  height: 90rpx;
+  line-height: 90rpx;
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #333;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+}
+.improveResumeWrap .resumeDetailBox > .title > .editBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #2e70f9;
+}
+.improveResumeWrap .resumeDetailBox .first{
+  padding: 20rpx 0 10rpx;
+}
+.improveResumeWrap .resumeDetailBox .first .name{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+	color: #333;
+}
+.improveResumeWrap .resumeDetailBox .first .profession{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+  margin-left: 24rpx;
+}
+.improveResumeWrap .resumeDetailBox .second{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+}
+.improveResumeWrap .resumeDetailBox .second text{
+  padding: 0 15rpx;
+  border-right: 1rpx solid #999;
+}
+.improveResumeWrap .resumeDetailBox .three{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	letter-spacing: 1rpx;
+	color: #7a91d5;
+}
+.improveResumeWrap .resumeDetailBox .three {
+  padding-top: 20rpx;
+}
+.improveResumeWrap .resumeDetailBox .three text{
+  padding: 0 20rpx;
+  text-align: center;
+  margin-right: 20rpx;
+	background-color: #e8eeff;
+	border-radius: 2rpx;
+  display: inline-block;
+}
+.improveResumeWrap .resumeDetailBox .iconWrap{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  text-align: center;
+}
+.improveResumeWrap .resumeDetailBox .four{
+  padding-top: 50rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.improveResumeWrap .resumeDetailBox .four .phone{
+  width: 21rpx;
+  height: 29rpx;
+  vertical-align: middle;
+}
+.improveResumeWrap .resumeDetailBox .five{
+  padding: 20rpx 0 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.improveResumeWrap .resumeDetailBox .five .email{
+  width: 29rpx;
+  height: 21rpx;
+  vertical-align: middle;
+}
+.improveResumeWrap .resumeDetailBox .strBox{
+  margin-left: 50rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333;
+}
+.improveResumeWrap .resumeDetailBox .contentBox{
+  padding: 30rpx 0;
+}
+.improveResumeWrap .resumeDetailBox .contentBox .content{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999;
+}
+.improveResumeWrap .resumeDetailBox .oneBox{
+  padding-top: 30rpx;
+  position: relative;
+}
+.improveResumeWrap .resumeDetailBox .borderBottom{
+  border-bottom: 1rpx solid #eee;
+  padding-bottom: 30rpx;
+}
+.improveResumeWrap .resumeDetailBox .oneBox .editBtn{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #2e70f9;
+  position: absolute;
+  right: 0;
+  top: 24rpx;
+}
+.improveResumeWrap .resumeDetailBox .oneBox .left{
+  width: 82rpx;
+  height: 82rpx;
+  float: left;
+  padding-top: 20rpx;
+}
+.improveResumeWrap .resumeDetailBox .oneBox .left .gongsiImg{
+  width: 82rpx;
+  height: 82rpx;
+}
+.improveResumeWrap .resumeDetailBox .oneBox .right{
+  margin-left: 120rpx;
+}
+.improveResumeWrap .resumeDetailBox .oneBox .right .name1{
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+	color: #333;
+}
+.improveResumeWrap .resumeDetailBox .oneBox .right .gongsi1{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  padding-top: 10rpx;
+}
+.improveResumeWrap .resumeDetailBox .oneBox .right .gongsi1 .endText{
+  border-left: 1rpx solid #666;
+  margin-left: 20rpx;
+  padding-left: 20rpx;
+  display: inline-block;
+}
+.improveResumeWrap .resumeDetailBox .oneBox .right .time1{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  padding-top: 5rpx;
+}
+.improveResumeWrap .resumeDetailBox .contentTitle{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+  padding: 30rpx 0 20rpx;
+}
+.improveResumeWrap .resumeDetailBox  .content2{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999;
+}
+.improveResumeWrap .finishWrap{
+  background: #f8f8f8;
+  padding-top: 30rpx;
+}
+.improveResumeWrap .finishWrap .finish{
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+  width: 600rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #ffffff;
+  margin: 0 auto;
+}

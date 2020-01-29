@@ -1,0 +1,158 @@
+/* pages/checkTimePull/checkTimePull.wxss */
+.checkTimePullWrap{
+  border-top: 16rpx solid #f8f8f8;
+  padding: 0 30rpx;
+}
+.checkTimePullWrap .addBoxWrap{
+  padding: 30rpx 30rpx 58rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.checkTimePullWrap .addBoxWrap > .title{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  padding-bottom: 45rpx;
+}
+.checkTimePullWrap .addBoxWrap .addBox{
+  width: 136rpx;
+  height: 136rpx;
+	background-color: #f1f1f1;
+	border-radius: 4rpx;
+  position: relative;
+  display: inline-block;
+}
+.checkTimePullWrap .addBoxWrap .addBox.addBox2{
+	background-color: #fff;
+  margin-left: 30rpx;
+}
+.checkTimePullWrap .addBoxWrap .addBox.addBox2 .imgBox{
+  width: 100%;
+  height: 100%;
+}
+.checkTimePullWrap .addBoxWrap .addBox .camera{
+  width: 69rpx;
+  height: 51rpx;
+  position: absolute;
+  top: 26rpx;
+  left: 34rpx;
+  z-index: 0;
+}
+.checkTimePullWrap .addBoxWrap .addBox .addText{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+  position: absolute;
+  left: 47rpx;
+  top: 91rpx;
+}
+.checkTimePullWrap .bottomWrap{
+  padding: 45rpx 0 60rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.checkTimePullWrap .bottomWrap > .title{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  padding: 0 30rpx 45rpx;
+}
+.checkTimePullWrap .bottomWrap .textareaWrap{
+  width: 100%;
+  height: 200rpx;
+}
+.checkTimePullWrap .bottomWrap .textareaWrap .textareaBox{
+  width: 100%;
+  height: 100%;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999;
+}
+.checkTimePullWrap .confirmBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 150rpx auto 0;
+}
+/* 审核弹出 */
+.checkTimePullWrap .checkMask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.checkTimePullWrap .checkMask .checkBox{
+	width: 540rpx;
+	height: 480rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.checkTimePullWrap .checkMask .checkBox .firstRow{
+  text-align: center;
+	font-size: 40rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+	color: #2e70f9;
+  padding: 70rpx 0 60rpx;
+}
+.checkTimePullWrap .checkMask .checkBox .firstRow .loading{
+  width: 42rpx;
+  height: 42rpx;
+  vertical-align: middle;
+}
+.checkTimePullWrap .checkMask .checkBox .secondRow{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	line-height: 43rpx;
+	color: #333;
+  text-align: center;
+}
+.checkTimePullWrap .checkMask .checkBox .threeRow{
+  height: 81rpx;
+  padding: 70rpx 30rpx 0;
+}
+.checkTimePullWrap .checkMask .checkBox .threeRow .btn{
+	width: 220rpx;
+	height: 80rpx;
+	border-radius: 8rpx;
+	border: solid 1rpx #cccccc;
+  line-height: 80rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #999;
+}
+.checkTimePullWrap .checkMask .checkBox .fourRow{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+	color: #999;
+  text-align: center;
+  padding-top: 30rpx;
+}
+.checkTimePullWrap .checkMask .checkBox .fourRow > .kefuBtn{
+	color: #2e70f9;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+  display: inline-block;
+  padding: 0;
+  background: transparent;
+  border: none;
+}

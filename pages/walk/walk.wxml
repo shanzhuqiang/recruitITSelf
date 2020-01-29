@@ -1,0 +1,46 @@
+<!--pages/walk/walk.wxml-->
+<view class='walkWrap'>
+  <image class='walkBg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc + "/walkBg.png" }}'></image>
+  <view class='walkBox'>
+    <view class='first'>{{ walkNum }}</view>
+    <view class='second'>今日步数</view>
+    <image class='walkNum' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc + "/walkNum.png" }}'></image>
+  </view>
+  <view class='workBottom'>
+    <view class='rule'>
+      规则说明
+      <image class='question2' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc + "/question2.png" }}' bindtap='openRule'></image>
+    </view>
+    <view class='two'>500步1个金币邀请一名好友可获得2个金币</view>
+    <view class='sportBtn' bindtap='shouquan'>步数兑换金币</view>
+    <view class='yaoqing' bindtap='yaoqingNow'>立即邀请</view>
+  </view>
+  <!-- 规则说明 -->
+  <i-modal title="规则说明" ok-text="我知道了" show-cancel="{{false}}" visible="{{ ruleOnOff }}" bind:ok="closeRuleOnOff">
+    <view style='padding: 0 30rpx;text-align: left'>
+      <view>1.每日签到：连续7天可获100金币，分享到微信 群链接被点开可获30币。</view>
+      <view>2.步数兑换：500步1个金币邀请一名好友可获2个金币。</view>
+      <view>3.文章转发：转发一次文章可获20金币。文章阅读/点赞：一次阅读/点赞可获10金币。</view>
+      <view>4.参与话题投票可获得6金币。</view>
+    </view>
+  </i-modal>
+  <!-- 需要授权 -->
+  <i-modal title="授权微信运动"  visible="{{ needAuto }}" bind:cancel="closeNoAuto" bind:ok="openAuto">
+    <view>步数兑换需要授权微信运动</view>
+  </i-modal>
+  <!-- 兑换失败 -->
+  <i-modal title="兑换金币" ok-text="我知道了" show-cancel="{{false}}" visible="{{ lessWalk }}" bind:ok="closeLessWalk">
+    <view>您的步数不足，满<text class='blueNum'>500</text>步才能兑换金币哦～</view>
+  </i-modal>
+  <!-- 兑换成功 -->
+  <i-modal title="兑换金币" ok-text="我知道了" show-cancel="{{false}}" visible="{{ getMoneySuccess }}" bind:ok="closeGetMoneySuccess">
+    <view>确定使用<text class='blueNum'>{{ walkNum }}</text>步兑换<text class='blueNum'>{{ money }}</text>个金币吗</view>
+  </i-modal>
+  <!-- 立即邀请 -->
+  <view class='maskWrap' wx:if="{{ maskOnOff }}">
+    <view class='contentBox'>
+      <image class='shareImg' show-menu-by-longpress wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shareImg2.png'></image>
+      <view class='text' bindtap='closeMask'>我知道了</view>
+    </view>
+  </view>
+</view>

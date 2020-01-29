@@ -1,0 +1,18 @@
+<!--pages/tixian/tixian.wxml-->
+<view class='tixianWrap'>
+  <view class='topBox'>
+    提现至：
+    <image class='wechat2' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/wechat2.png'></image>
+    微信
+  </view>
+  <view class='middleBox'>
+    <view class='title'>
+      当前余额{{ totalCoin }}<text>(30元起提现)</text>
+    </view>
+    <view class='bottomMoey'>
+      <text>￥</text>
+      <input class='input' type='number' value='{{ money }}' placeholder='请输入提现金额' bindinput="moneyChange"></input>
+    </view>
+  </view>
+  <view class='confirmBtn' bindtap="tixianBtn">确定</view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/workHistory/workHistory.wxml-->
+<view class='workHistoryWrap'>
+  <form bindsubmit="formSubmit">
+    <view class='hallRowWrap'>
+      <view class='hallRow'>
+        <view class='leftName'>公司名称</view>
+        <input class='rightInput' placeholder='请输入公司名称' name="name" value='{{ name }}'></input>
+      </view>
+      <view class='hallRow'>
+        <view class='leftName'>职位</view>
+        <input class='rightInput' placeholder='请输入职位' value='{{ major }}' name="major"></input>
+      </view>
+      <view class='hallRow'>
+        <view class='leftName'>入职时间</view>
+        <picker bindchange="inTimeChange" mode="date">
+          <input class='rightInput' placeholder="请选择" value='{{ inTime }}' name="start_time" disabled/>
+        </picker>
+        <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+      </view>
+      <view class='hallRow'>
+        <view class='leftName'>离职时间</view>
+        <picker bindchange="outTimeChange" mode="date">
+          <input class='rightInput' placeholder="请选择" value='{{ outTime }}' name="end_time" disabled/>
+        </picker>
+        <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+      </view>
+    </view> 
+    <view class='workContent'>
+      <view class='title'>工作内容</view>
+      <view class='textareaWrap'>
+        <textarea maxlength="1000" bindinput="iptChange" value='{{ content }}' name="content" class='textareaBox' placeholder="请输入工作内容" />
+      </view>
+    </view>
+    <button class='bottomBtn' form-type="submit">保存</button>
+  </form>
+  <view class='delBtn' wx:if="{{ id !== 'null' }}" bindtap='delWork'>删除此工作经历</view>
+</view> 
+

@@ -1,0 +1,81 @@
+<!--pages/projectHall/projectHall.wxml-->
+<view class='projectHallWrap'>
+  <view class='filterWrap'>
+    <!-- <view class='colBox {{ topFilterBtn === "quyu" ? "active" : "" }}' bindtap='topFilter' data-id="quyu">
+      <text>区域</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "quyu" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view> -->
+    <view class='colBox {{ region[0] !== "全部" ? "active" : "" }}' style="width: 50%">
+      <picker mode="region" bindcancel="bindcancel" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <text>区域</text>
+        <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ region[0] !== "全部" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+      </picker>
+    </view>
+    <view class='colBox {{ topFilterBtn === "jiage" ? "active" : "" }}' bindtap='topFilter' data-id="jiage" style="width: 50%">
+      <text>经验</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "jiage" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <!-- <view class='colBox {{ topFilterBtn === "shaixuan" ? "active" : "" }}' bindtap='topFilter' data-id="shaixuan">
+      <text>周期</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "shaixuan" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view> -->
+  </view>
+  <view class='itemWrap' wx:for="{{ listData }}" wx:key="" data-id="{{ item.id }}" bindtap='goProjectDetail'>
+    <view class='first'>
+      <!-- <view class='box'>招标</view> -->
+      <view class='title'>{{ item.name }}</view>
+      <view class='money'>{{ userType == 'engineer' ? "不限" : item.salaryStr }}</view>
+    </view>
+    <view class='second'>
+      <text style='padding-left: 0'>{{ item.job_label1 }}</text>
+      <text class='middleText'>{{ item.job_label2 }}</text>
+      <text>{{ item.job_label3 }}</text>
+    </view>
+    <view class='content'>
+      {{ item.company_name }}
+    </view>
+    <view class='peopleNum'>
+      {{ item.sign_num }}人已投递
+    </view>
+  </view>
+  <i-load-more tip="没有更多了" loading="{{ loading }}" />
+  <!-- 区域 -->
+  <!-- <view class='filterMask' wx:if="{{ topFilterBtn === 'quyu' && mask}}">
+    <view class='maskBody'>
+      <view class='title'>工作区域</view>
+      <view class='filterBtnWrap' wx:for="{{ quyuData }}" wx:key="">
+        <view class='filterBtn {{ quyuChoose === item.district_code ? "active" : ""}}' style='{{item.district_name === null ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id='{{ item.district_code }}' bindtap='quyuChooseFilter' wx:key="">{{ item.district_name }}</view>
+      </view>
+    </view>
+  </view> -->
+  <!-- 价格 -->
+  <view class='filterMask' wx:if="{{ topFilterBtn === 'jiage' && mask}}">
+    <view class='maskBody'>
+      <view class='title'>工作经验</view>
+      <view class='filterBtnWrap' wx:for="{{ shaixuanData }}" wx:key="">
+        <view class='filterBtn {{ shaixuan1 == item.id ? "active" : ""}}' style='{{item.name === "" ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id='{{ item.id }}' bindtap='shaixuanchooseFilter1' wx:key="">{{ item.name }}</view>
+      </view>
+      <!-- <view class='title'>月薪</view>
+      <view class='filterBtnWrap'>
+        <view class='fl'>
+          <input type='number' placeholder='最低价' value='{{ mini_salary }}' bindinput="miniSalaryChange"></input>
+        </view>
+        <view class='fr'>
+          <input type='number' placeholder='最高价' value='{{ max_salary }}' bindinput="maxSalaryChange"></input>
+        </view>
+      </view>
+      <view class='confirm' bindtap='confirmFilterjiage'>确定</view> -->
+    </view>
+  </view>
+  <!-- 筛选 -->
+  <view class='filterMask' wx:if="{{ topFilterBtn === 'shaixuan' && mask }}">
+    <view class='maskBody'>
+      <view class='title'>工作周期</view>
+      <view class='filterBtnWrap'>
+        <view class='filterBtn {{ shaixuan2 == "" ? "active" : ""}}' data-id='' bindtap='shaixuanchooseFilter2' >不限</view>
+        <view class='filterBtn {{ shaixuan2 == "2" ? "active" : ""}}' data-id='2' bindtap='shaixuanchooseFilter2' >长期兼职</view>
+        <view class='filterBtn {{ shaixuan2 == "1" ? "active" : ""}}' data-id='1' bindtap='shaixuanchooseFilter2' >短期兼职</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+
+<!-- <view class='indexWrapTwo' wx:if="{{ openStatus == 2 }}">
+    <view class='hallRow'>
+      <view class='leftName'>题目</view>
+      <input class='rightInput' value='{{ name }}' placeholder='请输入题目' bindinput='nameChange'></input>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>选项A</view>
+      <input class='rightInput' value='{{ name }}' placeholder='请输入选项A' bindinput='nameChange'></input>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>选项B</view>
+      <input class='rightInput' value='{{ name }}' placeholder='请输入选项B' bindinput='nameChange'></input>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>选项C</view>
+      <input class='rightInput' value='{{ name }}' placeholder='请输入选项C' bindinput='nameChange'></input>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>选项D</view>
+      <input class='rightInput' value='{{ name }}' placeholder='请输入选项D' bindinput='nameChange'></input>
+    </view>
+    <view class='bottomBox'>
+      <radio-group bindchange="radioChange">
+        A<radio class='rmbRadio' value="1" checked="{{ true }}" />
+        B<radio class='rmbRadio' value="2" checked="{{ false }}" />
+        C<radio class='rmbRadio' value="3" checked="{{ false }}" />
+        D<radio class='rmbRadio' value="4" checked="{{ false }}" />
+      </radio-group>
+    </view>
+    <view class='fabu' bindtap='fabuBtn'>发布</view>
+</view> -->
+<view class='indexWrap'>
+  <button class='authMask' open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" lang="zh_CN" wx:if="{{ authMask }}"></button>
+  <div class='authMask' wx:if="{{ firstMask }}"></div>
+  <view class='homeTitle'>请选择当前进入IT小程序身份</view>
+  <view class='chooseOneWrap'>
+    <image class='chooseOne' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/chooseOne.png'></image>
+    <view class='homeBtn' bindtap="goHomePage">我要找兼职</view>
+  </view>
+  <view class='chooseTwoWrap'>
+    <image class='chooseTwo' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/chooseTwo.png'></image>
+    <view class='homeBtn' bindtap="goHomePage2">我要招人</view>
+    <view class='homeBtn2' bindtap="goHomePage3">经纪人</view>
+  </view>
+  <!-- 个人信息不授权提示 -->
+  <view class='noAuthWrap' wx:if="{{ noAuthWrap }}">
+    <view class='noAuthBox'>
+      <view class='titleNo'>警告</view>
+      <view class='content'>请授权个人信息，若不授权则无法使用小程序</view>
+      <view class='bottomBtn'>
+        <view class='leftBtn fl' bindtap='noAuto'>不授权</view>
+        <button class='rightBtn fr' open-type="getUserInfo" bindgetuserinfo="autoGetUserInfo" lang="zh_CN">授权</button>
+      </view>
+    </view>
+  </view>
+  <!-- 位置信息不授权提示 -->
+  <i-modal title="提示" visible="{{ noLocation }}" bind:ok="closeNoLocation"  ok-text="授权" show-cancel="{{ false }}">
+    <view>请授权位置信息，否则无法使用小程序</view>
+  </i-modal>
+  <!-- 有密码要求登录 -->
+  <!-- <i-modal title="提示" visible="{{ passwordMask }}" bind:ok="goPassword"  ok-text="登录" show-cancel="{{ false }}">
+    <view>请先登录小程序</view>
+  </i-modal> -->
+</view>

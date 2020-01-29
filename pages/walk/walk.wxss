@@ -1,0 +1,132 @@
+/* pages/walk/walk.wxss */
+page{
+  height: 100%;
+}
+.walkWrap{
+  position: relative;
+  height: 100%;
+}
+.walkWrap .walkBg{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom:  0;
+  right: 0;
+  z-index: -1;
+}
+.walkWrap .walkBox{
+  text-align: center;
+  padding-top: 110rpx;
+  height: 680rpx;
+}
+.walkWrap .walkBox .first{
+	font-family: PingFangSC-Medium;
+	font-size: 60rpx;
+	color: #fff;
+  position: absolute;
+  left: 0;
+  top: 185rpx;
+  width: 100%;
+}
+.walkWrap .walkBox .second{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #fff;
+  position: absolute;
+  left: 0;
+  top: 270rpx;
+  width: 100%;
+}
+.walkWrap .walkBox .walkNum{
+  width: 280rpx;
+  height: 260rpx;
+}
+.walkWrap .workBottom{
+  text-align: center;
+}
+.walkWrap .workBottom .rule{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+	color: #4c85fb;
+  padding-top: 30rpx;
+}
+.walkWrap .workBottom .rule .question2{
+  height: 26rpx;
+  width: 26rpx;
+  vertical-align: middle;
+}
+.walkWrap .workBottom .two{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+  padding: 35rpx 0 55rpx;
+}
+.walkWrap .workBottom .sportBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: #4c85fb;
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 0 auto;
+}
+.walkWrap .workBottom .yaoqing{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: #fff;
+	border-style: solid;
+	border-width: 2rpx;
+	border-image-source: linear-gradient(90deg, 
+		#2e70f9 0%, 
+		#6e9dfd 100%);
+	border-image-slice: 1;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #2e70f9;
+  margin: 30rpx auto 0;
+}
+.walkWrap .blueNum{
+  color: #2e70f9;
+}
+/* 分享图片 */
+
+.walkWrap .maskWrap{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.walkWrap .maskWrap .contentBox{
+	width: 648rpx;
+	height: 774rpx;
+  padding-top: 40rpx;
+	background-color: #ffffff;
+	border-radius: 16rpx;
+  margin: 100rpx auto 0;
+  text-align: center;
+}
+.walkWrap .maskWrap .contentBox .shareImg{
+	width: 568rpx;
+	height: 653rpx;
+	background-color: #fff;
+	box-shadow: 0px 0px 17px 9px 
+		rgba(0, 0, 0, 0.08);
+	border-radius: 16rpx;
+}
+.walkWrap .maskWrap .contentBox .text{
+	font-family: PingFangSC-Regular;
+	font-size: 36rpx;
+	line-height: 48rpx;
+	color: #2e70f9;
+  padding-top: 30rpx;
+}

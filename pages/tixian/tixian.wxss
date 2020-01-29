@@ -1,0 +1,72 @@
+/* pages/tixian/tixian.wxss */
+page{
+  height: 100%;
+}
+.tixianWrap{
+  height: 100%;
+  background: #f8f8f8;
+}
+.tixianWrap .topBox{
+  height: 120rpx;
+  line-height: 120rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333;
+  padding: 0 36rpx;
+  background: #fff;
+}
+.tixianWrap .topBox .wechat2{
+  height: 51rpx;
+  width: 51rpx;
+  vertical-align: middle;
+  margin: 0 15rpx;
+}
+.tixianWrap .middleBox{
+  margin-top: 20rpx;
+  background: #fff;
+  padding: 0 36rpx;
+}
+.tixianWrap .middleBox .title{
+  height: 86rpx;
+  line-height: 86rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #333;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.tixianWrap .middleBox .title text{
+	color: #999;
+}
+.tixianWrap .middleBox .bottomMoey{
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 90rpx 0;
+	font-family: PingFangSC-Regular;
+	font-size: 48rpx;
+	color: #333;
+  position: relative;
+}
+.tixianWrap .middleBox .bottomMoey .input{
+	font-family: PingFangSC-Regular;
+	font-size: 36rpx;
+  position: absolute;
+  left: 60rpx;
+  right: 0;
+  top: 80rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.tixianWrap .confirmBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+  margin: 160rpx auto 0;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+}

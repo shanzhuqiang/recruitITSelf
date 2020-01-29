@@ -1,0 +1,212 @@
+/* pages/goodJob/goodJob.wxss */
+.goodJobWrap{
+  padding-top: 165rpx;
+}
+/* 导航栏 */
+.goodJobWrap .headRowWrap{
+  height: 165rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+.goodJobWrap .headRowWrap .headRow{
+  height: 76rpx;
+  line-height: 76rpx;
+  padding: 0 30rpx 15rpx;
+}
+.goodJobWrap .headRowWrap .headRow .addressWrap{
+  float: left;
+  width: 110rpx;
+}
+.goodJobWrap .headRowWrap .headRow .addressWrap .address{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  color: #333;
+  width: 80rpx;
+  float: left;
+  text-align: right;
+  overflow: hidden;
+  /* text-overflow:ellipsis; */
+  white-space: nowrap;
+}
+.goodJobWrap .headRowWrap .headRow .addressWrap .xiala{
+  width: 15rpx;
+  height: 10rpx;
+  float: right;
+  margin: 35rpx 0 0 10rpx;
+}
+.goodJobWrap .headRowWrap .headRow .serachIptWrap{
+  /* margin-left: 120rpx; */
+  background-color: #f4f4f4;
+	border-radius: 2px;
+  height: 62rpx;
+  padding-top: 14rpx;
+  padding-left: 80rpx;
+  position: relative;
+}
+.goodJobWrap .headRowWrap .headRow .serachIptWrap .search{
+  width: 26rpx;
+  height: 26rpx;
+  position: absolute;
+  left: 37rpx;
+  top: 26rpx;
+}
+.goodJobWrap .headRowWrap .headRow .serachIptWrap .serachIpt{
+  font-size: 26rpx;
+}
+.goodJobWrap .headRowWrap .filterWrap{
+  line-height: 75rpx;
+  height: 75rpx;
+  padding: 0 60rpx;
+}
+.goodJobWrap .headRowWrap .filterWrap .colBox{
+  width: 33%;
+  float: left;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+}
+.goodJobWrap .headRowWrap .filterWrap .colBox.active{
+	color: #2e70f9;
+}
+.goodJobWrap .headRowWrap .filterWrap .colBox .arrowDown{
+  width: 15rpx;
+  height: 10rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.goodJobWrap .headRowWrap .filterWrap .colBox .filterImg{
+  width: 22rpx;
+  height: 22rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.goodJobWrap .filterMask{
+  position: fixed;
+  left: 0;
+  top: 165rpx;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4)
+}
+.goodJobWrap .filterMask .maskBody{
+  padding: 35rpx 38rpx;
+  background: #fff;
+}
+.goodJobWrap .filterMask .maskBody .title{
+	font-family: PingFangSC-Regular;
+	font-size: 27rpx;
+	color: #333;
+  padding-bottom: 13rpx;
+}
+.goodJobWrap .filterMask .maskBody .filterBtnWrap{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17rpx;
+}
+.goodJobWrap .filterMask .maskBody .filterBtnWrap .filterBtn{
+	width: 214rpx;
+	height: 62rpx;
+	line-height: 62rpx;
+  text-align: center;
+	background-color: #fff;
+	border-radius: 4rpx;
+	border: solid 1rpx #f0f0f0;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+}
+.goodJobWrap .filterMask .maskBody .filterBtnWrap .filterBtn.active{
+	color: #2e70f9;
+	background-color: #e8eeff;
+}
+.goodJobWrap .filterMask .maskBody .confirm{
+	width: 600rpx;
+	line-height: 88rpx;
+	height: 88rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 38rpx auto 0;
+}
+/* 最新岗位 */
+.goodJobWrap .itemWrap{
+  background: #fff;
+  border-bottom: 16rpx solid #f8f8f8;
+  padding: 50rpx 30rpx 20rpx;
+  position: relative;
+}
+.goodJobWrap .itemWrap .first{
+  position: relative;
+  height: 40rpx;
+}
+.goodJobWrap .itemWrap .first .title{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #333;
+  height: 34rpx;
+  line-height: 34rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  right: 170rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.goodJobWrap .itemWrap .first .money{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #f34848;
+  position: absolute;
+  top: 0rpx;
+  right: 0;
+}
+.goodJobWrap .itemWrap .second{
+	font-size: 24rpx;
+	color: #666;
+  padding: 15rpx 0 25rpx;
+}
+.goodJobWrap .itemWrap .second text{
+	font-family: PingFangSC-Regular;
+  padding: 0 20rpx;
+}
+.goodJobWrap .itemWrap .second .middleText{
+  border-left: 1rpx solid #666;
+  border-right: 1rpx solid #666;
+}
+.goodJobWrap .itemWrap .picBox{
+  height: 80rpx;
+  padding-top: 10rpx;
+}
+.goodJobWrap .itemWrap .picBox .left{
+  float: left;
+}
+.goodJobWrap .itemWrap .picBox .left .logoImg{
+  height: 80rpx;
+  width: 80rpx;
+}
+.goodJobWrap .itemWrap .picBox .right{
+  margin-left: 100rpx;
+}
+.goodJobWrap .itemWrap .picBox .right .logoName{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+	color: #333;
+}
+.goodJobWrap .itemWrap .picBox .right .logoType{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding-top: 10rpx;
+}

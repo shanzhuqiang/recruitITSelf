@@ -1,0 +1,126 @@
+/* pages/enterprise/enterprise.wxss */
+.enterpriseWrap{
+  padding-top: 100rpx;
+}
+.enterpriseWrap .filterWrap{
+  line-height: 100rpx;
+  height: 100rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.enterpriseWrap .filterWrap .colBox{
+  width: 33%;
+  float: left;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+}
+.enterpriseWrap .filterWrap .colBox.active{
+	color: #2e70f9;
+}
+.enterpriseWrap .filterWrap .colBox .arrowDown{
+  width: 15rpx;
+  height: 10rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.enterpriseWrap .itemBox{
+  height: 185rpx;
+  padding: 0 30rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+  padding-top: 37rpx;
+}
+.enterpriseWrap .itemBox .topRow{
+  height: 80rpx;
+}
+.enterpriseWrap .itemBox .topRow .enterpriseImg{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+.enterpriseWrap .itemBox .topRow .rightTitle{
+  margin-left: 100rpx;
+}
+.enterpriseWrap .itemBox .topRow .rightTitle .topTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.enterpriseWrap .itemBox .topRow .rightTitle .downNum{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #666;
+  padding-top: 20rpx;
+}
+.enterpriseWrap .itemBox .topRow .rightTitle .downNum .senondText{
+  margin-left: 23rpx;
+}
+.enterpriseWrap .itemBox .downRow{
+  height: 40rpx;
+  padding-top: 30rpx;
+}
+.enterpriseWrap .itemBox .downRow .tags{
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 18rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #7a91d5;
+  background: #eff3ff;
+  float: left;
+  margin-right: 20rpx;
+}
+.enterpriseWrap .filterMask{
+  position: fixed;
+  left: 0;
+  top: 100rpx;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4)
+}
+.enterpriseWrap .filterMask .maskBody{
+  padding: 35rpx 38rpx;
+  background: #fff;
+}
+.enterpriseWrap .filterMask .maskBody .title{
+	font-family: PingFangSC-Regular;
+	font-size: 27rpx;
+	color: #333;
+  padding-bottom: 13rpx;
+}
+.enterpriseWrap .filterMask .maskBody .filterBtnWrap{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17rpx;
+}
+.enterpriseWrap .filterMask .maskBody .filterBtnWrap .filterBtn{
+	width: 214rpx;
+	height: 62rpx;
+	line-height: 62rpx;
+  text-align: center;
+	background-color: #fff;
+	border-radius: 4rpx;
+	border: solid 1rpx #f0f0f0;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.enterpriseWrap .filterMask .maskBody .filterBtnWrap .filterBtn.active{
+	color: #2e70f9;
+	background-color: #e8eeff;
+}

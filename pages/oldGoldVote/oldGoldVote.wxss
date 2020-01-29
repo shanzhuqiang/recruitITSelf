@@ -1,0 +1,204 @@
+/* pages/goldVote/goldVote.wxss */
+page{
+  height: 100%;
+}
+.oldGoldVoteWrap{
+  background: #101845;
+  padding: 0 30rpx;
+  height: 100%;
+}
+.oldGoldVoteWrap .topTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #fff;
+  border-left: 6rpx solid #2e70f9;
+  padding-left: 12rpx;
+  position: relative;
+}
+.oldGoldVoteWrap .topTitle .question{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 15rpx;
+  vertical-align: middle;
+}
+.oldGoldVoteWrap .itemBox{
+  width: 620rpx;
+  height: 262rpx;
+  margin: 30rpx auto 0;
+  padding: 0 35rpx;
+  background: #fff;
+	border-style: solid;
+	border-image-source: linear-gradient(-24deg, #1849bb 0%, #4bb8f1 100%);
+	border-image-slice:1;
+  border-radius: 4rpx;
+  position: relative;
+}
+.oldGoldVoteWrap .itemBox .firstBox{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  position: relative;
+  padding-top: 39rpx;
+}
+.oldGoldVoteWrap .itemBox .firstBox .lastTime{
+	width: 235rpx;
+	height: 37rpx;
+	line-height: 37rpx;
+  position: absolute;
+  right: -30rpx;
+  top: 39rpx;
+	font-size: 22rpx;
+	color: #fff;
+  text-align: center;
+}
+.oldGoldVoteWrap .itemBox .firstBox .lastTime .huatiImg{
+  width: 235rpx;
+  height: 37rpx;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+.oldGoldVoteWrap .itemBox .firstBox .lastTime text{
+  position: relative;
+  z-index: 1;
+}
+.oldGoldVoteWrap .itemBox .secondBox{
+  height: 74rpx;
+  line-height: 74rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #ffffff;
+  padding-top: 50rpx;
+}
+.oldGoldVoteWrap .itemBox .secondBox .topText{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 20rpx 10rpx;
+}
+.oldGoldVoteWrap .itemBox .secondBox .topText .leftText{
+  text-align: left;
+  width: 50%;
+  float: left
+}
+.oldGoldVoteWrap .itemBox .secondBox .topText .leftText .yaMoeny{
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #2e70f9;
+  margin-left: 10rpx;
+}
+.oldGoldVoteWrap .itemBox .secondBox .topText .rightText .yaMoeny2{
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #ef4933;
+  margin-right: 10rpx;
+}
+.oldGoldVoteWrap .itemBox .secondBox .topText .rightText{
+  text-align: right;
+  width: 50%;
+  float: left
+}
+.oldGoldVoteWrap .itemBox .peopleNum{
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #999;
+  position: absolute;
+  right: 36rpx;
+  bottom: 20rpx;
+}
+.oldGoldVoteWrap .itemBox .bottomLeft{
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #999;
+  position: absolute;
+  left: 36rpx;
+  bottom: 20rpx;
+}
+.oldGoldVoteWrap .itemBox .bottomLeft.blue{
+  color: #2e70f9
+}
+.oldGoldVoteWrap .maskWrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.oldGoldVoteWrap .maskWrap .maskBox{
+  width: 650rpx;
+  margin: 120rpx auto 0;
+  background: #fff;
+	border-radius: 16rpx;
+}
+.oldGoldVoteWrap .maskWrap .maskBox .title{
+	font-family: PingFangSC-Medium;
+	font-size: 36rpx;
+	line-height: 36rpx;
+	color: #333;
+  padding: 50rpx 0;
+  text-align: center;
+}
+.oldGoldVoteWrap .maskWrap .maskBox .text{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 48rpx;
+	color: #333;
+  padding: 0 50rpx;
+}
+.oldGoldVoteWrap .maskWrap .maskBox .bottomBtnWrap {
+  padding-top: 50rpx;
+}
+.oldGoldVoteWrap .maskWrap .maskBox .bottomBtnWrap .bottomBtn{
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 36rpx;
+	color: #2e70f9;
+  border-top: 1rpx solid #d5d6d8;
+}
+.oldGoldVoteWrap .modealImg{
+  width: 110rpx;
+  height: 110rpx;
+}
+.oldGoldVoteWrap .jinbi{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	line-height: 36rpx;
+	color: #333;
+}
+.oldGoldVoteWrap .jinbi .num{
+	color: #2e70f9;
+}
+.oldGoldVoteWrap .progressWrap{
+	height: 22rpx;
+	background-color: #ef4933;
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 18rpx;
+  line-height: 22rpx;
+	color: #ffffff;
+  position: relative;
+}
+.oldGoldVoteWrap .progressWrap .leftPre{
+  position: absolute;
+  left: 10rpx;
+  top: 0;
+}
+.oldGoldVoteWrap .progressWrap .rightPre{
+  position: absolute;
+  right: 10rpx;
+  top: 0;
+}
+.oldGoldVoteWrap .progressWrap .progress{
+	height: 22rpx;
+	background-color: #4c85fb;
+	border-radius: 4rpx;
+}

@@ -1,0 +1,150 @@
+<!--pages/myTask/myTask.wxml-->
+<view class='myTaskWrap'>
+  <view class='topBox'>
+    <view class='item {{ tabType == "0" ? "active" : "" }}' bindtap='chooseType' data-id="0">
+      待确认
+    </view>
+    <view class='item {{ tabType == "1" ? "active" : "" }}' bindtap='chooseType' data-id="1">
+      已确认
+    </view>
+    <!-- <view class='item {{ tabType == "2" ? "active" : "" }}' bindtap='chooseType' data-id="2">
+      已完成
+    </view> -->
+  </view>
+  <view class='itemWrapBox'>
+    <view class='itemWrap' wx:for="{{ listData }}" wx:key="">
+      <view data-id="{{ item.project_id }}" bindtap='goDetail'>
+        <view class='itemTop'>
+          <view class='squareWrap' wx:if="{{ item.user_type == 3}}">
+            <view class='square squareJ'>经</view>
+            <view class='wordText'>{{ item.ha_name }}</view>
+          </view>
+          <view class='squareWrap' wx:if="{{ item.user_type == 2}}">
+            <view class='square squareQ'>企</view>
+            <view class='wordText'>{{ item.ha_name }}</view>
+          </view>
+          <!-- <view class='squareWrap'>
+            <view class='square squareQ'>企</view>
+            <view class='wordText'>{{ item.ha_name }}</view>
+          </view> -->
+          <view class='time'>{{ item.create_at }}</view>
+        </view>
+        <view class='itemBox'>
+          <!-- <view class='leftImg'>招标</view> -->
+          <view class='rightText'>
+            <view class='firstRow'>{{ item.name }}</view>
+            <view class='secondRow'>
+              <text>{{ item.city_name }}</text>
+              <text class='line'>|</text>
+              <text>{{ item.job_experience }}</text>
+              <text class='line'>|</text>
+              <text>{{ item.nature }}</text>
+            </view>
+            <view class='money'>{{ item.salaryStr }}</view>
+          </view>
+        </view>
+      </view>
+      <view class='bottomRow' wx:if="{{ tabType == '0' }}">
+        <view class='yoaqingBtn' bindtap='accept' data-id="{{ item.id }}">接受</view>
+      </view>
+      <view class='bottomRow' wx:if="{{ tabType == '1' }}">
+        <view class='yoaqingBtn' bindtap='goCheckTime' data-name="{{ item.name }}" data-company="{{ item.company_name }}" data-id="{{ item.id }}" data-hourstatus="{{ item.hour_status }}">工时核对</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='itemWrapBox' wx:if="{{ tabType === 'inprogress' }}">
+    <view class='itemWrap'>
+      <view class='itemTop'>
+        <view class='square squareJ'>经</view>
+        <view class='wordText'>来自经纪人周周周</view>
+        <view class='time'>9月15日 14:00</view>
+      </view>
+      <view class='itemBox'>
+        <view class='leftImg'>招标</view>
+        <view class='rightText'>
+          <view class='firstRow'>我需要APP设计</view>
+          <view class='secondRow'>
+            <text>杭州</text>
+            <text class='line'>|</text>
+            <text>3-5年</text>
+            <text class='line'>|</text>
+            <text>短期兼职</text>
+          </view>
+          <view class='threeRow'>最近活跃：9小时前</view>
+        </view>
+      </view>
+    </view>
+    <view class='itemWrap'>
+      <view class='itemTop'>
+        <view class='square squareQ'>企</view>
+        <view class='wordText'>来自经纪人周周周</view>
+        <view class='time'>9月15日 14:00</view>
+      </view>
+      <view class='itemBox'>
+        <view class='leftImg'>招标</view>
+        <view class='rightText'>
+          <view class='firstRow'>我需要APP设计</view>
+          <view class='secondRow'>
+            <text>杭州</text>
+            <text class='line'>|</text>
+            <text>3-5年</text>
+            <text class='line'>|</text>
+            <text>短期兼职</text>
+          </view>
+          <view class='threeRow'>最近活跃：9小时前</view>
+        </view>
+      </view>
+      <view class='bottomRow'>
+        <view class='yoaqingBtn' bindtap='goCheckTime'>工时核对</view>
+      </view>
+    </view>
+  </view>
+  <view class='itemWrapBox' wx:if="{{ tabType === 'finish' }}">
+    <view class='itemWrap'>
+      <view class='itemTop'>
+        <view class='square squareJ'>经</view>
+        <view class='wordText'>来自经纪人周周周</view>
+        <view class='time'>9月15日 14:00</view>
+      </view>
+      <view class='itemBox'>
+        <view class='leftImg'>招标</view>
+        <view class='rightText'>
+          <view class='firstRow'>我需要APP设计</view>
+          <view class='secondRow'>
+            <text>杭州</text>
+            <text class='line'>|</text>
+            <text>3-5年</text>
+            <text class='line'>|</text>
+            <text>短期兼职</text>
+          </view>
+          <view class='threeRow'>最近活跃：9小时前</view>
+        </view>
+      </view>
+    </view>
+    <view class='itemWrap'>
+      <view class='itemTop'>
+        <view class='square squareQ'>企</view>
+        <view class='wordText'>来自经纪人周周周</view>
+        <view class='time'>9月15日 14:00</view>
+      </view>
+      <view class='itemBox'>
+        <view class='leftImg'>招标</view>
+        <view class='rightText'>
+          <view class='firstRow'>我需要APP设计</view>
+          <view class='secondRow'>
+            <text>杭州</text>
+            <text class='line'>|</text>
+            <text>3-5年</text>
+            <text class='line'>|</text>
+            <text>短期兼职</text>
+          </view>
+          <view class='threeRow'>最近活跃：9小时前</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view wx:if="{{ listData.length == 0 }}" class='noDataWrap'>
+    <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+    <view class='textWord'>暂无信息</view>
+  </view>
+</view>

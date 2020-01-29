@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-modal": "../../dist/modal/index"
+  },
+  "navigationBarTitleText": "金币投票",
+  "navigationBarBackgroundColor": "#fff"
+}

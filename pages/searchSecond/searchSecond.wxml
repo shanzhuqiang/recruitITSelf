@@ -1,0 +1,117 @@
+<!--pages/searchFirst/searchFirst.wxml-->
+<view class='searchSecondWrap'>
+  <view class='headRow'>
+    <!-- <view class='addressWrap' bindtap="goChooseCity">
+      <text class='address'>{{ userInfo.city_name }}</text>
+      <image class='xiala' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/xiala.png'></image>
+    </view> -->
+    <view class='serachIptWrap'>
+      <image class='search' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/search.png'></image>
+      <input class='serachIpt' value='{{ keyWord }}' placeholder="你想搜什么？" bindconfirm="iptChange" bindinput='clearList' confirm-type="搜索"/>
+      <view class="searchBtn" bindtap="iptChange">搜索</view>
+    </view>
+  </view>
+  <!-- 搜索记录 -->
+  <view class='historyWrap' wx:if="{{ dataList.length === 0 }}">
+    <view class='historyBox'>
+      <view class='historyTitle'>搜索历史</view>
+      <view class='historyTag'>
+        <text wx:for="{{ historyArray }}" wx:key="" data-id="{{ item }}" bindtap='searchHistory'>{{ item }}</text>
+      </view>
+      <view class='historyTitle'>热门推荐</view>
+      <view class='historyTag'>
+        <text data-id="日结" bindtap='searchHistory'>日结</text>
+        <text data-id="周末兼职" bindtap='searchHistory'>周末兼职</text>
+        <text data-id="服务员" bindtap='searchHistory'>服务员</text>
+        <text data-id="家教" bindtap='searchHistory'>家教</text>
+        <text data-id="派单" bindtap='searchHistory'>派单</text>
+        <text style='margin-right: 0' data-id="客服" bindtap='searchHistory'>客服</text>
+      </view>
+    </view>
+  </view>
+  <!-- 搜索过滤 -->
+  <view class='filterWrap' wx:if="{{ dataList.length !== 0 }}">
+    <view class='colBox {{ region[0] !== "全部" ? "active" : "" }}'>
+      <picker mode="region" bindcancel="bindcancel" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <text>区域</text>
+        <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ region[0] !== "全部" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+      </picker>
+    </view>
+    <view class='{{ filterStr === "sort" ? "active" : "" }}' bindtap='openSort'>
+      默认排序
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ filterStr === "sort" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <view class='{{ filterStr === "filter" ? "active" : "" }}' bindtap='openFilter'>
+      筛选
+      <image class='filter' wx:if="{{imgSrc !== ''}}" src='{{ filterStr === "filter" ? imgSrc + "/filterTwo.png" : imgSrc + "/filter.png" }}'></image>
+    </view>
+  </view>
+  <!-- 简历列表 -->
+  <view class='typeTitleWrap'>
+    <view class='jinyingItemWrap' wx:for="{{ dataList }}" wx:key="" data-id="{{ item.id }}" bindtap='goResumeDetail'>
+      <view class='firstRow'>
+        <view class='leftImgBox'>
+          <image class='leftImg' src='{{ item.avatar }}'></image>
+        </view>
+        <view class='rightBox'>
+          <view class='firstTitle'>
+            <text class='nameText'>{{ item.name }}</text>
+            <text class='typeName'>{{ item.job_name }}</text>
+          </view>
+          <view class='secondTags'>
+            <text style='padding-left: 0'>{{ item.work_yeas }}年</text>
+            <text class='middleTag'>{{ item.education_name }}</text>
+            <text>{{ item.salaryStr }}</text>
+          </view>
+          <view class='thirdTags'>
+            <text wx:if="{{ item.label1 }}">{{ item.label1 }}</text>
+            <text wx:if="{{ item.label2 }}">{{ item.label2 }}</text>
+            <text wx:if="{{ item.label3 }}">{{ item.label3 }}</text>
+            <!-- <text>{{ item.label_4 }}</text> -->
+          </view>
+        </view>
+      </view>
+      <view class='contentWrap'>
+        <view class='content'>
+          {{ item.introduction || "暂无信息" }}
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 过滤弹出 -->
+  <view class='makWrap' wx:if="{{ filterStr !== '' && maskOn }}">
+    <view class='sortBox' wx:if="{{ filterStr === 'sort' }}">
+      <view class='{{ sortVal == 5 ? "active" : "" }}' bindtap='chooseSort' data-id="5">智能排序</view>
+      <view class='{{ sortVal == 1 ? "active" : "" }}' bindtap='chooseSort' data-id="1">时间排序</view>
+    </view>
+    <view class='filterBox' wx:if="{{ filterStr === 'filter' }}">
+      <view class='filterScroll'>
+        <!-- <view>
+          <view class='titleRow'>工作区域</view>
+          <view class='tagRow' wx:for="{{ quyuData }}" wx:key="">
+            <view class='tagBtn {{ quyuChoose === item.district_code ? "active" : ""}}' style='{{item.district_name === null ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id='{{ item.district_code }}' bindtap='quyuChooseFilter' wx:key="">{{ item.district_name }}</view>
+          </view>
+        </view> -->
+        <view>
+          <view class='titleRow'>工作经验</view>
+          <view class='tagRow' wx:for="{{ jingyanData }}" wx:key="">
+            <view class='tagBtn  {{ jingyanChoose == item.id ? "active" : ""}}' wx:for="{{ item }}" data-id="{{ item.id }}" bindtap='jingyanChooseFilter' wx:key="">{{ item.name }}</view>
+          </view>
+        </view>
+        <view>
+          <view class='titleRow'>学历要求</view>
+          <view class='tagRow' wx:for="{{ xueliData }}" wx:key="">
+            <view class='tagBtn  {{ xueliChoose == item.id ? "active" : ""}}' wx:for="{{ item }}" data-id="{{ item.id }}" bindtap='xueliChooseFilter' wx:key="">{{ item.name }}</view>
+          </view>
+        </view>
+        <view>
+          <view class='titleRow'>薪资区间（元）</view>
+          <view class='tagRow' wx:for="{{ xinziData }}" wx:key="">
+            <view class='tagBtn  {{ xinziChoose == item.id ? "active" : ""}}' style='{{item.name == null ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id="{{ item.id }}" bindtap='xinziChooseFilter' wx:key="">{{ item.name }}</view>
+          </view>
+        </view>
+      </view>
+      <view class='bottomBtn' bindtap='gangweiConfirm'>确定</view>
+    </view>
+  </view>
+</view>

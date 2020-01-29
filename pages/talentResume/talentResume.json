@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-load-more": "../../dist/load-more/index"
+  },
+  "navigationBarTitleText": "人才简历",
+  "navigationBarBackgroundColor": "#fff"
+}

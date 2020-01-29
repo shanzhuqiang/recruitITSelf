@@ -1,0 +1,282 @@
+/* pages/searchFirst/searchFirst.wxss */
+
+/* 导航栏 */
+.searchSecondWrap .headRow{
+  height: 76rpx;
+  line-height: 76rpx;
+  padding: 0 30rpx 15rpx;
+}
+.searchSecondWrap .headRow .addressWrap{
+  float: left;
+  width: 110rpx;
+}
+.searchSecondWrap .headRow .addressWrap .address{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  color: #333;
+  width: 80rpx;
+  text-align: right;
+  float: left;
+  overflow: hidden;
+  /* text-overflow:ellipsis; */
+  white-space: nowrap;
+}
+.searchSecondWrap .headRow .addressWrap .xiala{
+  width: 15rpx;
+  height: 10rpx;
+  float: right;
+  margin: 35rpx 0 0 10rpx;
+}
+.searchSecondWrap .headRow .serachIptWrap{
+  /* margin-left: 120rpx; */
+  background-color: #f4f4f4;
+	border-radius: 2px;
+  height: 62rpx;
+  padding-top: 14rpx;
+  padding-left: 80rpx;
+  position: relative;
+}
+.searchSecondWrap .headRow .serachIptWrap .search{
+  width: 26rpx;
+  height: 26rpx;
+  position: absolute;
+  left: 37rpx;
+  top: 26rpx;
+}
+.searchSecondWrap .headRow .serachIptWrap .serachIpt{
+  font-size: 26rpx;
+}
+.searchSecondWrap .headRow .serachIptWrap .searchBtn{
+  position: absolute;
+  font-size: 26rpx;
+  right: 10rpx;
+  top: 0;
+  z-index: 9;
+  padding: 0 20rpx;
+}
+.searchSecondWrap .historyWrap .historyBox{
+  padding: 0 30rpx;
+}
+.searchSecondWrap .historyWrap .historyBox .historyTitle{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  padding:38rpx 0 30rpx;
+	color: #333;
+}
+.searchSecondWrap .historyWrap .historyBox .historyTag text{
+  display: inline-block;
+	height: 62rpx;
+	line-height: 62rpx;
+  text-align: center;
+	border-radius: 4rpx;
+	border: solid 1rpx #f0f0f0;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  padding: 0 18rpx;
+  margin-right: 16rpx;
+}
+.searchSecondWrap .filterWrap{
+  height: 89rpx;
+  line-height: 89rpx;
+  border-bottom: 1rpx solid #eee;
+  padding: 0 100rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+  display: flex;
+}
+.searchSecondWrap .filterWrap > view{
+  width: 33%;
+}
+.searchSecondWrap .filterWrap > view.active{
+	color: #2e70f9;
+}
+.searchSecondWrap .filterWrap > view .arrowDown{
+  width: 15rpx;
+  height: 10rpx;
+  vertical-align: middle;
+}
+.searchSecondWrap .filterWrap > view .filter{
+  width: 22rpx;
+  height: 22rpx;
+  vertical-align: middle;
+}
+/* 排序 */
+.searchSecondWrap .makWrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 180rpx;
+  background: rgba(0, 0, 0, 0.4)
+}
+.searchSecondWrap .makWrap .sortBox > view {
+	height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+	background-color: #ffffff;
+  border-bottom: 1rpx solid #f0f0f0;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+}
+.searchSecondWrap .makWrap .sortBox > view.active {
+	color: #2e70f9;
+}
+/* 过滤 */
+.searchSecondWrap .makWrap .filterBox{
+  height: 100%;
+  position: relative;
+}
+.searchSecondWrap .makWrap .filterBox .filterScroll{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 88rpx;
+  top: 0;
+  background: #fff;
+  padding: 0 30rpx 20rpx;
+  overflow: auto;
+}
+.searchSecondWrap .makWrap .filterBox .titleRow{
+	font-family: PingFangSC-Regular;
+	font-size: 27rpx;
+  height: 27rpx;
+  line-height: 27rpx;
+	color: #333;
+  padding: 30rpx 0 13rpx;
+}
+.searchSecondWrap .makWrap .filterBox .tagRow{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17rpx;
+}
+.searchSecondWrap .makWrap .filterBox .tagRow > view{
+  height: 60rpx;
+  width: 280rpx;
+	border: solid 1rpx #f0f0f0;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  text-align: center;
+}
+.searchSecondWrap .makWrap .filterBox .tagRow .tagBtn{
+	width: 214rpx;
+	height: 62rpx;
+	line-height: 62rpx;
+  text-align: center;
+	background-color: #fff;
+	border-radius: 4rpx;
+	border: solid 1rpx #f0f0f0;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.searchSecondWrap .makWrap .filterBox .tagRow .tagBtn.active{
+	color: #2e70f9;
+	background-color: #e8eeff;
+}
+.searchSecondWrap .makWrap .filterBox  .bottomBtn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background: #4c85fb;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #fff;
+}
+/* 精英简历列表 */
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap{
+  padding: 0 30rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow{
+  height: 130rpx;
+  padding: 40rpx 0 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .leftImgBox{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .leftImgBox .leftImg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .rightBox{
+  margin-left: 110rpx;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .rightBox .firstTitle .nameText{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+	color: #333;
+  max-width: 200rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .rightBox .firstTitle .typeName{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+	color: #333;
+  margin-left: 24rpx;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .rightBox .secondTags{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+  padding-top: 20rpx;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .rightBox .secondTags text{
+  padding: 0 15rpx;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .rightBox .secondTags text.middleTag{
+  border-left: 1rpx solid #999;
+  border-right: 1rpx solid #999;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .firstRow .rightBox .thirdTags text{
+	height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+	background-color: #e8eeff;
+	border-radius: 2rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	letter-spacing: 1px;
+	color: #7a91d5;
+  padding: 0 13rpx;
+  margin-right: 20rpx;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .contentWrap{
+  padding: 33rpx 0 40rpx;
+}
+.searchSecondWrap .typeTitleWrap .jinyingItemWrap .contentWrap .content{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

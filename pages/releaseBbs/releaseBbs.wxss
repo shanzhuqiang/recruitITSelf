@@ -1,0 +1,91 @@
+/* pages/releaseBbs/releaseBbs.wxss */
+.releaseBbsWrap .topBoxWrap{
+  padding: 30rpx;
+  border-bottom: 20rpx solid #f8f8f8;
+}
+.releaseBbsWrap .topBoxWrap .topBox{
+	border-radius: 4rpx;
+	border: solid 1rpx #cccccc;
+  padding: 20rpx;
+}
+.releaseBbsWrap .topBoxWrap .topBox .inputDiv{
+	font-size: 24rpx;
+	font-family: PingFangSC-Regular;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.releaseBbsWrap .topBoxWrap .topBox .textareaDiv{
+	font-size: 24rpx;
+	font-family: PingFangSC-Regular;
+  height: 200rpx;
+  width: 100%;
+}
+.releaseBbsWrap .addBox{
+  width: 136rpx;
+  height: 136rpx;
+	background-color: #f1f1f1;
+	border-radius: 4rpx;
+  position: relative;
+  display: inline-block;
+}
+.releaseBbsWrap .addBox.addBox2{
+	background-color: #fff;
+  margin-left: 30rpx;
+}
+.releaseBbsWrap .addBox.addBox2 .imgBox{
+  width: 100%;
+  height: 100%;
+}
+.releaseBbsWrap .addBox .camera{
+  width: 69rpx;
+  height: 51rpx;
+  position: absolute;
+  top: 26rpx;
+  left: 34rpx;
+  z-index: 0;
+}
+.releaseBbsWrap .addBox .addText{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+  position: absolute;
+  left: 47rpx;
+  top: 91rpx;
+}
+.releaseBbsWrap .itemRowWrap{
+  padding: 0 30rpx;
+}
+.releaseBbsWrap .itemRowWrap .itemRow{
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.releaseBbsWrap .itemRowWrap .itemRow .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+  float: left;
+  width: 140rpx;
+}
+.releaseBbsWrap .itemRowWrap .itemRow .rightInput{
+  margin-left: 150rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #999;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.releaseBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  text-align: center;
+  margin: 100rpx auto 0;
+}

@@ -1,0 +1,46 @@
+<!--pages/postDetail/postDetail.wxml-->
+<view class='projectDetailWrap2'>
+  <view class='topBox'>
+    <!-- <view class='box'>招标</view> -->
+    <view class='first'>
+      <view class='leftTitle'>{{ job_info.name }}</view>
+      <view class='rightTitle'>{{ job_info.salaryStr }}</view>
+    </view>
+    <view class='second'>
+      <text>{{ job_info.city_name + '·' + job_info.district_name }}</text>
+      <text class='line'>|</text>
+      <text class='middle'>{{ job_info.job_experience }}</text>
+      <text class='line'>|</text>
+      <text>{{ job_info.nature }}</text>
+    </view>
+  </view>
+  <view class='detailBox'>
+    <view class='titleOne'>岗位详情</view>
+    <view class='titleSmall'>岗位职责</view>
+    <textarea class='contentRow' value='{{ job_info.instruction }}' disabled auto-height></textarea>
+    <view class='titleSmall'>任职要求</view>
+    <textarea class='contentRow' value='{{ job_info.requirement }}' disabled auto-height></textarea>
+  </view>
+  <view class='detailBox'>
+    <view class='titleOne'>招聘数据</view>
+    <view class='bottomRow'>
+      <view class='itemBox'>
+        <view class='first'>{{ job_info.apply_count }}</view>
+        <view class='second'>待录取</view>
+      </view>
+      <view class='itemBox middle'>
+        <view class='first'>{{ job_info.calc_count }}</view>
+        <view class='second'>待结算</view>
+      </view>
+      <view class='itemBox'>
+        <view class='first'>{{ job_info.finish_count }}</view>
+        <view class='second'>已完成</view>
+      </view>
+    </view>
+  </view>
+  <view class='bottomBtnWrap'>
+    <view class='btn {{ job_info.operate_status == 3 ? "disabled" : "" }}' bindtap='changeStatus2' data-id="3">结束</view>
+    <!-- <view class='btn {{ job_info.operate_status == 2 ? "disabled" : "" }}' bindtap='changeStatus2' data-id="2">暂停</view> -->
+    <view class='btn {{ job_info.operate_status == 1 ? "disabled" : "" }}' bindtap='changeStatus3' data-id="1">重发</view>
+  </view>
+</view>

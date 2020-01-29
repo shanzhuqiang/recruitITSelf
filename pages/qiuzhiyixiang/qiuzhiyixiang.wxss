@@ -1,0 +1,66 @@
+/* pages/qiuzhiyixiang/qiuzhiyixiang.wxss */
+.qiuzhiyixiangWrap{
+  padding: 50rpx 30rpx 0;
+}
+.qiuzhiyixiangWrap .title{
+	font-family: PingFangSC-Medium;
+	font-size: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+	color: #333;
+  padding-bottom: 15rpx;
+}
+.qiuzhiyixiangWrap .des{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+	color: #666;
+}
+.qiuzhiyixiangWrap .listWrap{
+  padding: 65rpx 15rpx 84rpx;
+}
+.qiuzhiyixiangWrap .listWrap .listItem{
+  position: relative;
+  border-bottom: 1rpx solid #ddd;
+}
+.qiuzhiyixiangWrap .listWrap .listItem .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  height: 120rpx;
+  line-height: 120rpx;
+  width: 150rpx;
+  float: left;
+}
+.qiuzhiyixiangWrap .listWrap .listItem .iptBox{
+  height: 120rpx;
+  line-height: 120rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  margin-left: 160rpx;
+  text-align: right;
+  width: 450rpx;
+}
+.qiuzhiyixiangWrap .listWrap .listItem .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 50rpx;
+}
+.qiuzhiyixiangWrap .finish{
+	width: 600rpx;
+	height: 90rpx;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4px;
+  margin: 0 auto;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+}

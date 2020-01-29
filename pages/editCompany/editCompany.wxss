@@ -1,0 +1,98 @@
+/* pages/editCompany/editCompany.wxss */
+.editCompanyWrap{
+  padding-bottom: 80rpx;
+}
+.editCompanyWrap .hallRowWrap{
+  padding: 0 30rpx;
+}
+.editCompanyWrap .hallRow{
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #ddd;
+  position:  relative;
+}
+.editCompanyWrap .hallRow .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  height: 120rpx;
+  line-height: 120rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.editCompanyWrap .hallRow .rightInput{
+  float: right;
+	font-size: 30rpx;
+  margin-right: 50rpx;
+  text-align: right;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #333
+}
+.editCompanyWrap .hallRow .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 46rpx;
+}
+.editCompanyWrap .textareaWrap{
+  padding: 20rpx 18rpx;
+  border-bottom: 1rpx solid #ddd;
+  height: 180rpx;
+}
+.editCompanyWrap .textareaWrap .textareaBox{
+  height: 100%;
+  width: 100%;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+}
+.editCompanyWrap .addBoxWrap{
+  height: 136rpx;
+}
+.editCompanyWrap .addBox{
+  width: 136rpx;
+  height: 136rpx;
+	background-color: #f1f1f1;
+	border-radius: 4rpx;
+  position: relative;
+  float: left;
+}
+.editCompanyWrap .addBox .camera{
+  width: 69rpx;
+  height: 51rpx;
+  position: absolute;
+  top: 26rpx;
+  left: 34rpx;
+  z-index: 0;
+}
+.editCompanyWrap .addBox .addText{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+  position: absolute;
+  left: 47rpx;
+  top: 91rpx;
+}
+.editCompanyWrap .addBox.addBox2{
+	background-color: #fff;
+  margin-left: 30rpx;
+}
+.editCompanyWrap .addBox.addBox2 .imgBox{
+  width: 100%;
+  height: 100%;
+}
+.editCompanyWrap .saveBtn{
+	width: 600rpx;
+	height: 90rpx;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+  text-align: center;
+  line-height: 90rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 80rpx auto 0;
+}

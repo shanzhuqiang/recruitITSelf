@@ -1,0 +1,374 @@
+/* pages/postDetail/postDetail.wxss */
+.postDetailWrap{
+  height: 100%;
+}
+.postDetailWrap .showCompanyListWrap{
+	width:50vw;
+	height: 100vh;
+	background:#fff;
+  position: relative;
+}
+.postDetailWrap .showCompanyListWrap .comSearchBox{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  position: relative;
+}
+.postDetailWrap .showCompanyListWrap .comSearchBox .ipt{
+  position: absolute;
+  left: 20rpx;
+  right: 0;
+  height: 80rpx;
+  line-height: 80rpx;
+	font-size: 28rpx;
+	font-family: PingFangSC-Regular;
+}
+.postDetailWrap .showCompanyListWrap .companyItem{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.postDetailWrap .topBox{
+  border-bottom: 16rpx solid #f8f8f8;
+  padding: 0 30rpx;
+}
+.postDetailWrap .topBox .first{
+  position: relative;
+}
+.postDetailWrap .topBox .first .leftTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #333;
+  padding-right: 150rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.postDetailWrap .topBox .first .rightTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 28rpx;
+	color: #f34848;
+  position: absolute;
+  right: 0rpx;
+  top: 0;
+}
+.postDetailWrap .topBox .first .rightTitle2{
+	font-family: PingFangSC-Medium;
+	font-size: 28rpx;
+	color: #fdad06;
+  position: absolute;
+  top: 50rpx;
+  right: 0;
+}
+.postDetailWrap .topBox .second {
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding-top: 25rpx;
+}
+.postDetailWrap .topBox .second .line{
+  margin: 0 10rpx;
+}
+.postDetailWrap .topBox .three{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	letter-spacing: 1rpx;
+	color: #7a91d5;
+  padding: 25rpx 0 40rpx;
+}
+.postDetailWrap .topBox .three text{
+	height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  padding: 0 20rpx;
+	background-color: #e8eeff;
+	border-radius: 2px;
+  margin-right: 35rpx;
+}
+.postDetailWrap .topBox .fourBox{
+  border-top: 1rpx solid #eee;
+  height: 128rpx;
+}
+.postDetailWrap .topBox .fourBox .leftImg{
+  float: left;
+  width: 58rpx;
+  height: 128rpx;
+  line-height: 128rpx;
+}
+.postDetailWrap .topBox .fourBox .leftImg .touxiang{
+  width: 58rpx;
+  height: 58rpx;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+.postDetailWrap .topBox .fourBox .rightBox{
+  margin-left: 80rpx;
+  padding-top: 30rpx;
+}
+.postDetailWrap .topBox .fourBox .rightBox .firstRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333;
+}
+.postDetailWrap .topBox .fourBox .rightBox .firstRow text{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  margin-left: 20rpx;
+}
+.postDetailWrap .topBox .fourBox .rightBox .secondRow{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+  padding-top: 10rpx;
+}
+/* 岗位详情 */
+.postDetailWrap .detailBox{
+  padding: 0 30rpx 30rpx;
+  border-bottom: 16rpx solid #faf8f8;
+}
+.postDetailWrap .detailBox .titleOne{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  padding-top: 35rpx;
+}
+.postDetailWrap .detailBox .titleSmall{
+	font-family: PingFangSC-Medium;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+	color: #333;
+  padding: 30rpx 0 15rpx;
+}
+.postDetailWrap .detailBox .contentRow{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #666;
+  width: 100%;
+}
+/* 公司 */
+.postDetailWrap .companyBox{
+  padding: 40rpx 30rpx 0;
+}
+.postDetailWrap .companyBox .leftImgBox{
+  float: left;
+  width: 82rpx;
+  height: 82rpx;
+  margin-left: 10rpx;
+}
+.postDetailWrap .companyBox .leftImgBox .logoImg{
+  width: 82rpx;
+  height: 82rpx;
+}
+.postDetailWrap .companyBox .rightImgBox{
+  margin-left: 132rpx;
+  padding-bottom: 40rpx;
+}
+.postDetailWrap .companyBox .rightImgBox .rowOne{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+}
+.postDetailWrap .companyBox .rightImgBox .rowTwo{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  line-height: 26rpx;
+	color: #666;
+  padding-top: 20rpx;
+}
+.postDetailWrap .companyBox .rightImgBox .rowTwo .line{
+  margin: 0 10rpx;
+}
+.postDetailWrap .companyBox .rightImgBox  .rowThree{
+	height: 28rpx;
+  line-height: 28rpx;
+	background: #2e70f9;
+	border-radius: 14rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #fff;
+  display: inline-block;
+  padding-right: 20rpx;
+}
+.postDetailWrap .companyBox .rightImgBox  .rowThree .okImg{
+  width: 15rpx;
+  height: 14rpx;
+  vertical-align: middle;
+  margin: -1rpx 10rpx 0;
+}
+.postDetailWrap .companyBox .bottomAddressBox{
+  border-top: 1rpx solid #eee;
+}
+.postDetailWrap .companyBox .bottomAddressBox .addressTest{
+  position: relative;
+}
+.postDetailWrap .companyBox .bottomAddressBox .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 30rpx;
+}
+.postDetailWrap .companyBox .bottomAddressBox .titleAddress{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  padding: 30rpx 0 37rpx;
+}
+.postDetailWrap .companyBox .bottomAddressBox .firstText{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+}
+.postDetailWrap .companyBox .bottomAddressBox .firstText .local{
+  width: 22rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.postDetailWrap .companyBox .bottomAddressBox .secondText{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding: 22rpx 0 40rpx;
+}
+.postDetailWrap .bottomBtn{
+  border-top: 16rpx solid #f8f8f8;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.postDetailWrap .bottomBtn .leftBtn{
+  width: 140rpx;
+  text-align: center;
+  float: left;
+  height: 100rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+}
+.postDetailWrap .bottomBtn .leftBtn .share{
+  width: 28rpx;
+  height: 28rpx;
+}
+.postDetailWrap .bottomBtn .rightBtn{
+  text-align: center;
+  background: #4c85fb;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.postDetailWrap .bottomBtn .rightBtn.none{
+  background: #ccc;
+  color: #fff;
+}
+.postDetailWrap .shareMask{
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4)
+}
+.postDetailWrap .shareMask .bottomBox{
+  height: 425rpx;
+  background: #f2f2f2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.postDetailWrap .shareMask .bottomBox .firstBox{
+  height: 327rpx;
+}
+.postDetailWrap .shareMask .bottomBox .firstBox .shareChooseWord{
+  color: #797979;
+  text-align: center;
+  font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  padding-top: 45rpx;
+	font-family: PingFangSC-Regular;
+}
+.postDetailWrap .shareMask .bottomBox .firstBox .firstBoxWrap{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 130rpx;
+  color: #333;
+  font-size: 24rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+  padding-top: 30rpx;
+}
+.postDetailWrap .shareMask .bottomBox .firstBox .firstBoxWrap .circle{
+  width: 124rpx;
+  height: 124rpx;
+  border-radius: 50%;
+}
+.postDetailWrap .shareMask .bottomBox .firstBox .firstBoxWrap .circle .shareImg{
+  width: 100%;
+  height: 100%;
+}
+.postDetailWrap .shareMask .bottomBox .firstBox .firstBoxWrap .circleWord{
+  padding-top: 14rpx;
+}
+.postDetailWrap .shareMask .bottomBox .secondBox{
+  height: 98rpx;
+  line-height: 98rpx;
+  background: #fff;
+  text-align: center;
+  color: #333;
+  font-size: 32rpx;
+	font-family: PingFangSC-Regular;
+}
+.postDetailWrap .maskWrap{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.postDetailWrap .maskWrap .contentBox{
+	width: 648rpx;
+	height: 774rpx;
+  padding-top: 40rpx;
+	background-color: #ffffff;
+	border-radius: 16rpx;
+  margin: 100rpx auto 0;
+  text-align: center;
+}
+.postDetailWrap .maskWrap .contentBox .shareImg{
+	width: 568rpx;
+	height: 653rpx;
+	background-color: #fff;
+	box-shadow: 0px 0px 17px 9px 
+		rgba(0, 0, 0, 0.08);
+	border-radius: 16rpx;
+}
+.postDetailWrap .maskWrap .contentBox .text{
+	font-family: PingFangSC-Regular;
+	font-size: 36rpx;
+	line-height: 48rpx;
+	color: #2e70f9;
+  padding-top: 30rpx;
+}

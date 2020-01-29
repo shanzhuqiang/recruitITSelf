@@ -1,0 +1,195 @@
+/* pages/enterpriseInfo/enterpriseInfo.wxss */
+.enterpriseInfoWrap{
+}
+.enterpriseInfoWrap .topInfo{
+  padding: 34rpx 30rpx 0;
+  height: 176rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.enterpriseInfoWrap .topInfo .logoImg{
+  width: 82rpx;
+  height: 82rpx;
+  float: left;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight{
+  margin-left: 102rpx;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight .topTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  line-height: 32rpx;
+  height: 32rpx;
+	color: #333;
+  position: relative;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  padding-right: 90rpx;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight .guanzhuGag{
+	width: 87rpx;
+	line-height: 38rpx;
+	height: 38rpx;
+  text-align: center;
+	border-radius: 4rpx;
+	border: solid 1px #2e70f9;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #2e70f9;
+  position: absolute;
+  right: 30rpx;
+  top: 29rpx;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight .bottomTag{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  line-height: 26rpx;
+  height: 26rpx;
+	color: #666;
+  padding: 20rpx 0 24rpx;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight .bottomTag text{
+  padding: 0 15rpx;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight .bottomTag .borderLeft{
+  border-left: 1rpx solid #666;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight .bottomTag .borderBoth{
+  border-left: 1rpx solid #666;
+  border-right: 1rpx solid #666;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight .okBox{
+	width: 84rpx;
+	height: 30rpx;
+	line-height: 30rpx;
+	background-color: #2e70f9;
+	border-radius: 14rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #fff;
+  text-align: center;
+  position: relative;
+  padding-left: 20rpx;
+}
+.enterpriseInfoWrap .topInfo .topInfoRight .okBox .okImg{
+  width: 15rpx;
+  height: 14rpx;
+  position: absolute;
+  left: 8rpx;
+  top: 8rpx;
+}
+.enterpriseInfoWrap .chooseBtnWrap{
+ height: 106rpx;
+ line-height: 106rpx;
+ border-bottom: 1rpx solid #f0f0f0;
+ padding: 0 60rpx;
+}
+.enterpriseInfoWrap .chooseBtnWrap .btnWrod{
+  width: 33%;
+  float: left;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #666;
+  position: relative;
+}
+.enterpriseInfoWrap .chooseBtnWrap .btnWrod.active{
+	color: #333333;
+}
+.enterpriseInfoWrap .chooseBtnWrap .btnWrod.active::after{
+  content: "";
+  position: absolute;
+	width: 40rpx;
+	height: 7rpx;
+  background: #1a49d2;
+  left: 85rpx;
+  bottom: 0rpx
+}
+.enterpriseInfoWrap .gongsiWrap{
+  padding: 0 30rpx;
+}
+.enterpriseInfoWrap .gongsiWrap .title{
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+	color: #333;
+  padding: 50rpx 0;
+}
+.enterpriseInfoWrap .gongsiWrap .addressWrap .addressOne{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+}
+.enterpriseInfoWrap .gongsiWrap .addressWrap .addressOne .localImg{
+  width: 22rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}
+.enterpriseInfoWrap .gongsiWrap .addressWrap .addressTwo{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding-top: 22rpx;
+}
+.enterpriseInfoWrap .gongsiWrap .xianqgingImgWrap{
+  width: 690rpx;
+  height: 390rpx;
+  padding-bottom: 30rpx;
+}
+.enterpriseInfoWrap .gongsiWrap .xianqgingImg{
+  width: 690rpx;
+  height: 390rpx;
+}
+.enterpriseInfoWrap .gongsiWrap .content{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #666;
+  padding-bottom: 120rpx;
+}
+/* 在找职位 */
+.enterpriseInfoWrap .zhiweiWrap .zhiweiItemWrap{
+  padding: 0 30rpx;
+}
+.enterpriseInfoWrap .zhiweiWrap .zhiweiItemWrap .zhiweiItem{
+  height: 155rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  position: relative;
+}
+.enterpriseInfoWrap .zhiweiWrap .zhiweiItemWrap .zhiweiItem .title{
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+	color: #333;
+  padding: 43rpx 0 20rpx;
+}
+.enterpriseInfoWrap .zhiweiWrap .zhiweiItemWrap .zhiweiItem .tagWrap{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+}
+.enterpriseInfoWrap .zhiweiWrap .zhiweiItemWrap .zhiweiItem .tagWrap text{
+  padding: 0 15rpx;
+}
+.enterpriseInfoWrap .zhiweiWrap .zhiweiItemWrap .zhiweiItem .tagWrap text.middleTag{
+  border-left: 1rpx solid #999;
+  border-right: 1rpx solid #999;
+}
+.enterpriseInfoWrap .zhiweiWrap .zhiweiItemWrap .zhiweiItem .money{
+  position: absolute;
+  right: 0;
+  top: 36rpx;
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+	color: #f34848;
+}
+.enterpriseInfoWrap .zhiweiWrap .zhiweiItemWrap .zhiweiItem .time{
+  position: absolute;
+  right: 0;
+  top: 88rpx;
+	font-family: PingFangSC-Medium;
+	font-size: 22rpx;
+	color: #ccc;
+}

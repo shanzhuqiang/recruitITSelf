@@ -1,0 +1,20 @@
+<view class='indexWrap'>
+  <view  class='authMask' wx:if="{{ authMask }}">
+    <button class='btnUser' open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" lang="zh_CN">点击授权</button>
+  </view>
+  <div class='authMask2' wx:if="{{ firstMask }}"></div>
+  <view class='homeTitle'>请选择当前进入IT小程序身份</view>
+  <view class='chooseOneWrap'>
+    <image class='chooseOne' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/chooseOne.png'></image>
+    <view class='homeBtn' bindtap="goHomePage">我要找兼职</view>
+  </view>
+  <view class='chooseTwoWrap'>
+    <image class='chooseTwo' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/chooseTwo.png'></image>
+    <view class='homeBtn' bindtap="goHomePage2">我要招人</view>
+    <view class='homeBtn2' bindtap="goHomePage3">经纪人</view>
+  </view>
+  <!-- 位置信息不授权提示 -->
+  <i-modal title="提示" visible="{{ noLocation }}" bind:ok="closeNoLocation"  ok-text="授权" show-cancel="{{ false }}">
+    <view>请授权位置信息，否则无法使用小程序</view>
+  </i-modal>
+</view>

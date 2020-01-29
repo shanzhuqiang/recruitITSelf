@@ -1,0 +1,161 @@
+/* pages/postDetail/postDetail.wxss */
+page{
+  height: 100%;
+}
+.projectDetailWrap2{
+  height: 100%;
+  background: #faf8f8;
+  position: relative;
+  padding-bottom: 100rpx;
+}
+.projectDetailWrap2 .topBox{
+  border-bottom: 16rpx solid #f8f8f8;
+  padding: 20rpx 30rpx;
+  position: relative;
+  background: #fff;
+}
+.projectDetailWrap2 .topBox .box{
+	width: 68rpx;
+	line-height: 30rpx;
+	height: 30rpx;
+  text-align: center;
+	background-image: linear-gradient(-45deg, 
+		#4874f7 0%, 
+		#1a49d2 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+	border-radius: 2rpx;
+	font-family: PingFangSC-Regular;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 28rpx;
+}
+.projectDetailWrap2 .topBox .first{
+  position: relative;
+  padding-left: 80rpx;
+}
+.projectDetailWrap2 .topBox .first .leftTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #333;
+  padding-right: 150rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.projectDetailWrap2 .topBox .first .rightTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 28rpx;
+	color: #f34848;
+  position: absolute;
+  right: 0rpx;
+  top: 0;
+}
+.projectDetailWrap2 .topBox .second {
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding-top: 25rpx;
+}
+.projectDetailWrap2 .topBox .second .line{
+  margin: 0 10rpx;
+}
+.projectDetailWrap2 .topBox .three{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	letter-spacing: 1rpx;
+	color: #7a91d5;
+  padding: 25rpx 0 40rpx;
+}
+.projectDetailWrap2 .topBox .three text{
+	height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  padding: 0 20rpx;
+	background-color: #e8eeff;
+	border-radius: 2px;
+  margin-right: 35rpx;
+}
+/* 岗位详情 */
+.projectDetailWrap2 .detailBox{
+  padding: 0 30rpx 30rpx;
+  border-bottom: 16rpx solid #faf8f8;
+  background: #fff;
+}
+.projectDetailWrap2 .detailBox .titleOne{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  padding-top: 35rpx;
+}
+.projectDetailWrap2 .detailBox .titleSmall{
+	font-family: PingFangSC-Medium;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+	color: #333;
+  padding: 30rpx 0 15rpx;
+}
+.projectDetailWrap2 .detailBox .contentRow{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #666;
+  width: 100%;
+}
+.projectDetailWrap2 .detailBox .bottomRow{
+  padding-top: 40rpx;
+  height: 100rpx;
+}
+.projectDetailWrap2 .detailBox .bottomRow .itemBox{
+  float: left;
+  width: 33%;
+  text-align: center;
+  height: 100rpx;
+}
+.projectDetailWrap2 .detailBox .bottomRow .itemBox.middle{
+  border-left: 1rpx solid #f0f0f0;
+  border-right: 1rpx solid #f0f0f0;
+}
+.projectDetailWrap2 .detailBox .bottomRow .itemBox .first{
+	font-family: PingFangSC-Semibold;
+	font-size: 40rpx;
+	color: #333;
+}
+.projectDetailWrap2 .detailBox .bottomRow .itemBox .second{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #333;
+}
+.projectDetailWrap2 .bottomBtnWrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  bottom: 0;
+  background: #fff;
+}
+.projectDetailWrap2 .bottomBtnWrap .btn{
+  float: right;
+	height: 62rpx;
+  line-height: 62rpx;
+	background-color: #fff;
+	border-radius: 4rpx;
+	border: solid 1rpx #999;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333;
+  margin: 20rpx 30rpx 0 0;
+  padding: 0 44rpx;
+}
+.projectDetailWrap2 .bottomBtnWrap .btn.disabled{
+  color: #999;
+  border-color: #f0f0f0;
+}

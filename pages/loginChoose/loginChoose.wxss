@@ -1,0 +1,51 @@
+/* pages/loginChoose/loginChoose.wxss */
+.loginChooseWrap .topImg{
+  height: 160rpx;
+  text-align: center;
+  padding: 200rpx 0 130rpx;
+}
+.loginChooseWrap .topImg .login{
+  height: 160rpx;
+  width: 160rpx;
+}
+.loginChooseWrap .wordRow{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+	color: #999;
+  text-align: center;
+}
+.loginChooseWrap .loginOne{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  text-align: center;
+  margin: 30rpx auto 0;
+}
+.loginChooseWrap .loginTwo{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: #fff;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(149, 173, 246, 0.36);
+	border-style: solid;
+	border-width: 2rpx;
+	border-image-source: linear-gradient(90deg, 
+		#2e70f9 0%, 
+		#6e9dfd 100%);
+	border-image-slice: 1;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #333;
+  margin: 60rpx auto 0;
+  text-align: center;
+}

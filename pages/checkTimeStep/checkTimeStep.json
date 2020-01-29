@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-steps": "../../dist/steps/index",
+    "i-step": "../../dist/step/index"
+  },
+  "navigationBarTitleText": "工时核对",
+  "navigationBarBackgroundColor": "#fff"
+}

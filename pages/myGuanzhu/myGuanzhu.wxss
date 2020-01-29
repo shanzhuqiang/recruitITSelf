@@ -1,0 +1,72 @@
+/* pages/myGuanzhu/myGuanzhu.wxss */
+/* 精英简历列表 */
+.myGuanzhuWrap .itemBox{
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.myGuanzhuWrap .itemBox .firstRow{
+  height: 130rpx;
+  padding: 40rpx 0 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.myGuanzhuWrap .itemBox .firstRow .leftImgBox{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+.myGuanzhuWrap .itemBox .firstRow .leftImgBox .leftImg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.myGuanzhuWrap .itemBox .firstRow .rightBox{
+  margin-left: 110rpx;
+}
+.myGuanzhuWrap .itemBox .firstRow .rightBox .firstTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+	color: #333;
+}
+.myGuanzhuWrap .itemBox .firstRow .rightBox .firstTitle .nameText{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+	color: #333;
+  max-width: 200rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.myGuanzhuWrap .itemBox .firstRow .rightBox .firstTitle .typeName{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+	color: #333;
+  margin-left: 24rpx;
+}
+.myGuanzhuWrap .itemBox .firstRow .rightBox .secondTags{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+  padding-top: 20rpx;
+}
+.myGuanzhuWrap .itemBox .firstRow .rightBox .secondTags text{
+  padding: 0 15rpx;
+}
+.myGuanzhuWrap .itemBox .firstRow .rightBox .secondTags text.middleTag{
+  border-left: 1rpx solid #999;
+  border-right: 1rpx solid #999;
+}
+.myGuanzhuWrap .itemBox .firstRow .rightBox .bottomTime{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding-top: 14rpx;
+}

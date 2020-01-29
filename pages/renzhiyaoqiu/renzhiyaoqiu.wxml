@@ -1,0 +1,9 @@
+<!--pages/gangweizhize/gangweizhize.wxml-->
+<view class='renzhiyaoqiuWrap'>
+  <view class='bgRow'></view>
+  <view class='textareaWrap'>
+    <textarea maxlength="1000" bindinput="iptChange" class='textareaBox' placeholder="请输入任职要求" />
+  </view>
+  <view class='wordNum'>{{ keyVal.length }}/1000字</view>
+  <view class='saveBtn'>保存</view>
+</view>

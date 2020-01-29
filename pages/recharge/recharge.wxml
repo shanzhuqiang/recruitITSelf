@@ -1,0 +1,43 @@
+<!--pages/recharge/recharge.wxml-->
+<view class='rechargeWrap'>
+  <view class='topBox'>
+    <view class='title'>充值金额</view>
+    <view class='itemBoxRow clearfix'>
+      <view class='itemBox {{ index%2 == 0 ? "fl" : "fr" }} {{ typeCur == item.id ? "active" : "" }}' wx:for="{{ listData }}" wx:key="" data-id="{{ item.id }}" data-price="{{ item.price }}" bindtap='choosePrice'>
+        <view class='firstText'>{{ item.title }}</view>
+        <view class='secondText'>{{ item.subtitle }}</view>
+      </view>
+      <!-- <view class='itemBox fr'>
+        <view class='firstText'>5000元</view>
+        <view class='secondText'>送10金币</view>
+      </view>
+      <view class='itemBox fl'>
+        <view class='firstText'>5000元</view>
+        <view class='secondText'>送10金币</view>
+      </view>
+      <view class='itemBox fr'>
+        <view class='firstText'>5000元</view>
+        <view class='secondText'>送10金币</view>
+      </view> -->
+    </view>
+    <view class='inputBox'>
+      <input class='input' placeholder='手动输入充值金额' bindinput='inputNum'></input>
+    </view>
+  </view>
+  <view class='bottomBox'>
+    <view class='title'>支付方式</view>
+    <view class='itemBox'>
+      <image class='wechat' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/wechat.png'></image>
+      微信支付
+    </view>
+    <!-- <view class='itemBox'>
+      <image class='rmb' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/rmb.png'></image>
+      账号余额
+    </view> -->
+    <radio-group bindchange="radioChange">
+      <radio class='wechatRadio' value="1" checked="{{ true }}" />
+      <!-- <radio class='rmbRadio' value="2" checked="{{ true }}" /> -->
+    </radio-group>
+  </view>
+  <view class='bottomBtn' bindtap='confirm'>确定</view>
+</view>

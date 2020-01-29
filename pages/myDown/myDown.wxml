@@ -1,0 +1,25 @@
+<!--pages/myDown/myDown.wxml-->
+<view class='myDownWrap'>
+  <view class='itemWrap' wx:for="{{ listData }}" wx:key="">
+    <view class='itemBox' data-id="{{ item.re_resume_id }}" bindtap='goResumeDetail'>
+      <view class='workName'>{{ item.name }}</view>
+      <view class='leftImg'>
+        <image class='touxiang' wx:if="{{ item.avatar }}" src='{{ item.avatar }}'></image>
+      </view>
+      <view class='rightText'>
+        <view class='firstRow'>
+          <text class='nameText {{ topType == 1 ? "mosaic" : "" }}'>{{ item.username }}</text>
+          <text class='typeName'>{{ item.title }}</text>
+        </view>
+        <view class='secondRow'>
+          <text>{{ item.work_years }}年</text>
+          <text class='line'>|</text>
+          <text>{{ item.education }}</text>
+          <text class='line'>|</text>
+          <text>{{ item.salaryStr }}</text>
+        </view>
+        <view class='threeRow'>最近活跃：{{ item.eigneer_day }}</view>
+      </view>
+    </view>
+  </view>
+</view>

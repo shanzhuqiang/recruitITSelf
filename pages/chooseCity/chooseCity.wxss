@@ -1,0 +1,71 @@
+/* pages/chooseCity/chooseCity.wxss */
+page{
+  height: 100%;
+}
+.chooseCityWrap{
+  height: 100%;
+}
+.chooseCityWrap .leftBox{
+  height: 100%;
+  width: 194rpx;
+  background: #f4f4f4;
+  float: left;
+}
+.chooseCityWrap .rightBox{
+  margin-left: 194rpx;
+}
+.chooseCityWrap .leftBox .item{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.chooseCityWrap .leftBox .item.active{
+	font-family: PingFangSC-Medium;
+  color: #333;
+  background: #fff;
+}
+.chooseCityWrap .rightBox{
+  padding-left: 35rpx;
+}
+.chooseCityWrap .rightBox .title{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+  padding: 20rpx 0 40rpx;
+}
+.chooseCityWrap .rightBox .itemBox{
+ width: 150rpx;
+ height: 64rpx;
+ border: 1rpx solid #f0f0f0;
+ border-radius: 4rpx;
+ text-align: center;
+ line-height: 64rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666666;
+  display: inline-block;
+  margin: 0 20rpx 20rpx 0;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.chooseCityWrap .rightBox .itemBox .local{
+  width: 22rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+.chooseCityWrap .rightBox .itemBox.active{
+	color: #2e70f9;
+	background-color: #e8eeff;
+}
+.chooseCityWrap .rightBox .itemBox.active2{
+	color: #2e70f9;
+  background-color: #fff;
+}

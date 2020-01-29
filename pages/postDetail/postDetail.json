@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-drawer": "../../dist/drawer/index"
+  },
+  "navigationBarTitleText": "岗位详情",
+  "navigationBarBackgroundColor": "#fff"
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-drawer": "../../dist/drawer/index"
+  },
+  "navigationBarTitleText": "身份认证",
+  "navigationBarBackgroundColor": "#fff"
+}

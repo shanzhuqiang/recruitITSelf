@@ -1,0 +1,45 @@
+<!--pages/vip/vip.wxml-->
+<view class='vipWrap'>
+  <view class='title'>充值会员立享多重优惠</view>
+  <view class='vipBox'>
+    <view class='vipItem one fl {{ active == 1 ? "active" : "" }}' bindtap='chooseType'>
+      <image class='vipBg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/vipBg.png'></image>
+      <view class='firstRow'>
+        <image class='queen' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/queenA.png'></image>
+      </view>
+      <view class='secondRow'>
+        <text class='one'>￥</text>
+        <text class='two'>180</text>
+        <text class='three'>/年</text>
+      </view>
+      <view class='threeRow'>享受平台推荐订单</view>
+      <view class='threeRow'>（人工）、佣金折扣等</view>
+      <view class='fourRow'>有效期至2019.11.11</view>
+    </view>
+    <view class='vipItem fr {{ active == 2 ? "active" : "" }}' bindtap='chooseType2'>
+      <image class='vipBg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/vipBg.png'></image>
+      <view class='firstRow'>
+        <image class='queen' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/queenB.png'></image>
+      </view>
+      <view class='secondRow'>
+        <text class='one'>￥</text>
+        <text class='two'>20</text>
+        <text class='three'>/月</text>
+      </view>
+      <view class='threeRow'>B套餐：任务有限查</view>
+      <view class='threeRow'>看权限等</view>
+      <view class='fourRow'>有效期至2019.11.11</view>
+    </view>
+  </view>
+  <view class='titleBox'>
+    <view class='title'>支付方式</view>
+  </view>
+  <view class='itemBoxWrap'>
+    <view class='itemBox'>
+      <image class='wechat' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/wechat.png'></image>
+      微信支付
+      <radio class='wechatRadio' value="wechat" checked="{{ true }}" />
+    </view>
+  </view>
+  <view class='bottomBtn' bindtap='confirm'>确认</view>
+</view>

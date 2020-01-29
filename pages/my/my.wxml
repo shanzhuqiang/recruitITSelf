@@ -1,0 +1,192 @@
+<!--pages/my/my.wxml-->
+<view class='myWrap'>
+  <view class='topBoxWrap'>
+    <view class='topBox'>
+      <image class='touxiang' src='{{ userInfo.avatar }}'></image>
+      <view class='firstRow'>
+        <view class='one'>{{ userInfo.nickname }}</view>
+        <view class='two'>{{ userType === 'engineer' ? 'IT精英' : userType === 'hr' ? '企业金主' : '赏金猎人' }}</view>
+        <!-- <view class='three'>
+          <image class='zuanshi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/zuanshi.png'></image>
+          A会员
+        </view> -->
+      </view>
+      <view class='renzhengWrap' bindtap='goRenzheng'>
+        <image class='renzheng' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/renzheng.png'></image>
+        已认证
+      </view>
+      <view class='tongzhi' bindtap='goMyMessage'>
+        通知
+        <view class='unReadNum' wx:if="{{ unReadNum }}">{{ unReadNum }}</view>
+      </view> 
+      <view class='topBottomBox'>
+        <!-- <view bindtap='goMyGold'>{{ userType == 'engineer' ? '金币' : '猎币' }} {{ num }}</view> -->
+        <view bindtap='goMyGold'>金币 {{ num }}</view>
+        <!-- <view bindtap='goMyMoney'>我的钱包</view> -->
+      </view>
+    </view>
+  </view>
+  <view class='middleBox' wx:if="{{ userType === 'engineer' }}">
+    <view bindtap='goImproveResume'>
+      <image class='jianli' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/jianli.png'></image>
+      <view>完善简历</view>
+    </view>
+    <view bindtap='goMyDelivery'>
+      <image class='toudi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/toudi.png'></image>
+      <view>我的投递</view>
+      <!-- <view class='interviewCount' wx:if="{{ interviewCount }}">{{ interviewCount }}</view> -->
+    </view>
+    <view bindtap='goMyTask'>
+      <image class='renwu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/renwu.png'></image>
+      <view>我的任务</view>  
+    </view>
+    <view bindtap='goMyRelease'>
+      <image class='fabu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabu.png'></image>
+      <view>我的发布</view>
+    </view>
+  </view>
+  <view class='middleBox' wx:if="{{ userType === 'hr' }}">
+    <view bindtap='goResume'>
+      <image class='jianli' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/jianli.png'></image>
+      <view>简历</view>
+    </view>
+    <view bindtap='goTask'>
+      <image class='toudi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/toudi.png'></image>
+      <view>每日任务</view>
+    </view>
+    <!-- <view bindtap='goMyGuanzhu'> -->
+    <view bindtap='goMyCompany'>
+      <image class='guanzhu2' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/guanzhu2.png'></image>
+      <!-- <view>我的关注</view> -->
+      <view>我的公司</view>
+    </view>
+    <view bindtap='goMyRelease'>
+      <image class='fabu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabu.png'></image>
+      <view>我的发布</view>
+    </view>
+  </view>
+  <view class='middleBox' wx:if="{{ userType === 'agent' }}">
+    <view bindtap='goTask'>
+      <image class='toudi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/toudi.png'></image>
+      <view>每日任务</view>
+    </view>
+    <view bindtap='goMyGuanzhu'>
+      <image class='guanzhu2' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/guanzhu2.png'></image>
+      <view>我的关注</view>  
+    </view>
+    <view bindtap='goMyRecommend'>
+      <image class='renwu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/renwu.png'></image>
+      <view>我的推荐</view>  
+    </view>
+    <view bindtap='goMyRelease'>
+      <image class='fabu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabu.png'></image>
+      <view>我的发布</view>
+    </view>
+  </view>
+  <view class='vipWrap'>
+    <image class='vipGuanggao' bindtap='goVip' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/vipGuanggao.png'></image>
+  </view>
+  <view class='listWrap'>
+    <!-- <view class='listItem' bindtap='goMyDownResume' wx:if="{{ userType === 'agent' }}">
+      <image class='downResume' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/downResume.png'></image>
+      我的下载
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view> -->
+    <!-- <view class='listItem' bindtap='goMyCompany' wx:if="{{ userType === 'hr' }}">
+      <image class='company' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/company.png'></image>
+      我的公司
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view> -->
+    <view class='listItem' bindtap='goTask' wx:if="{{ userType === 'engineer' }}">
+      <image class='renwuDay' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/renwuDay.png'></image>
+      每日任务
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem' bindtap='goGUnzhugongsi' wx:if="{{ userType !== 'hr' }}">
+      <image class='guanzhu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/guanzhu.png'></image>
+      关注公司
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem' bindtap='goSpread'>
+      <image class='tuiguangren' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/tuiguangren.png'></image>
+      成为推广人
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem'>
+      <button class='listItemBtn' open-type="contact" bindcontact="handleContact"></button>
+      <image class='kefu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/kefu.png'></image>
+      客服
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem'>
+      <button class='listItemBtn' open-type="feedback" bindcontact="handleContact"></button>
+      <image class='yijian' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/yijian.png'></image>
+      意见反馈
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem' bindtap='goSetting'>
+      <image class='shezhi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shezhi.png'></image>
+      设置
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+  </view>
+  <view style='height: 90rpx;'></view>
+  <view class='btootmNavWrap'>
+    <view class='btnBox' bindtap='goHome'>
+      <view class='imgBox'>
+        <image class='homePng' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/home.png'></image>
+      </view>
+      <view>首页</view>
+    </view>
+    <view class='btnBox' bindtap='goBountyPlatform'>
+      <view class='imgBox'>
+        <image class='shangjin' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shangjin.png'></image>
+      </view>
+      <view>赏金平台</view>
+    </view>
+    <view class='btnBox' bindtap='goRelease'>
+        <image class='addfabu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/addfabu.png'></image>
+        <view class='imgBox'></view>
+        <view>发布</view>
+    </view>
+    <view class='btnBox' bindtap='goBbs'>
+      <view class='imgBox'>
+        <image class='luntan' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/luntan.png'></image>
+      </view>
+        <view>论坛</view>
+    </view>
+    <view class='btnBox active'>
+    <view class='unReadNum' wx:if="{{ unReadNum }}">{{ unReadNum }}</view>
+      <view class='imgBox'>
+        <image class='my' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/my2.png'></image>
+      </view>
+        <view>我的</view>
+    </view>
+  </view>
+  <!-- 发布 -->
+  <view class='releaseWrap' wx:if="{{ releaseMark }}">
+    <view class='iconBox'>
+      <view class='iconCol' bindtap='goReleaseBbs'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuTiezi.png'></image>
+        </view>
+        <view>发布帖子</view>
+      </view>
+      <view class='iconCol' wx:if="{{ userType == 'hr' }}" bindtap='goReleaseProject'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuXiangmu.png'></image>
+        </view>
+        <view>外派需求</view>
+      </view>
+      <view class='iconCol' wx:if="{{ userType == 'hr' }}" bindtap='goReleaseGangwei'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuGangwei.png'></image>
+        </view>
+        <view>入职需求</view>
+      </view>
+    </view>
+    <view class='bottomClose'>
+      <image class='bottomCloseIcon' bindtap='closeRelease' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/bottomClose.png'></image>
+    </view>
+  </view>
+</view>

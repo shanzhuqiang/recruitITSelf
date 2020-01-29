@@ -1,0 +1,42 @@
+<!--pages/sharePage/sharePage.wxml-->
+<view class='sharePageWrap'>
+  <view class='backHome'>
+    <view style='padding-top: 10rpx;'>返回</view>
+    <view>首页</view>
+  </view>
+  <image class='shareBg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shareBg2.png'></image>
+  <view style='height: 500rpx;'></view>
+  <view class='iptWrap'>
+    <image class='phone' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/phone2.png'></image>
+    <input class='inputEl' type='number' placeholder='请输入手机号' placeholder-style='color:#fff'></input>
+  </view>
+  <view class='iptWrapRow'>
+    <view class='iptWrap iptWrap2'>
+      <image class='code' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/code.png'></image>
+      <input class='inputEl' type='number' placeholder='请输入短信验证码' placeholder-style='color:#fff'></input>
+    </view>
+    <view class='codeBtn'>获取短信验证码</view>
+  </view>
+  <view class='iptWrap'>
+    <image class='password' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/password.png'></image>
+    <input class='inputEl' type='number' placeholder='请设置登录密码' placeholder-style='color:#fff'></input>
+  </view>
+  <view class='bottomRow'>
+    <view class='fangBox'>
+      <image class='fang' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fang.png'></image>
+      <image class='ok' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/ok2.png'></image>
+    </view>
+    <view>注册视为同意《IT小程序协议》</view>
+  </view>
+  <view class='loginNow'>马上注册</view>
+  <view class='haveLogin'>已有账号，点击登陆</view>
+  <view class='reuleWrap'>
+    <view class='ruleTitle'>
+      <image class='ruleBg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/ruleTitle.png'></image>
+      活动规则
+    </view>
+    <view class='content'>
+      <view>活动规则：通过个人推广链接成功推广IT职客或经纪人（以用户完成注册为准），每成功推广一人可获得1元现金奖励。（提现需满足30元以上）</view>
+    </view>
+  </view>
+</view>

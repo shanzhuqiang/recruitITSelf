@@ -1,0 +1,20 @@
+<!--pages/spread/spread.wxml-->
+<view class='spreadWrap'>
+    <image class='spreadWrapBg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shareBg.png' bindtap='openImg'></image>
+    <view class='yaoqingBtn' bindtap='openMask'>立即邀请好友</view>
+    <view class='reuleWrap'>
+      <view class='ruleTitle'>
+        <image class='ruleBg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/ruleTitle.png'></image>
+        活动规则
+      </view>
+      <view class='content'>
+        <view>活动规则：通过个人推广链接成功推广IT职客或经纪人（以用户完成注册为准），每成功推广一人可获得1元现金奖励。（提现需满足30元以上）</view>
+      </view>
+    </view>
+    <view class='maskWrap' wx:if="{{ maskOnOff }}">
+      <view class='contentBox'>
+        <image class='shareImg' show-menu-by-longpress wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shareImg.png'></image>
+        <view class='text' bindtap='closeMask'>我知道了</view>
+      </view>
+    </view>
+</view>

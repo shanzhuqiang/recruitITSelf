@@ -1,0 +1,174 @@
+/* pages/checkTime/checkTime.wxss */
+.checkTimeWrap .hallRowWrap{
+  padding: 0 30rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.checkTimeWrap .hallRow{
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #ddd;
+  position:  relative;
+}
+.checkTimeWrap .hallRow .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  height: 120rpx;
+  line-height: 120rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.checkTimeWrap .hallRow .rightInput{
+  float: right;
+	font-size: 30rpx;
+  margin-right: 50rpx;
+  text-align: right;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #333
+}
+.checkTimeWrap .hallRow .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 46rpx;
+}
+.checkTimeWrap .bottomBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 100rpx auto 30rpx
+}
+/* 上传凭证 */
+.checkTimeWrap .addBoxWrap{
+  padding: 0 30rpx;
+}
+.checkTimeWrap .addBoxWrap .title{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  padding: 37rpx 20rpx 45rpx;
+}
+.checkTimeWrap .addBoxWrap .bottomBox{
+  border-bottom: 1rpx solid #ddd;
+  padding: 0 20rpx 58rpx;
+  height: 136rpx;
+}
+.checkTimeWrap .addBoxWrap .bottomBox .addBox{
+  width: 136rpx;
+  height: 136rpx;
+	background-color: #f1f1f1;
+	border-radius: 4rpx;
+  position: relative;
+  float: left;
+}
+.checkTimeWrap .addBoxWrap .bottomBox .addBox.addBox2{
+	background-color: #fff;
+  margin-left: 30rpx;
+}
+.checkTimeWrap .addBoxWrap .bottomBox .addBox.addBox2 .imgBox{
+  width: 100%;
+  height: 100%;
+}
+.checkTimeWrap .addBoxWrap .bottomBox .addBox .camera{
+  width: 69rpx;
+  height: 51rpx;
+  position: absolute;
+  top: 26rpx;
+  left: 34rpx;
+  z-index: 0;
+}
+.checkTimeWrap .addBoxWrap .bottomBox .addBox .addText{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+  position: absolute;
+  left: 47rpx;
+  top: 91rpx;
+}
+/* 审核弹出 */
+.checkTimeWrap .checkMask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.checkTimeWrap .checkMask .checkBox{
+	width: 540rpx;
+	height: 480rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.checkTimeWrap .checkMask .checkBox .firstRow{
+  text-align: center;
+	font-size: 40rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+	color: #2e70f9;
+  padding: 70rpx 0 60rpx;
+}
+.checkTimeWrap .checkMask .checkBox .firstRow .loading{
+  width: 42rpx;
+  height: 42rpx;
+  vertical-align: middle;
+}
+.checkTimeWrap .checkMask .checkBox .secondRow{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	line-height: 43rpx;
+	color: #333;
+  text-align: center;
+}
+.checkTimeWrap .checkMask .checkBox .threeRow{
+  height: 81rpx;
+  padding: 70rpx 30rpx 0;
+}
+.checkTimeWrap .checkMask .checkBox .threeRow .btn{
+	width: 220rpx;
+	height: 80rpx;
+	border-radius: 8rpx;
+	border: solid 1rpx #cccccc;
+  line-height: 80rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #999;
+}
+.checkTimeWrap .checkMask .checkBox .fourRow{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+	color: #999;
+  text-align: center;
+  padding-top: 30rpx;
+}
+.checkTimeWrap .checkMask .checkBox .fourRow > .kefuBtn{
+	color: #2e70f9;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+  display: inline-block;
+  padding: 0;
+  background: transparent;
+  border: none;
+}

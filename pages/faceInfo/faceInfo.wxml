@@ -1,0 +1,101 @@
+<!--pages/postDetail/postDetail.wxml-->
+<view class='faceInfoWrap'>
+  <view class='detailBox'>
+    <view class='titleOne'>面试信息</view>
+    <view class='rowBox'>
+      <view class='leftName'>面试时间</view>
+      <view class='rightVal'>{{ interviewInfo.time }}</view>
+    </view>
+    <view class='rowBox'>
+      <view class='leftName'>面试地点</view>
+      <view class='rightVal'>{{ interviewInfo.address }}</view>
+    </view>
+    <view class='rowBox'>
+      <view class='leftName'>联系人</view>
+      <view class='rightVal'>{{ interviewInfo.contact }}</view>
+    </view>
+    <view class='rowBox'>
+      <view class='leftName'>联系电话</view>
+      <view class='rightVal'>{{ interviewInfo.mobile }}</view>
+    </view>
+  </view>
+  <view class='topBox'>
+    <view class='first'>
+      <view class='leftTitle'>{{ dataInfo.name }}</view>
+      <view class='rightTitle'>{{ dataInfo.salaryStr }}</view>
+    </view>
+    <view class='second'>
+      <text>{{ dataInfo.city_name + '·' + dataInfo.district_name }}</text>
+      <text class='line'>|</text>
+      <text class='middle'>{{ dataInfo.job_experience }}</text>
+      <text class='line'>|</text>
+      <text>{{ dataInfo.education || dataInfo.nature }}</text>
+    </view>
+    <view class='three'>
+      <text wx:if="{{ dataInfo.job_label1 }}">{{ dataInfo.job_label1 }}</text>
+      <text wx:if="{{ dataInfo.job_label2 }}">{{ dataInfo.job_label2 }}</text>
+      <text wx:if="{{ dataInfo.job_label3 }}">{{ dataInfo.job_label3 }}</text>
+    </view>
+    <view class='fourBox'>
+      <view class='leftImg'>
+        <image class='touxiang' wx:if="{{ dataInfo.hr_icon }}" src='{{ dataInfo.hr_icon }}'></image>
+      </view>
+      <view class='rightBox'>
+        <view class='firstRow'>
+          {{ dataInfo.hr_name }}
+          <text>负责人</text>
+        </view>
+        <view class='secondRow'>最近活跃：{{ dataInfo.hr_day }}</view>
+      </view>
+    </view>
+  </view>
+  <view class='detailBox'>
+    <view class='titleOne'>岗位详情</view>
+    <view class='titleSmall'>岗位职责</view>
+    <textarea class='contentRow' value='{{ dataInfo.instruction }}' disabled auto-height></textarea>
+    <view class='titleSmall'>任职要求</view>
+    <textarea class='contentRow' value='{{ dataInfo.requirement }}' disabled auto-height></textarea>
+  </view>
+  <view class='companyBox'>
+    <view class='leftImgBox'>
+      <image class='logoImg' wx:if="{{ companyInfo.icon }}" src='{{ companyInfo.icon }}'></image>
+    </view>
+    <view class='rightImgBox'>
+      <view class='rowOne'>{{ companyInfo.name }}</view>
+      <view class='rowTwo'>
+        <text>{{ companyInfo.label1 }}</text>
+        <text class='line'>|</text>
+        <text>{{ companyInfo.label2 }}</text>
+        <text class='line'>|</text>
+        <text>{{ companyInfo.label3 }}</text>
+        <text class='line'>|</text>
+        <text>{{ companyInfo.label4 }}</text>
+      </view>
+      <view class='rowThree' wx:if="{{ companyInfo.status == 1 }}">
+        <image class='okImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/ok.png'></image>
+        <text>已认证</text>
+      </view>
+      <view class='rowThree' wx:if="{{ companyInfo.status == 2 }}">
+        <text style='padding-left: 14rpx'>未认证</text>
+      </view>
+    </view>
+    <view class='bottomAddressBox'>
+      <view class='titleAddress'>公司地址</view>
+      <view class='addressTest'>
+        <!-- <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image> -->
+        <view class='firstText'>
+          <image class='local' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/local.png'></image>
+          <text>{{ companyInfo.area }}</text>
+        </view>
+        <view class='secondText'>{{ companyInfo.address }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='bottomBtn'>
+    <view class='leftBtn'>
+      <view style='padding-top:18rpx;'><image class='share' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/share.png'></image></view>
+      <view>推荐</view>
+    </view>
+    <view class='rightBtn none'>{{ interviewInfo.status == 1 ? '待面试' : interviewInfo.status == 2 ? '面试' : '面试未通过' }}</view>
+  </view> -->
+</view>

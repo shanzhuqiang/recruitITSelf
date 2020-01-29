@@ -1,0 +1,68 @@
+
+
+.myDownWrap .itemWrap{
+  padding: 0 30rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.myDownWrap .itemWrap .itemBox{
+  border-bottom: 1rpx solid #f0f0f0;
+  padding: 0rpx 0 40rpx;
+}
+.myDownWrap .itemWrap .itemBox .workName{
+	font-family: PingFangSC-Medium;
+	color: #333;
+	font-size: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+.myDownWrap .itemWrap .itemBox .leftImg{
+  height: 80rpx;
+  left: 80rpx;
+  float: left;
+  padding-left: 10rpx;
+}
+.myDownWrap .itemWrap .itemBox .leftImg .touxiang{
+  width: 80rpx;
+  height: 80rpx;
+}
+.myDownWrap .itemWrap .itemBox .rightText{
+  margin-left: 107rpx;
+}
+.myDownWrap .itemWrap .itemBox .rightText .firstRow .nameText{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+	color: #333;
+  max-width: 200rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.myDownWrap .itemWrap .itemBox .rightText .firstRow .typeName{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+  margin-left: 10rpx;
+}
+.myDownWrap .itemWrap .itemBox .rightText .secondRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+  padding: 10rpx 0 15rpx; 
+}
+.myDownWrap .itemWrap .itemBox .rightText .secondRow .line{
+  margin: 0 20rpx;
+}
+.myDownWrap .itemWrap .itemBox .rightText .threeRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+}

@@ -1,0 +1,9 @@
+<!--pages/gangweizhize/gangweizhize.wxml-->
+<view class='desMyselfWrap'>
+  <view class='bgRow'></view>
+  <view class='textareaWrap'>
+    <textarea maxlength="1000" bindinput="iptChange" value='{{ keyVal }}' class='textareaBox' placeholder="填写你的优势，有助于更优秀的岗位找到你" />
+  </view>
+  <view class='wordNum'>{{ keyVal.length }}/1000字</view>
+  <view class='saveBtn' bindtap='saveBtn'>保存</view>
+</view>

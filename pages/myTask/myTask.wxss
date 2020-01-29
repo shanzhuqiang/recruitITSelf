@@ -1,0 +1,178 @@
+/* pages/myTask/myTask.wxss */
+.myTaskWrap .topBox{
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  border-bottom: 1rpx solid #eee;
+  padding: 0 80rpx;
+}
+.myTaskWrap .topBox .item{
+  width: 50%;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #666;
+  position: relative;
+  text-align: center;
+}
+.myTaskWrap .topBox .item.active{
+	font-family: PingFangSC-Medium;
+	color: #333;
+}
+.myTaskWrap .topBox .item.active::after{
+  content: "";
+  position: absolute;
+  width: 40rpx;
+  height: 6rpx;
+  background: #2e70f9;
+  left: 50%;
+  margin-left: -20rpx;
+  bottom: 0rpx
+}
+.myTaskWrap .itemWrap{
+  padding: 0 30rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.myTaskWrap .itemWrap .itemTop{
+  height: 30rpx;
+  padding-top: 30rpx;
+}
+.myTaskWrap .itemWrap .itemTop .squareWrap{
+  float: left;
+  height: 30rpx;
+}
+.myTaskWrap .itemWrap .itemTop .square{
+  float: left;
+	width: 30rpx;
+	height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+	border-radius: 2rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #ffffff;
+
+}
+.myTaskWrap .itemWrap .itemTop .squareJ{
+	background-image: linear-gradient(-45deg, 
+		#f5d50a 0%, 
+		#ffcc00 42%, 
+		#fca607 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+}
+.myTaskWrap .itemWrap .itemTop .squareQ{
+	background-image: linear-gradient(-45deg, 
+		#3ac7a5 0%, 
+		#79fee2 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+}
+.myTaskWrap .itemWrap .itemTop .wordText{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333333;
+  float: left;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-left: 15rpx;
+}
+.myTaskWrap .itemWrap .itemTop .time{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  float: right;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.myTaskWrap .itemWrap .itemBox{
+  border-bottom: 1rpx solid #f0f0f0;
+  padding: 30rpx 0 40rpx;
+}
+.myTaskWrap .itemWrap .itemBox .leftImg{
+	width: 68rpx;
+	height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+	background-image: linear-gradient(-45deg, 
+		#4874f7 0%, 
+		#1a49d2 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+	border-radius: 2rpx;
+  float: left;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #fff;
+}
+.myTaskWrap .itemWrap .itemBox .rightText{
+  margin-left: 85rpx;
+}
+.myTaskWrap .itemWrap .itemBox .rightText .firstRow{
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+	color: #333;
+}
+.myTaskWrap .itemWrap .itemBox .rightText .secondRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+  padding: 15rpx 0 15rpx; 
+}
+.myTaskWrap .itemWrap .itemBox .rightText .secondRow .line{
+  margin: 0 20rpx;
+}
+.myTaskWrap .itemWrap .itemBox .rightText .threeRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+}
+.myTaskWrap .itemWrap .itemBox .rightText .money{
+	font-family: PingFangSC-Medium;
+	font-size: 24rpx;
+	color: #f34848;
+}
+.myTaskWrap .itemWrap .bottomRow{
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.myTaskWrap .itemWrap .bottomRow .bottomBtn{
+	width: 136rpx;
+	height: 50rpx;
+  line-height: 50rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #cccccc;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #999;
+  float: right;
+  margin-top: 22rpx;
+}
+.myTaskWrap .itemWrap .bottomRow .yoaqingBtn{
+	width: 136rpx;
+	height: 50rpx;
+  line-height: 50rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #4c85fb;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #4c85fb;
+  float: right;
+  margin: 22rpx 0 0 17rpx;
+}

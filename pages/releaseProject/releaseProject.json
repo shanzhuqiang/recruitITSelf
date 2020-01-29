@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-drawer": "../../dist/drawer/index"
+  },
+  "navigationBarTitleText": "外派岗位",
+  "navigationBarBackgroundColor": "#fff"
+}

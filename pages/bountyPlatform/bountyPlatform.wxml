@@ -1,0 +1,228 @@
+<!--pages/bountyPlatform/bountyPlatform.wxml-->
+<view class='bountyPlatformWrap'>
+  <view class='typeWrap'>
+    <view class='{{topType === "xiangmu" ? "active" : ""}}' bindtap='changeTopType' data-id="xiangmu">外派需求</view>
+    <view class='{{topType === "zhaopin" ? "active" : ""}}' bindtap='changeTopType' data-id="zhaopin">入职需求</view>
+  </view>
+  <!-- 项目过滤 -->
+  <view class='filterWrap' wx:if="{{ topType === 'xiangmu' }}">
+    <!-- <view class='colBox {{ xiangmuFilter === "quyu" ? "active" : "" }}' bindtap='xiangmuBtn' data-id="quyu">
+      <text>区域</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ xiangmuFilter === "quyu" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view> -->
+    <view class='colBox {{ region[0] !== "全部" ? "active" : "" }}' style="width: 50%">
+      <picker mode="region" bindcancel="bindcancel" bindchange="bindRegionChange" value="{{region2}}" custom-item="{{customItem}}">
+        <text>区域</text>
+        <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ region[0] !== "全部" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+      </picker>
+    </view>
+    <view class='colBox {{ xiangmuFilter === "jiage" ? "active" : "" }}' bindtap='xiangmuBtn' data-id="jiage" style="width: 50%">
+      <text>经验</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ xiangmuFilter === "jiage" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <!-- <view class='colBox {{ xiangmuFilter === "shaixuan" ? "active" : "" }}' bindtap='xiangmuBtn' data-id="shaixuan">
+      <text>周期</text>
+      <image class='filterImg' wx:if="{{imgSrc !== ''}}" src='{{ xiangmuFilter === "shaixuan" ? imgSrc + "/filterTwo.png" : imgSrc + "/filter.png" }}'></image>
+    </view> -->
+  </view>
+  <!-- 招聘过滤 -->
+  <view class='filterWrap' wx:if="{{ topType === 'zhaopin' }}">
+    <view class='colBox {{ region[0] !== "全部" ? "active" : "" }}'>
+      <picker mode="region" bindcancel="bindcancel2" bindchange="bindRegionChange2" value="{{region}}" custom-item="{{customItem}}">
+        <text>区域</text>
+        <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ region[0] !== "全部" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+      </picker>
+    </view>
+    <view class='colBox {{ zhaopinFilter === "jingyan" ? "active" : "" }}' bindtap='zhaopinBtn' data-id="jingyan">
+      <text>经验</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ zhaopinFilter === "jingyan" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <view class='colBox {{ zhaopinFilter === "xueli" ? "active" : "" }}' bindtap='zhaopinBtn' data-id="xueli">
+      <text>学历</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ zhaopinFilter === "xueli" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <!-- <view class='colBox {{ zhaopinFilter === "zhouqi" ? "active" : "" }}' bindtap='zhaopinBtn' data-id="zhouqi">
+      <text>周期</text>
+      <image class='filterImg' wx:if="{{imgSrc !== ''}}" src='{{ zhaopinFilter === "zhouqi" ? imgSrc + "/filterTwo.png" : imgSrc + "/filter.png" }}'></image>
+    </view> -->
+  </view>
+  <!-- 赏金项目 -->
+  <view wx:if="{{ topType === 'xiangmu' }}">
+    <view class='itemBox' wx:for="{{ projectList }}" wx:key="" bindtap='goProjectDetail' data-id="{{ item.id }}">
+      <view class='first'>
+        <view class='box'>赏金</view>
+        <view class='title'>{{ item.name }}</view>
+        <view class='money'>赏金￥{{ item.reward }}</view>
+      </view>
+      <view class='second'>
+        <text style='padding-left: 0'>{{ item.job_label1 }}</text>
+        <text class='middleText'>{{ item.job_label2 }}</text>
+        <text>{{ item.job_label3 }}</text>
+      </view>
+      <view class='three'>{{ item.salaryStr }}</view>
+      <view class='content'>{{ item.instruction }}</view>
+      <view class='peopleNum'>{{ item.sign_num }}人已投递</view>
+    </view>
+    <view wx:if="{{ projectList.length == 0 }}" class='noDataWrap'>
+      <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+      <view class='textWord'>暂无信息</view>
+    </view>
+  </view>
+  <!-- 赏金招聘 -->
+  <view wx:if="{{ topType === 'zhaopin' }}">
+    <view class='itemWrap' wx:for="{{ quartersList }}" wx:key="" bindtap='goPostDetail' data-id="{{ item.id }}">
+      <view class='first'>
+        <view class='title'>{{ item.name }}</view>
+        <view class='money'>赏金￥{{ item.reward }}</view>
+      </view>
+      <view class='second'>
+        <text style='padding-left: 0'>{{ item.city_name }}</text>
+        <text class='middleText'>{{ item.education }}</text>
+        <text>{{ item.job_experience }}</text>
+      </view>
+      <view class='three'>{{ item.salaryStr }}</view>
+      <view class='picBox'>
+        <view class='left'>
+          <image class='logoImg' src='{{ item.company_icon }}' ></image>
+        </view>
+        <view class='right'>
+          <view class='logoName'>{{ item.company_name }}</view>
+          <view class='logoType'>{{ item.line_name }}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{ quartersList.length == 0 }}" class='noDataWrap'>
+      <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+      <view class='textWord'>暂无信息</view>
+    </view>
+  </view>
+  <view style='height: 90rpx;'></view>
+  <!-- 底部导航 -->
+  <view class='btootmNavWrap'>
+    <view class='btnBox'>
+      <view class='imgBox' bindtap='goHome'>
+        <image class='homePng' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/home.png'></image>
+      </view>
+      <view>首页</view>
+    </view>
+    <view class='btnBox active'>
+      <view class='imgBox'>
+        <image class='shangjin' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shangjin2.png'></image>
+      </view>
+      <view>赏金平台</view>
+    </view>
+    <view class='btnBox' bindtap='goRelease'>
+        <image class='addfabu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/addfabu.png'></image>
+        <view class='imgBox'></view>
+        <view>发布</view>
+    </view>
+    <view class='btnBox' bindtap='goBbs'>
+      <view class='imgBox'>
+        <image class='luntan' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/luntan.png'></image>
+      </view>
+        <view>论坛</view>
+    </view>
+    <view class='btnBox' bindtap='goMy'>
+    <view class='unReadNum' wx:if="{{ unReadNum }}">{{ unReadNum }}</view>
+      <view class='imgBox'>
+        <image class='my' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/my.png'></image>
+      </view>
+        <view>我的</view>
+    </view>
+  </view>
+  <!-- 发布 -->
+  <view class='releaseWrap' wx:if="{{ releaseMark }}">
+    <view class='iconBox'>
+      <view class='iconCol' bindtap='goReleaseBbs'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuTiezi.png'></image>
+        </view>
+        <view>发布帖子</view>
+      </view>
+      <view class='iconCol' wx:if="{{ userType == 'hr' }}" bindtap='goReleaseProject'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuXiangmu.png'></image>
+        </view>
+        <view>外派需求</view>
+      </view>
+      <view class='iconCol' wx:if="{{ userType == 'hr' }}" bindtap='goReleaseGangwei'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuGangwei.png'></image>
+        </view>
+        <view>入职需求</view>
+      </view>
+    </view>
+    <view class='bottomClose'>
+      <image class='bottomCloseIcon' bindtap='closeRelease' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/bottomClose.png'></image>
+    </view>
+  </view>
+  <!-- 区域 -->
+  <view class='filterMask' wx:if="{{ xiangmuFilter === 'quyu' && xiangmuMask}}">
+    <view class='maskBody'>
+      <view class='title'>工作区域</view>
+      <view class='filterBtnWrap' wx:for="{{ quyuData }}" wx:key="">
+        <view class='filterBtn {{ quyuChoose === item.district_code ? "active" : ""}}' style='{{item.district_name === null ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id='{{ item.district_code }}' bindtap='quyuChooseFilter' wx:key="">{{ item.district_name }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 价格 -->
+  <view class='filterMask' wx:if="{{ xiangmuFilter === 'jiage' && xiangmuMask}}">
+    <view class='maskBody'>
+      <view class='title'>工作经验</view>
+      <view class='filterBtnWrap' wx:for="{{ shaixuanData }}" wx:key="">
+        <view class='filterBtn {{ shaixuan1 == item.id ? "active" : ""}}' style='{{item.name === "" ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id='{{ item.id }}' bindtap='shaixuanchooseFilter1' wx:key="">{{ item.name }}</view>
+      </view>
+      <!-- <view class='title'>价格区间（元）</view>
+      <view class='filterBtnWrap'>
+        <view class='fl'>
+          <input type='number' placeholder='最低价' value='{{ mini_salary }}' bindinput="miniSalaryChange"></input>
+        </view>
+        <view class='fr'>
+          <input type='number' placeholder='最高价' value='{{ max_salary }}' bindinput="maxSalaryChange"></input>
+        </view>
+      </view>
+      <view class='confirm' bindtap='confirmFilterjiage'>确定</view> -->
+    </view>
+  </view>
+  <!-- 筛选 -->
+  <view class='filterMask' wx:if="{{ xiangmuFilter === 'shaixuan' && xiangmuMask }}">
+    <view class='maskBody'>
+      <view class='title'>工作周期</view>
+      <view class='filterBtnWrap'>
+        <view class='filterBtn {{ shaixuan2 == "" ? "active" : ""}}' data-id='' bindtap='shaixuanchooseFilter2' >不限</view>
+        <view class='filterBtn {{ shaixuan2 == "2" ? "active" : ""}}' data-id='2' bindtap='shaixuanchooseFilter2' >长期兼职</view>
+        <view class='filterBtn {{ shaixuan2 == "1" ? "active" : ""}}' data-id='1' bindtap='shaixuanchooseFilter2' >短期兼职</view>
+      </view>
+      <!-- <view class='confirm' bindtap='confirmFilter'>确定</view> -->
+    </view>
+  </view>
+    <!-- 经验过滤弹框 -->
+  <view class='filterMask' wx:if="{{ zhaopinFilter === 'jingyan' && zhaopinMask }}">
+    <view class='maskBody'>
+      <view class='title'>工作经验</view>
+      <view class='filterBtnWrap' wx:for="{{ jingyanData }}" wx:key="">
+        <view class='filterBtn {{ jingyanChoose === item.id ? "active" : ""}}' wx:for="{{ item }}" data-id='{{ item.id }}' bindtap='jingyanChooseFilter' wx:key="">{{ item.name }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 学历过滤弹框 -->
+  <view class='filterMask' wx:if="{{ zhaopinFilter === 'xueli' && zhaopinMask }}">
+    <view class='maskBody'>
+      <view class='title'>学历要求</view>
+      <view class='filterBtnWrap' wx:for="{{ xueliData }}" wx:key="">
+        <view class='filterBtn {{ xueliChoose === item.id ? "active" : ""}}' wx:for="{{ item }}" data-id='{{ item.id }}' bindtap='xueliChooseFilter' wx:key="">{{ item.name }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 周期过滤弹框 -->
+  <view class='filterMask' wx:if="{{ zhaopinFilter === 'zhouqi' && zhaopinMask }}">
+    <view class='maskBody'>
+      <view class='title'>工作周期</view>
+      <view class='filterBtnWrap'>
+        <view class='filterBtn {{ zhouqiChoose == "" ? "active" : ""}}' data-id='' bindtap='zhouqiChooseFilter' >不限</view>
+        <view class='filterBtn {{ zhouqiChoose == "2" ? "active" : ""}}' data-id='2' bindtap='zhouqiChooseFilter' >长期兼职</view>
+        <view class='filterBtn {{ zhouqiChoose == "1" ? "active" : ""}}' data-id='1' bindtap='zhouqiChooseFilter' >短期兼职</view>
+      </view>
+    </view>
+  </view>
+</view>

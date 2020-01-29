@@ -1,0 +1,10 @@
+<!--pages/loginChoose/loginChoose.wxml-->
+<view class='loginChooseWrap'>
+  <view class='topImg'>
+    <image class='login' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/login.png'></image>
+  </view>
+  <view class='wordRow'>登陆查看更多内容</view>
+  <view class=''></view>
+  <button class='loginOne' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >一键登录</button>
+  <view class='loginTwo' bindtap='goLogin'>手机号登录</view>
+</view>

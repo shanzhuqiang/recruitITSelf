@@ -1,0 +1,31 @@
+<!--pages/myGold/myGold.wxml-->
+<view class='myGoldWrap'>
+  <view class='topImg'>
+    <image class='goldBg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/goldBg.png'></image>
+    <view class='first'>当前余额</view>
+    <view class='secondNum'>{{ num }}</view>
+    <view class='rightBtn' bindtap='goTixian'>提现</view>
+  </view>
+  <view class='middleBtnBox'>
+    <view class='{{ typeStr == 1 ? "active" : "" }}' bindtap='chooseType' data-id="1">收入</view>
+    <view class='{{ typeStr == 2 ? "active" : "" }}' bindtap='chooseType' data-id="2">支出</view>
+  </view>
+  <view class='itemBox' wx:for="{{ listData }}" wx:key="">
+    <view class='first'>{{ item.title }}</view>
+    <view class='second'>
+      <view class='itemNum'>{{ item.way == 1 ? '+' : '-' }}{{ item.num }}元</view>
+      {{ item.create_at }}
+    </view>
+  </view>
+  <view wx:if="{{ listData.length == 0 }}" class='noDataWrap'>
+    <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+    <view class='textWord'>暂无信息</view>
+  </view>
+  <!-- <view class='itemBox'>
+    <view class='first'>平台调整</view>
+    <view class='second'>
+      <view class='itemNum'>+100金币</view>
+      2019-01-14
+    </view>
+  </view> -->
+</view>

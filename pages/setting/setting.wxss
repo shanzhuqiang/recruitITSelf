@@ -1,0 +1,74 @@
+/* pages/setting/setting.wxss */
+page{
+  height: 100%;
+}
+.settingWrap{
+  height: 100%;
+  background: #f8f8f8;
+}
+.settingWrap .listWrap{
+  padding: 0 30rpx;
+  background: #fff;
+}
+.settingWrap .listWrap .item{
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  position: relative;
+}
+.settingWrap .listWrap .item .listItemBtn{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 99;
+}
+.settingWrap .listWrap .item .listItemBtn::after{
+  border: none;
+}
+.settingWrap .listWrap .item .first{
+  float: left;
+  height: 88rpx;
+  line-height: 88rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+  padding-left: 10rpx;
+}
+.settingWrap .listWrap .item .second{
+  float: right;
+  height: 88rpx;
+  line-height: 88rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding-right: 40rpx;
+}
+.settingWrap .listWrap .item .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 32rpx;
+}
+.settingWrap .qiehuanBox{
+  height: 90rpx;
+  line-height: 90rpx;
+  border-top: 16rpx solid #f8f8f8;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+  text-align: center;
+  background: #fff;
+}
+.settingWrap .loginOut{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+  height: 26rpx;
+  line-height: 26rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}

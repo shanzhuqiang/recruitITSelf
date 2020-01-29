@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-modal": "../../dist/modal/index"
+  },
+  "navigationBarTitleText": "夯大猎",
+  "navigationBarBackgroundColor": "#fff"
+}

@@ -1,0 +1,39 @@
+/* pages/gangweizhize/gangweizhize.wxss */
+.desMyselfWrap .bgRow{
+  height: 16rpx;
+  background: #f8f8f8;
+}
+.desMyselfWrap .textareaWrap{
+  padding: 0 30rpx;
+  height: 400rpx;
+}
+.desMyselfWrap .textareaBox{
+  width: 100%;
+  height: 379rpx;
+  padding: 10rpx 0;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	line-height: 24rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.desMyselfWrap .wordNum{
+  text-align: right;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #999;
+  padding: 10rpx 40rpx 0;
+}
+.desMyselfWrap .saveBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+  margin: 127rpx auto 0;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+}

@@ -1,0 +1,160 @@
+/* pages/talentResume/talentResume.wxss */
+.talentResumeWrap{
+  padding-top: 100rpx;
+}
+.talentResumeWrap .filterWrap{
+  line-height: 100rpx;
+  height: 100rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.talentResumeWrap .filterWrap .colBox{
+  width: 33%;
+  float: left;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+}
+.talentResumeWrap .filterWrap .colBox.active{
+	color: #2e70f9;
+}
+.talentResumeWrap .filterWrap .colBox .arrowDown{
+  width: 15rpx;
+  height: 10rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.talentResumeWrap .filterMask{
+  position: fixed;
+  left: 0;
+  top: 100rpx;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4)
+}
+.talentResumeWrap .filterMask .maskBody{
+  padding: 35rpx 38rpx;
+  background: #fff;
+}
+.talentResumeWrap .filterMask .maskBody .title{
+	font-family: PingFangSC-Regular;
+	font-size: 27rpx;
+	color: #333;
+  padding-bottom: 13rpx;
+}
+.talentResumeWrap .filterMask .maskBody .filterBtnWrap{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17rpx;
+}
+.talentResumeWrap .filterMask .maskBody .filterBtnWrap .filterBtn{
+	width: 214rpx;
+	height: 62rpx;
+	line-height: 62rpx;
+  text-align: center;
+	background-color: #fff;
+	border-radius: 4rpx;
+	border: solid 1rpx #f0f0f0;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.talentResumeWrap .filterMask .maskBody .filterBtnWrap .filterBtn.active{
+	color: #2e70f9;
+	background-color: #e8eeff;
+}
+/* 人才简历列表 */
+.talentResumeWrap .itemWrap{
+  padding: 0 30rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.talentResumeWrap .itemWrap .firstRow{
+  height: 130rpx;
+  padding: 40rpx 0 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.talentResumeWrap .itemWrap .firstRow .leftImgBox{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+.talentResumeWrap .itemWrap .firstRow .leftImgBox .leftImg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.talentResumeWrap .itemWrap .firstRow .rightBox{
+  margin-left: 110rpx;
+}
+.talentResumeWrap .itemWrap .firstRow .rightBox .firstTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+	color: #333;
+}
+.talentResumeWrap .itemWrap .firstRow .rightBox .firstTitle .nameText{
+  max-width: 200rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.talentResumeWrap .itemWrap .firstRow .rightBox .firstTitle .typeName{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+	color: #333;
+  margin-left: 24rpx;
+}
+.talentResumeWrap .itemWrap .firstRow .rightBox .secondTags{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+  padding-top: 20rpx;
+}
+.talentResumeWrap .itemWrap .firstRow .rightBox .secondTags text{
+  padding: 0 15rpx;
+}
+.talentResumeWrap .itemWrap .firstRow .rightBox .secondTags text.middleTag{
+  border-left: 1rpx solid #999;
+  border-right: 1rpx solid #999;
+}
+.talentResumeWrap .itemWrap .firstRow .rightBox .thirdTags text{
+	height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+	background-color: #e8eeff;
+	border-radius: 2rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	letter-spacing: 1px;
+	color: #7a91d5;
+  padding: 0 13rpx;
+  margin-right: 20rpx;
+}
+.talentResumeWrap .itemWrap .contentWrap{
+  padding: 33rpx 0 40rpx;
+}
+.talentResumeWrap .itemWrap .contentWrap .content{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

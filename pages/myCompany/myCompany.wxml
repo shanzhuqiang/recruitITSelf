@@ -1,0 +1,40 @@
+<!--pages/enterpriseInfo/enterpriseInfo.wxml-->
+<view class='myCompanyWrap'>
+  <view class='topInfo'>
+      <image class='logoImg' src='{{ company_info.icon }}'></image>
+      <view class='topInfoRight'>
+        <view class='topTitle'>
+          {{ company_info.name }}
+        </view>
+        <!-- <view class='guanzhuGag' bindtap='goEditCompany' data-id="{{ company_info.id }}">编辑</view> -->
+        <view class='bottomTag'>
+          <text style='padding-left: 0'>{{ company_info.label1 }}</text>
+          <text class='borderLeft'>{{ company_info.label2 }}</text>
+          <text class='borderBoth'>{{ company_info.label3 }}</text>
+          <text>{{ company_info.label4 }}</text>
+        </view>
+        <view class='okBox' wx:if="{{ company_info.status === 1 }}">
+          <image class='okImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/ok.png'></image>
+          已认证
+        </view>
+      </view>
+  </view>
+  <view class='gongsiWrap'>
+    <view class='title'>公司地址</view>
+    <view class='addressWrap'>
+      <view class='addressOne'>
+      <image class='localImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/local.png'></image>
+      {{ company_info.area }}
+      </view>
+      <view class='addressTwo'>{{ company_info.address }}</view>
+    </view>
+    <view class='title'>公司介绍</view>
+    <view class='xianqgingImgWrap'>
+      <image class='xianqgingImg' src='{{ company_info.image }}'></image>
+    </view>
+    <view class='content'>
+      {{ company_info.instruction }}
+    </view>
+  </view>
+</view>
+ 

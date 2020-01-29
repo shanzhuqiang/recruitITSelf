@@ -1,0 +1,34 @@
+<!--pages/renzheng/renzheng.wxml-->
+<view class='inviteWrap'>
+  <view class='hallRow'>
+    面试日期
+    <picker class='rightIpt' mode="date" bindchange="bindDateChange">
+      <view style='color: #999'>
+        {{ inviteDate }}
+      </view>
+    </picker>
+    <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+  </view>
+  <view class='hallRow'>
+    面试时段
+    <picker class='rightIpt' mode="time" bindchange="bindTimeChange">
+      <view style='color: #999'>
+        {{ inviteTime }}
+      </view>
+    </picker>
+    <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+  </view>
+  <view class='hallRow'>
+    面试地点
+    <input class='rightInput' placeholder='请输入面试地址' bindinput='addressChange' placeholder-style='color: #999'></input>
+  </view>
+  <view class='hallRow'>
+    联系人
+    <input class='rightInput' placeholder='请输入联系人' bindinput='nameChange' placeholder-style='color: #999'></input>
+  </view>
+  <view class='hallRow'>
+    电话
+    <input class='rightInput' placeholder='请输入联系电话' type='number' maxlength='11' bindinput='phoneChange' placeholder-style='color: #999'></input>
+  </view>
+  <view class='finish' bindtap='finish'>邀请</view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/education/education.wxml-->
+<view class='educationWrap'>
+  <form bindsubmit="formSubmit">
+    <view class='hallRowWrap'>
+      <view class='hallRow'>
+        <view class='leftName'>学校名称</view>
+        <input class='rightInput' placeholder='请输入学校名称' name="name" value='{{ name }}'></input>
+      </view>
+      <view class='hallRow'>
+        <view class='leftName'>专业</view>
+        <input class='rightInput' placeholder='请输入专业' name="major" value='{{ major }}'></input>
+      </view>
+      <view class='hallRow'>
+        <view class='leftName'>学历</view>
+        <picker bindchange="xueliChange" range="{{ xueliArray }}" range-key="name">
+          <input class='rightInput' placeholder="请选择" value='{{ xueli.name }}' name="level" disabled/>
+        </picker>
+        <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+      </view>
+      <view class='hallRow'>
+        <view class='leftName'>入学时间</view>
+        <picker bindchange="intimeChange" mode="date">
+          <input class='rightInput' placeholder="请选择" value='{{ intime }}' name="start_time" disabled/>
+        </picker>
+        <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+      </view>
+      <view class='hallRow'>
+        <view class='leftName'>毕业时间</view>
+        <picker bindchange="outtimeChange" mode="date">
+          <input class='rightInput' placeholder="请选择" value='{{ outtime }}' name="end_time" disabled/>
+        </picker>
+        <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+      </view>
+    </view>
+    <button class='bottomBtn' form-type="submit">保存</button>
+  </form>
+  <view class='delBtn' wx:if="{{ id !== 'null' }}" bindtap='delWork'>删除此教育经历</view>
+</view>

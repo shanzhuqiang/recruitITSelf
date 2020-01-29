@@ -1,0 +1,110 @@
+/* pages/businessLicense/businessLicense.wxss */
+.businessLicenseWrap{
+  padding: 0 30rpx;
+}
+.businessLicenseWrap .title{
+	font-family: PingFangSC-Medium;
+	font-size: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+	color: #333;
+  padding: 56rpx 0 10rpx;
+}
+.businessLicenseWrap .content{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #666;
+}
+.businessLicenseWrap .threeRow{
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+	color: #999;
+  padding: 70rpx 0 26rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.businessLicenseWrap .threeRow > text{
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+	color: #333;
+}
+.businessLicenseWrap .imgBox{
+  padding: 40rpx 0;
+  text-align: center;
+  position: relative;
+  border-bottom: 1rpx solid #ddd;
+}
+.businessLicenseWrap .imgBox .businessLicense{
+  width: 372rpx;
+  height: 529rpx;
+}
+.businessLicenseWrap .imgBox .updateBtnBox{
+  position: absolute;
+	height: 70rpx;
+  line-height: 70rpx;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #fff;
+  padding: 0 24rpx;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%, -50%);
+}
+.businessLicenseWrap .imgBox .updateBtnBox .camera2{
+  width: 38rpx;
+  height: 32rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.businessLicenseWrap .imgBox .updateBtnBox .textWord{
+  display: inline-block;
+	height: 70rpx;
+  line-height: 70rpx;
+}
+.businessLicenseWrap .bottomTitle{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+	color: #333;
+  padding: 30rpx 0 20rpx;
+}
+.businessLicenseWrap .rowContent{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	line-height: 36rpx;
+	color: #999;
+}
+.businessLicenseWrap .rowContent > text {
+	color: #1a49d2;
+}
+.businessLicenseWrap  .confirmBtn{
+	width: 600rpx;
+	height: 90rpx;
+	background: linear-gradient(
+		#e7e7e7, 
+		#e7e7e7), 
+	linear-gradient(
+		#aaaaaa, 
+		#aaaaaa);
+	border-radius: 4rpx;
+  margin: 100rpx auto 120rpx;
+  color: #999;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 32rpx;
+}
+.businessLicenseWrap  .confirmBtn.ok{
+	background: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	color: #fff;
+}

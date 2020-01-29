@@ -1,0 +1,121 @@
+/* pages/enterpriseInfo/enterpriseInfo.wxss */
+.myCompanyWrap{
+}
+.myCompanyWrap .topInfo{
+  padding: 34rpx 30rpx 0;
+  height: 176rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.myCompanyWrap .topInfo .logoImg{
+  width: 82rpx;
+  height: 82rpx;
+  float: left;
+}
+.myCompanyWrap .topInfo .topInfoRight{
+  margin-left: 102rpx;
+}
+.myCompanyWrap .topInfo .topInfoRight .topTitle{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  line-height: 32rpx;
+  height: 32rpx;
+	color: #333;
+  position: relative;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  padding-right: 90rpx;
+}
+.myCompanyWrap .topInfo .topInfoRight .guanzhuGag{
+	width: 87rpx;
+	line-height: 38rpx;
+	height: 38rpx;
+  text-align: center;
+	border-radius: 4rpx;
+	border: solid 1px #2e70f9;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #2e70f9;
+  position: absolute;
+  right: 30rpx;
+  top: 29rpx;
+}
+.myCompanyWrap .topInfo .topInfoRight .bottomTag{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+  line-height: 26rpx;
+  height: 26rpx;
+	color: #666;
+  padding: 20rpx 0 24rpx;
+}
+.myCompanyWrap .topInfo .topInfoRight .bottomTag text{
+  padding: 0 15rpx;
+}
+.myCompanyWrap .topInfo .topInfoRight .bottomTag .borderLeft{
+  border-left: 1rpx solid #666;
+}
+.myCompanyWrap .topInfo .topInfoRight .bottomTag .borderBoth{
+  border-left: 1rpx solid #666;
+  border-right: 1rpx solid #666;
+}
+.myCompanyWrap .topInfo .topInfoRight .okBox{
+	width: 84rpx;
+	height: 30rpx;
+	line-height: 30rpx;
+	background-color: #2e70f9;
+	border-radius: 14rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #fff;
+  text-align: center;
+  position: relative;
+  padding-left: 20rpx;
+}
+.myCompanyWrap .topInfo .topInfoRight .okBox .okImg{
+  width: 15rpx;
+  height: 14rpx;
+  position: absolute;
+  left: 8rpx;
+  top: 8rpx;
+}
+.myCompanyWrap .gongsiWrap{
+  padding: 0 30rpx;
+}
+.myCompanyWrap .gongsiWrap .title{
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+	color: #333;
+  padding: 50rpx 0;
+}
+.myCompanyWrap .gongsiWrap .addressWrap .addressOne{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+}
+.myCompanyWrap .gongsiWrap .addressWrap .addressOne .localImg{
+  width: 22rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}
+.myCompanyWrap .gongsiWrap .addressWrap .addressTwo{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  padding-top: 22rpx;
+}
+.myCompanyWrap .gongsiWrap .xianqgingImgWrap{
+  width: 690rpx;
+  height: 390rpx;
+  padding-bottom: 30rpx;
+}
+.myCompanyWrap .gongsiWrap .xianqgingImg{
+  width: 690rpx;
+  height: 390rpx;
+}
+.myCompanyWrap .gongsiWrap .content{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	line-height: 36rpx;
+	color: #666;
+  padding-bottom: 120rpx;
+}

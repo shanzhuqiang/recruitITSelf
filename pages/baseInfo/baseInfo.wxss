@@ -1,0 +1,111 @@
+/* pages/baseInfo/baseInfo.wxss */
+.baseInfoWrap .showCompanyListWrap{
+	width:50vw;
+	height: 100vh;
+	background:#fff;
+  position: relative;
+}
+.baseInfoWrap .showCompanyListWrap .companyItem{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.baseInfoWrap .hallRowWrap{
+  padding: 0 30rpx;
+}
+.baseInfoWrap .hallRow{
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #ddd;
+  position:  relative;
+}
+.baseInfoWrap .hallRow .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  height: 120rpx;
+  line-height: 120rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.baseInfoWrap .hallRow .rightInput{
+  float: right;
+	font-size: 30rpx;
+  margin-right: 50rpx;
+  text-align: right;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #333
+}
+.baseInfoWrap .hallRow .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 46rpx;
+}
+.baseInfoWrap .bottomBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 30rpx auto 30rpx
+}
+/* 标签 */
+.baseInfoWrap .bottomBox{
+  padding: 37rpx 30rpx 28rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.baseInfoWrap .bottomBox .firstTitle{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  padding-left: 30rpx;
+}
+.baseInfoWrap .bottomBox .tagWrap{
+  padding: 24rpx 0 0 30rpx;
+}
+.baseInfoWrap .bottomBox .tagWrap .tag{
+  height: 28rpx;
+  line-height: 28rpx;
+	background-color: #e8eeff;
+  text-align: center;
+	border-radius: 2rpx;
+  padding: 0 15rpx;
+  display: inline-block;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	letter-spacing: 1rpx;
+	color: #7a91d5;
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+}
+.baseInfoWrap .bottomBox .tagWrap .addTagBtn{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+	height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+	border-radius: 2rpx;
+	border: solid 1rpx #dddddd;
+  display: inline-block;
+  padding: 0 15rpx;
+  margin-bottom: 10rpx;
+}

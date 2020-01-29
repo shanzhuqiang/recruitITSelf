@@ -1,0 +1,246 @@
+/* pages/bbsInfo/bbsInfo.wxss */
+.bbsInfoWrap .topBox{
+  height: 100rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+}
+.bbsInfoWrap .topBox .leftImg{
+  width: 80rpx;
+  padding-left: 30rpx;
+  float: left;
+}
+.bbsInfoWrap .topBox .leftImg .touxiang{
+  width: 71rpx;
+  height: 71rpx;
+}
+.bbsInfoWrap .topBox .rightBox{
+  margin-left: 120rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.bbsInfoWrap .topBox .rightBox .userName{
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+	color: #333;
+}
+.bbsInfoWrap .topBox .rightBox .shenfen{
+  display: inline-block;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #fff;
+	border-radius: 4rpx;
+  padding: 0 12rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  margin: 0 24rpx 0 20rpx;
+}
+.bbsInfoWrap .topBox .rightBox .shenfen.one{
+	background-image: linear-gradient(-90deg, 
+		#80a9ff 0%, 
+		#3c7bfd 100%);
+}
+.bbsInfoWrap .topBox .rightBox .shenfen.two{
+	background-image: linear-gradient(-90deg, 
+		#4beeda 0%, 
+		#19dfba 100%);
+}
+.bbsInfoWrap .topBox .rightBox .shenfen.three{
+	background-image: linear-gradient(-90deg, 
+		#f5d50a 0%, 
+		#ffcc00 42%, 
+		#fca607 100%);
+}
+.bbsInfoWrap .topBox .rightBox .time{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999;
+}
+.bbsInfoWrap .topBox .rightBox .time .tiameType{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #2e70f9;
+  margin-left: 20rpx;
+}
+.bbsInfoWrap .topBox .guanzhu{
+	width: 90rpx;
+	height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+	border-radius: 4rpx;
+	border: solid 1rpx #2e70f9;
+  position: absolute;
+  right: 28rpx;
+  top: 22rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #2e70f9;
+}
+.bbsInfoWrap .middle{
+  padding: 20rpx 30rpx 0;
+}
+.bbsInfoWrap .middle .title{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	line-height: 48rpx;
+	color: #333;
+  padding-bottom: 30rpx;
+}
+.bbsInfoWrap .middle .content{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	line-height: 42rpx;
+	color: #666;
+}
+.bbsInfoWrap .middle .imgBox{
+  height: 300rpx;
+  width: 100%;
+  padding-top: 20rpx;
+}
+.bbsInfoWrap .middle .imgBox .imgContent{
+  height: 100%;
+  width: 100%;
+}
+.bbsInfoWrap .discussBox{
+  padding: 40rpx 30rpx 0;
+}
+.bbsInfoWrap .discussBox .titleWord{
+  border-left: 6rpx solid #2e70f9;
+  height: 30rpx;
+  line-height: 30rpx;
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+	color: #333;
+  padding-left: 20rpx;
+}
+.bbsInfoWrap .noDiscuess{
+  font-size: 30rpx;
+  color: #666;
+  padding-top: 50rpx;
+  text-align: center;
+}
+.bbsInfoWrap .discussItemWrap{
+  padding-top: 50rpx;
+}
+.bbsInfoWrap .discussItemWrap .discussItem{
+  background: #f8f8f8;
+  padding:20rpx 20rpx 32rpx;
+  position: relative;
+  border-bottom: 1rpx solid #ececec;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .discussTop .leftImg{
+  width: 60rpx;
+  height: 60rpx;
+  float: left;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .discussTop .leftImg .touxiang{
+  width: 58rpx;
+  height: 58rpx;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .discussTop .rightBox{
+  margin-left: 80rpx;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .discussTop .rightBox .name{
+	font-family: PingFangSC-Medium;
+	font-size: 26rpx;
+	color: #333;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .discussTop .rightBox .time{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	color: #999999;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .discussTop .huifu{
+	width: 60rpx;
+	height: 24rpx;
+  line-height: 24rpx;
+	background-color: #e4ebfa;
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+  text-align: center;
+	color: #2e70f9;
+  position: absolute;
+  right: 24rpx;
+  top: 30rpx;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .discussContent{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #666;
+  line-height: 32rpx;
+  padding: 24rpx 0 10rpx;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .otherContent{
+	background-color: rgba(213,225,251,0.7);
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #666;
+  line-height: 32rpx;
+  padding: 20rpx 30rpx 20rpx 14rpx;
+}
+.bbsInfoWrap .discussItemWrap .discussItem .otherContent .userName{
+	font-family: PingFangSC-Medium;
+	color: #2e70f9;
+}
+.bbsInfoWrap .bottomBox{
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 40rpx;
+	background-color: #ffffff;
+	box-shadow: 0 2rpx 20rpx 0 
+		rgba(224, 223, 223, 0.5);
+}
+.bbsInfoWrap .bottomBox > view{
+  display: inline-block;
+}
+.bbsInfoWrap .bottomBox .one{
+  border-bottom: 1rpx solid #9e9e9e;
+  width: 280rpx;
+  height: 54rpx;
+  position: relative;
+  top: -10rpx;
+}
+.bbsInfoWrap .bottomBox .one .edit{
+  display: inline-block;
+  width: 21rpx;
+  height: 24rpx;
+  position: absolute;
+  left: 0;
+  top: 18rpx;
+}
+.bbsInfoWrap .bottomBox .one .ipt{
+  display: inline-block;
+	font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  width: 250rpx;
+  position: absolute;
+  left: 34rpx;
+  top: 0;
+}
+.bbsInfoWrap .bottomBox .two{
+  width: 130rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #999;
+  display: inline-block;
+}
+.bbsInfoWrap .bottomBox .two .discussIcon{
+  width: 36rpx;
+  height: 32rpx;
+  padding-top: 20rpx;
+}
+.bbsInfoWrap .bottomBox .two .heartIcon{
+  width: 36rpx;
+  height: 34rpx;
+  padding-top: 20rpx;
+}
+.bbsInfoWrap .bottomBox .two .shareIcon{
+  width: 36rpx;
+  height: 36rpx;
+  padding-top: 20rpx;
+}

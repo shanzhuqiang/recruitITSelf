@@ -1,0 +1,46 @@
+/* pages/guanzhugongsi/guanzhugongsi.wxss */
+.guanzhugongsiWrap{
+  padding: 40rpx 30rpx 0;
+}
+.guanzhugongsiWrap .listItem{
+  height: 152rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  padding-left: 12rpx;
+  margin-bottom: 40rpx
+}
+.guanzhugongsiWrap .listItem .left{
+  width: 82rpx;
+  float: left;
+  padding-top: 18rpx;
+}
+.guanzhugongsiWrap .listItem .left .logo{
+  height: 82rpx;
+  width: 82rpx;
+}
+.guanzhugongsiWrap .listItem .right{
+  margin-left: 110rpx;
+}
+.guanzhugongsiWrap .listItem .right .first{
+	font-family: PingFangSC-Medium;
+	font-size: 30rpx;
+	color: #333;
+  padding-bottom: 10rpx;
+}
+.guanzhugongsiWrap .listItem .right .second{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  padding-bottom: 7rpx;
+}
+.guanzhugongsiWrap .listItem .right .second text{
+  padding: 0 15rpx;
+  border-right: 1rpx solid #666;
+}
+.guanzhugongsiWrap .listItem .right .three{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+}
+.guanzhugongsiWrap .listItem .right .three text{
+	color: #2e70f9;
+}

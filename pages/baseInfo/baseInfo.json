@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-drawer": "../../dist/drawer/index",
+    "i-input": "../../dist/input/index",
+    "i-modal": "../../dist/modal/index"
+  },
+  "navigationBarTitleText": "基本信息",
+  "navigationBarBackgroundColor": "#fff"
+}

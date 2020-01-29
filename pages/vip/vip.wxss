@@ -1,0 +1,145 @@
+/* pages/vip/vip.wxss */
+.vipWrap > .title{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  padding: 48rpx 0 38rpx;
+  text-align: center;
+}
+.vipWrap .vipBox {
+  padding: 0 80rpx;
+	height: 400rpx;
+}
+.vipWrap .vipBox .vipItem{
+	width: 280rpx;
+	height: 400rpx;
+	background-image: linear-gradient(-45deg, 
+		#c4a364 0%, 
+		#ebd9ae 100%);
+	box-shadow: 0 0 21rpx 0 
+		rgba(253, 183, 34, 0.35);
+	border-radius: 20rpx;
+  position: relative;
+	border: solid 3rpx transparent;
+}
+.vipWrap .vipBox .vipItem.active{
+	border: solid 3rpx #000000;
+}
+.vipWrap .vipBox .vipItem.one{
+  position: relative;
+}
+.vipWrap .vipBox .vipItem.one::after{
+  content: "荐";
+	width: 58rpx;
+	height: 58rpx;
+	line-height: 58rpx;
+  text-align: center;
+  border-radius: 50%;
+  border: 4rpx solid #ebd9ae;
+	background-color: #161927;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #fff;
+  position: absolute;
+  right: -15rpx;
+  top: -20rpx;
+}
+.vipWrap .vipBox .vipItem .vipBg{
+  width: 249rpx;
+  height: 346rpx;
+  position: absolute;
+  left: 15rpx;
+  top: 14rpx;
+  z-index: 0;
+}
+.vipWrap .vipBox .vipItem .firstRow {
+  text-align: center;
+  padding: 20rpx 0;
+}
+.vipWrap .vipBox .vipItem .firstRow .queen{
+  width: 86rpx;
+  height: 60rpx;
+}
+.vipWrap .vipBox .vipItem .secondRow{
+	color: #161927;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+.vipWrap .vipBox .vipItem .secondRow .one{
+	font-family: PingFangSC-Regular;
+	font-size: 34rpx;
+}
+.vipWrap .vipBox .vipItem .secondRow .two{
+	font-family: PingFangSC-Semibold;
+	font-size: 80rpx;
+}
+.vipWrap .vipBox .vipItem .secondRow .three{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+}
+.vipWrap .vipBox .vipItem .threeRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #161927;
+  text-align: center;
+}
+.vipWrap .vipBox .vipItem  .fourRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666;
+  text-align: center;
+  padding-top: 35rpx;
+}
+.vipWrap .titleBox{
+  padding: 50rpx 48rpx 0;
+}
+.vipWrap .titleBox .title{
+	font-family: PingFangSC-Medium;
+	font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+	color: #333;
+  border-left: 6rpx solid #2e70f9;
+  padding-left: 20rpx;
+}
+.vipWrap  .itemBoxWrap{
+  padding: 40rpx 30rpx 0;
+}
+.vipWrap .itemBoxWrap .itemBox{
+  height: 104rpx;
+  line-height: 104rpx;
+  border-bottom: 1rpx solid #eee;
+	font-family: SourceHanSansCN-Light;
+	font-size: 24rpx;
+	color: #333;
+  padding-left: 120rpx;
+  position: relative;
+}
+.vipWrap .itemBoxWrap .itemBox .wechat{
+  width: 53rpx;
+  height: 44rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 34rpx;
+}
+.vipWrap .itemBoxWrap .itemBox .wechatRadio{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.vipWrap .bottomBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #ebd199;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(223, 183, 97, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 70rpx auto 0;
+}

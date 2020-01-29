@@ -1,0 +1,134 @@
+<!--pages/myRelease/myRelease.wxml-->
+<view class='myReleaseWrap'>
+  <view class='topBox' wx:if="{{ userType === 'hr' }}">
+    <view class='item {{ tabType === "tiezi" ? "active" : "" }}' bindtap='chooseType' data-id="tiezi">帖子</view>
+    <view class='item {{ tabType === "xiangmu" ? "active" : "" }}' bindtap='chooseType' data-id="xiangmu">
+      {{ projectName }}
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowDown.png'></image>
+    </view>
+    <view class='item {{ tabType === "gangwei" ? "active" : "" }}' bindtap='chooseType' data-id="gangwei">
+      {{ gangweiName }}
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowDown.png'></image>
+    </view>
+  </view>
+  <!-- 发布的帖子 -->
+  <view wx:if="{{ tabType === 'tiezi' }}">
+    <view class='itemBox' wx:for="{{ bbsList }}" wx:key="" data-id="{{ item.id }}"  bindtap='goBbsInfo'>
+      <view class='topName'>
+        <image class='touxiang' wx:if="{{imgSrc !== ''}}" src='{{ item.user_info.avatar }}'></image>
+        <view class='name'>{{ item.user_info.username }}</view>
+        <view class='shenfen {{ item.user_info.user_type == 1 ? "one" : item.user_info.user_type == 2 ? "two" : "three" }}'>{{ item.user_info.user_type == 1 ? 'IT精英' : item.user_info.user_type == 2 ? '企业金主' : '赏金猎人' }}</view>
+        <view class='time'>{{ item.publish_time }}</view>
+      </view>
+      <view class='title'>{{ item.title }}</view>
+      <view class='bottomBox' wx:if="{{ item.imgs.length == 0 }}">
+        <view class='content'>{{ item.content }}</view>
+      </view>
+      <view class='bottomBox' wx:if="{{ item.imgs.length > 0 }}">
+        <view class='left'>
+          <view class='content'>{{ item.content }}</view>
+        </view>
+        <view class='right'>
+          <image class='rightImg' src='{{ item.imgs[0] }}'></image>
+        </view>
+      </view>
+      <view class='bottomBtn'>
+        <view class='address overflow'>{{ item.address }}</view>
+        <view class='iconBox'>
+          <image class='discussIcon' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shareIcon.png'></image>
+          <text class='num'>{{ item.repost_count }}</text>
+        </view>
+        <view class='iconBox'>
+          <image class='heartIcon' wx:if="{{imgSrc !== '' && item.ic_collect == 1}}" src='{{ imgSrc }}/heartIcon2.png'></image>
+          <image class='heartIcon' wx:if="{{imgSrc !== '' && item.ic_collect == 2}}" src='{{ imgSrc }}/heartIcon.png'></image>
+          <text class='num'>{{ item.collect_count }}</text>
+        </view>
+        <view class='iconBox'>
+          <image class='discussIcon' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/discussIcon.png'></image>
+          <text class='num'>{{ item.message_count }}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{ bbsList.length == 0 }}" class='noDataWrap'>
+      <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+      <view class='textWord'>暂无信息</view>
+    </view>
+  </view>
+  <!-- 发布的项目 -->
+  <view wx:if="{{ tabType === 'xiangmu' }}">
+    <view class='itemWrap' wx:for="{{ projectList }}" wx:key="">
+      <view data-id="{{ item.id }}" bindtap='goProjectDetail'>
+        <view class='first'>
+          <!-- <view class='box'>招标</view> -->
+          <view class='title'>{{ item.name }}</view>
+          <view class='money'>{{ item.salaryStr }}</view>
+        </view>
+        <view class='second'>
+          <text style='padding-left: 0'>{{ item.job_label1 }}</text>
+          <text class='middleText'>{{ item.job_label2 }}</text>
+          <text>{{ item.job_label3 }}</text>
+        </view>
+        <view class='content'>
+          {{ item.instruction }}
+        </view>
+        <!-- <view class='line'></view> -->
+      </view>
+      <!-- <view class='btnWrap'>
+        <view class='timeBtn' bindtap='goCheckTime' data-name="{{ item.name }}" data-company="{{ item.company_name }}" data-id="{{ item.id }}" data-hourstatus="{{ item.hour_status }}">工时核对</view>
+      </view> -->
+    </view>
+    <view wx:if="{{ projectList.length == 0 }}" class='noDataWrap'>
+      <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+      <view class='textWord'>暂无信息</view>
+    </view>
+  </view>
+  <!-- 发布的岗位 -->
+  <view wx:if="{{ tabType === 'gangwei' }}">
+    <view class='itemWrap itemWrapTwo' wx:key="" wx:for="{{ quartersList }}" data-id="{{ item.id }}" bindtap='goWordDetail'>
+      <view class='first'>
+        <view class='title'>{{ item.name }}</view>
+        <view class='money'>{{ item.salaryStr }}</view>
+      </view>
+      <view class='second'>
+        <text style='padding-left: 0'>{{ item.city_name }}</text>
+        <text class='middleText'>{{ item.job_experience }}</text>
+        <text>{{ item.education }}</text>
+      </view>
+      <view class='picBox'>
+        <view class='left'>
+          <image class='logoImg' src='{{ item.company_icon }}' ></image>
+        </view>
+        <view class='right'>
+          <view class='logoName'>{{ item.company_name }}</view>
+          <view class='logoType'>{{ item.line_name }}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{ quartersList.length == 0 }}" class='noDataWrap'>
+      <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+      <view class='textWord'>暂无信息</view>
+    </view>
+  </view>
+  <!-- 项目状态选择 -->
+  <view class='typeAllMask' wx:if="{{ projectMask }}">
+    <!-- <view class='maskRow {{ projectType == "" ? "active" : "" }}' bindtap='chooseProject' data-id="" data-ida="全部项目">全部项目</view> -->
+    <view class='maskRow {{ projectType == 1 ? "active" : "" }}' bindtap='chooseProject' data-id="1" data-ida="招聘中">进行中</view>
+    <!-- <view class='maskRow {{ projectType == 2 ? "active" : "" }}' bindtap='chooseProject' data-id="2" data-ida="暂停中">暂停中</view> -->
+    <view class='maskRow {{ projectType == 3 ? "active" : "" }}' bindtap='chooseProject' data-id="3" data-ida="已结束">已结束</view>
+    <!-- <view class='maskRow {{ projectType == 4 ? "active" : "" }}' bindtap='chooseProject' data-id="4" data-ida="审核中">审核中</view> -->
+    <!-- <view class='maskRow {{ projectType == 5 ? "active" : "" }}' bindtap='chooseProject' data-id="5" data-ida="审核驳回">审核驳回</view> -->
+    <!-- <view class='maskRow {{ projectType == 6 ? "active" : "" }}' bindtap='chooseProject' data-id="6" data-ida="进行中">进行中</view> -->
+    <view class='maskRow {{ projectType == 7 ? "active" : "" }}' bindtap='chooseProject' data-id="7" data-ida="已完成">已完成</view>
+    <!-- <view class='maskRow {{ typeAll === "岗位" ? "active" : "" }}' bindtap='chooseAll' data-id="岗位">已拒绝</view> -->
+  </view>
+  <!-- 岗位状态选择 -->
+  <view class='typeAllMask' wx:if="{{ gangweiMask }}">
+    <!-- <view class='maskRow {{ gangweiType == "" ? "active" : "" }}' bindtap='chooseGangwei' data-id="" data-ida="全部岗位">全部岗位</view> -->
+    <view class='maskRow {{ gangweiType == 1 ? "active" : "" }}' bindtap='chooseGangwei' data-id="1" data-ida="招聘中">进行中</view>
+    <!-- <view class='maskRow {{ gangweiType == 2 ? "active" : "" }}' bindtap='chooseGangwei' data-id="2" data-ida="暂停中">暂停中</view> -->
+    <view class='maskRow {{ gangweiType == 3 ? "active" : "" }}' bindtap='chooseGangwei' data-id="3" data-ida="已结束">已结束</view>
+    <!-- <view class='maskRow {{ gangweiType == 4 ? "active" : "" }}' bindtap='chooseGangwei' data-id="4" data-ida="审核中">审核中</view> -->
+    <!-- <view class='maskRow {{ gangweiType == 5 ? "active" : "" }}' bindtap='chooseGangwei' data-id="5" data-ida="审核驳回">审核驳回</view> -->
+    <view class='maskRow {{ gangweiType == 7 ? "active" : "" }}' bindtap='chooseGangwei' data-id="7" data-ida="已完成">已完成</view>
+  </view>
+</view>

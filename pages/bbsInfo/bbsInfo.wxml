@@ -1,0 +1,94 @@
+<!--pages/bbsInfo/bbsInfo.wxml-->
+<view class='bbsInfoWrap'>
+  <view class='topBox'>
+    <view class='leftImg'>
+      <image class='touxiang'  src='{{ bbsInfo.user_info.avatar }}'></image>
+    </view>
+    <view class='rightBox'>
+      <view>
+        <text class='userName'>{{ bbsInfo.user_info.username }}</text>
+        <view class='shenfen {{ bbsInfo.user_info.user_type == 1 ? "one" : bbsInfo.user_info.user_type == 2 ? "two" : "three" }}'>{{ bbsInfo.user_info.user_type == 1 ? 'IT精英' : bbsInfo.user_info.user_type == 2 ? '企业金主' : '赏金猎人' }}</view>
+      </view>
+      <view class='time'>{{ bbsInfo.publish_time }}<text class='tiameType'>#{{ bbsInfo.type == 1 ? '个人发布' : '官方发布' }}#</text></view>
+    </view>
+    <view class='guanzhu' wx:if="{{ is_collect == 1 }}">已关注</view>
+    <view class='guanzhu' wx:if="{{ is_collect == 2 }}" data-id="{{ bbsInfo.user_info.id }}" bindtap='guanzhuBtn'>+关注</view>
+  </view>
+  <view class='middle'>
+    <view class='title'>{{ bbsInfo.title }}</view>
+    <view class='content'>
+      {{ bbsInfo.content }}
+    </view>
+    <view class='imgBox' wx:if="{{ bbsInfo.imgs.length > 0 }}">
+      <image class='imgContent' src='{{ bbsInfo.imgs[0] }}'></image>
+    </view>
+  </view>
+  <view class='discussBox'>
+    <view class='titleWord'>全部评论</view>
+    <view class='discussItemWrap' wx:if="{{ bbsInfo.comment_list.length > 0 }}">
+      <view class='discussItem' wx:for="{{ bbsInfo.comment_list }}" wx:key="">
+        <view class='discussTop'>
+          <view class='leftImg'>
+            <image class='touxiang' wx:if="{{imgSrc !== ''}}" src='{{ item.user_info.avatar }}'></image>
+          </view>
+          <view class='rightBox'>
+            <view class='name'>{{ item.user_info.username }}</view>
+            <view class='time'>{{ item.create_time }}</view>
+          </view>
+          <view class='huifu' bindtap='huifu' data-id="{{ item.id }}">回复</view>
+        </view>
+        <view class='discussContent'>
+          {{ item.content }}
+        </view>
+        <view class='otherContent' wx:for="{{ item.sub_comment }}" wx:key="">
+          <text class='userName'>{{ item.user_info.username }}</text>回复:{{ item.content }}
+        </view>
+      </view>
+      <!-- <view class='discussItem'>
+        <view class='discussTop'>
+          <view class='leftImg'>
+            <image class='touxiang' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/touxiang.png'></image>
+          </view>
+          <view class='rightBox'>
+            <view class='name'>小**</view>
+            <view class='time'>2019-09-29 14:01</view>
+          </view>
+          <view class='huifu'>回复</view>
+        </view>
+        <view class='discussContent'>
+          无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津
+        </view>
+        <view class='otherContent'>
+          <text class='userName'>hahaha</text>回复:无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津无人问津
+        </view>
+      </view> -->
+    </view>
+    <view class='noDiscuess' wx:if="{{ bbsInfo.comment_list.length == 0 }}">暂无评论</view>
+    <view style='height: 120rpx;'></view>
+    <view class='bottomBox'>
+      <view class='one' bindtap='huifuTheme'>
+        <image class='edit' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/edit.png'></image>
+        <input class='ipt' focus="{{ focus }}" type='text' placeholder='评论点什么吧' bindconfirm="iptChange" confirm-type="评论"></input>
+      </view>
+      <view class='two'>
+        <view>
+          <image class='discussIcon' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/discussIcon.png'></image>
+        </view>
+        <view>{{ bbsInfo.message_count }}</view>
+      </view>
+      <view class='two' bindtap='thumbUp'>
+        <view>
+        <image class='heartIcon' wx:if="{{imgSrc !== '' && shoucang == 1}}" src='{{ imgSrc }}/heartIcon2.png'></image>
+        <image class='heartIcon' wx:if="{{imgSrc !== '' && shoucang == 2}}" src='{{ imgSrc }}/heartIcon.png'></image>
+        </view>
+        <view>{{ bbsInfo.collect_count }}</view>
+      </view>
+      <button class='bottonClass two' open-type="share">
+        <view>
+          <image class='shareIcon' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shareIcon.png'></image>
+        </view>
+        <view>{{ bbsInfo.repost_count }}</view>
+      </button>
+    </view>
+  </view>
+</view>

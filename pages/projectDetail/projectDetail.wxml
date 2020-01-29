@@ -1,0 +1,137 @@
+<!--pages/postDetail/postDetail.wxml-->
+<view class='projectDetailWrap'>
+  <view class='topBox'>
+    <view class='first'>
+      <view class='leftTitle'>{{ job_info.name }}</view>
+      <view class='rightTitle'>{{ userType == 'engineer' ? "不限" : job_info.salaryStr }}</view>
+      <view class='rightTitle2' wx:if="{{ bonus == 1 && job_info.salaryStr }}">赏金￥{{ job_info.reward }}</view>
+    </view>
+    <view class='second'>
+      <text>{{ job_info.city_name + '·' + job_info.district_name }}</text>
+      <text class='line' wx:if="{{ job_info.job_experience }}">|</text>
+      <text class='middle'>{{ job_info.job_experience }}</text>
+      <text class='line' wx:if="{{ job_info.nature }}">|</text>
+      <text>{{ job_info.nature }}</text>
+    </view>
+    <view class='three'>
+      <!-- <text>{{ job_info.project_label1 }}</text>
+      <text>{{ job_info.project_label2 }}</text>
+      <text>{{ job_info.project_label3 }}</text> -->
+    </view>
+    <view class='fourBox'>
+      <view class='leftImg'>
+        <image class='touxiang' wx:if="{{ job_info.hr_icon }}" src='{{ job_info.hr_icon }}'></image>
+      </view>
+      <view class='rightBox'>
+        <view class='firstRow'>
+          {{ job_info.hr_name }}
+          <text>负责人</text>
+        </view>
+        <view class='secondRow'>最近活跃：{{ job_info.hr_day }}</view>
+      </view>
+    </view>
+  </view>
+  <view class='detailBox'>
+    <view class='titleOne'>岗位详情</view>
+    <view class='titleSmall'>岗位职责</view>
+    <textarea class='contentRow' value='{{ job_info.instruction }}' disabled auto-height></textarea>
+    <view class='titleSmall'>任职要求</view>
+    <textarea class='contentRow' value='{{ job_info.requirement }}' disabled auto-height></textarea>
+  </view>
+  <view class='companyBox'>
+    <view class='leftImgBox'>
+      <image class='logoImg' wx:if="{{ companyInfo.icon }}" src='{{ companyInfo.icon }}'></image>
+    </view>
+    <view class='rightImgBox'>
+      <view class='rowOne'>{{ companyInfo.name }}</view>
+      <view class='rowTwo'>
+        <text>{{ companyInfo.label1 }}</text>
+        <text class='line' wx:if="{{ companyInfo.label2 }}">|</text>
+        <text>{{ companyInfo.label2 }}</text>
+        <text class='line' wx:if="{{ companyInfo.label3 }}">|</text>
+        <text>{{ companyInfo.label3 }}</text>
+        <text class='line' wx:if="{{ companyInfo.label4 }}">|</text>
+        <text>{{ companyInfo.label4 }}</text>
+      </view>
+      <view class='rowThree' wx:if="{{ companyInfo.status == 1 }}">
+        <image class='okImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/ok.png'></image>
+        <text>已认证</text>
+      </view>
+      <view class='rowThree' wx:if="{{ companyInfo.status == 2 }}">
+        <text style='padding-left: 14rpx'>未认证</text>
+      </view>
+    </view>
+    <view class='bottomAddressBox'>
+      <view class='titleAddress'>公司地址</view>
+      <view class='addressTest'>
+        <!-- <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image> -->
+        <view class='firstText'>
+          <image class='local' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/local.png'></image>
+          <text>{{ companyInfo.area }}</text>
+        </view>
+        <view class='secondText'>{{ companyInfo.address }}</view>
+      </view>
+    </view>
+  </view>
+  <view style='height: 116tpx;'></view>
+  <view class='bottomBtn' wx:if="{{ userType == 'engineer' }}">
+    <view class='rightBtn' bindtap='applyNow' wx:if="{{ job_info.is_post == 2 }}">立即投递</view>
+    <view class='rightBtn none' wx:if="{{ job_info.is_post == 1 }}">已经投递</view>
+  </view>
+  <view class='bottomBtn' wx:if="{{ userType == 'agent' && bonus == 1  }}">
+    <view class='rightBtn' bindtap='shareUser'>推荐</view>
+    <!-- <view class='rightBtn' bindtap='shareBtn'>推荐</view> -->
+  </view>
+  <view class='bottomBtn' wx:if="{{ userType == 'agent' && bonus != 1 }}">
+    <view class='rightBtn none'>当前身份不可用</view>
+    <!-- <view class='rightBtn' bindtap='shareBtn'>推荐</view> -->
+  </view>
+  <view class='bottomBtn' wx:if="{{ userType == 'hr' }}">
+    <view class='rightBtn none'>当前身份不可用</view>
+  </view>
+  <!-- 图片分享 -->
+  <view class='maskWrap' wx:if="{{ maskOnOff }}">
+    <view class='contentBox'>
+      <image class='shareImg' show-menu-by-longpress wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shareImg4.png'></image>
+      <view class='text' bindtap='closeMask'>我知道了</view>
+    </view>
+  </view>
+  <!-- 分享遮罩 -->
+  <view class='shareMask' wx:if="{{ shareMask }}">
+    <view class='bottomBox'>
+      <view class='firstBox'>
+        <view class='shareChooseWord'>分享至</view>
+        <view class='firstBoxWrap' style='{{ userType === "engineer" ? "padding: 30rpx 200rpx 0" : "" }}'>
+          <view bindtap='shareUser' wx:if="{{ userType !== 'engineer' }}">
+            <view class='circle'>
+              <image class='shareImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/share1.png'></image>
+            </view>
+            <view class='circleWord'>站内分享</view>
+          </view>
+          <view bindtap='sharePhoto'>
+            <view class='circle'>
+              <image class='shareImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/share2.png'></image>
+            </view>
+            <view class='circleWord'>生成分享图</view>
+          </view>
+          <button class='bottonClass' open-type="share">
+            <view class='circle'>
+              <image class='shareImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/share3.png'></image>
+            </view>
+            <view class='circleWord'>链接分享</view>
+          </button>
+        </view>
+      </view>
+      <view class='secondBox' bindtap='cancalShare'>取消</view>
+    </view>
+  </view>
+  <!-- 推荐列表 -->
+  <i-drawer mode="right" visible="{{ showUsertList }}" bind:close="toggleshowUsertList">
+    <scroll-view class="showCompanyListWrap" scroll-y>
+      <view class="comSearchBox">
+        <input class="ipt" placeholder="输入关键字过滤" bindinput="comIptChange"></input>
+      </view>
+      <view class='companyItem' wx:for="{{ user_list }}" wx:key="" data-id="{{ item.id }}" data-name="{{ item.username }}" bindtap='chooseDistrict'>{{ item.username }}</view>
+    </scroll-view>
+  </i-drawer>
+</view>

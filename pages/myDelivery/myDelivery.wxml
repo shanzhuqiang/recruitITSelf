@@ -1,0 +1,75 @@
+<!--pages/myDelivery/myDelivery.wxml-->
+<view class='myDeliveryWrap'>
+  <view class='topBoxWrap'>
+    <view class='topBoxLeft' bindtap='openTypeAllBtn'>
+      {{ typeAll }}
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ typeAllBtn ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <view class='topBox'>
+      <view class='item {{ tabType == 1 ? "active" : "" }}' bindtap='chooseType' data-id="1">
+        已投递
+      </view>
+      <view class='item {{ tabType == 2 ? "active" : "" }}' bindtap='chooseType' data-id="2">
+        待沟通
+      </view>
+      <view class='item {{ tabType == 3 ? "active" : "" }}' bindtap='chooseType' data-id="3">
+        面试
+      </view>
+      <view class='item {{ tabType == 4 ? "active" : "" }}' bindtap='chooseType' data-id="4">
+        不合适
+      </view>
+    </view>
+  </view>
+  <view class='itemWrap'>
+    <view wx:for="{{ listData }}" wx:key="">
+      <!-- 项目 -->
+      <view class='itemBox' wx:if="{{ item.type == 2 }}" bindtap='goProjectDetail' data-id="{{ item.re_project_id }}" data-ida="{{ item.id }}">
+        <!-- <view class='leftImg'>招标</view> -->
+        <view class='rightText'>
+          <view class='firstRow'>
+            {{ item.name }}
+            <view class='time'>{{ item.create_time }}</view>
+          </view>
+          <view class='secondRow'>
+            <text>{{ item.city_name }}</text>
+            <text class='line'>|</text>
+            <text>{{ item.job_experience }}</text>
+            <text class='line'>|</text>
+            <text>{{ item.nature }}</text>
+          </view>
+          <view class='threeRow'>{{ item.salaryStr }}</view>
+        <view class='bottomBtn' wx:if="{{ item.status == 5 }}">已录用</view>
+        </view>
+      </view>
+      <!-- 岗位 -->
+      <view class='itemBox' wx:if="{{ item.type == 1 }}" bindtap='goPostDetail' data-id="{{ item.re_job_id }}" data-ida="{{ item.id }}">
+        <view class='leftImg2'>
+          <image class='logoImg' wx:if="{{imgSrc !== ''}}" src='{{ item.company_icon }}'></image>
+        </view>
+        <view class='rightText rightText2'>
+          <view class='firstRow'>
+            {{ item.name }}
+            <view class='time'>{{ item.create_time }}</view>
+          </view>
+          <view class='secondRow'>
+            <text>{{ item.city_name }}</text>
+            <text class='line'>|</text>
+            <text>{{ item.company_name }}</text>
+          </view>
+          <view class='threeRow'>{{ item.salaryStr }}</view>
+        <view class='bottomBtn' wx:if="{{ item.status == 5 }}">已录用</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{ listData.length == 0 }}" class='noDataWrap'>
+      <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+      <view class='textWord'>暂无信息</view>
+    </view>
+  </view>
+  <!-- 选择全部或项目或岗位 -->
+  <view class='typeAllMask' wx:if="{{ typeAllBtn }}">
+    <view class='maskRow {{ typeAll === "全部" ? "active" : "" }}' bindtap='chooseAll' data-id="全部">全部</view>
+    <view class='maskRow {{ typeAll === "项目" ? "active" : "" }}' bindtap='chooseAll' data-id="项目">项目</view>
+    <view class='maskRow {{ typeAll === "岗位" ? "active" : "" }}' bindtap='chooseAll' data-id="岗位">岗位</view>
+  </view>
+</view>

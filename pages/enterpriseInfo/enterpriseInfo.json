@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-load-more": "../../dist/load-more/index"
+  },
+  "navigationBarTitleText": "企业详情",
+  "navigationBarBackgroundColor": "#fff"
+}

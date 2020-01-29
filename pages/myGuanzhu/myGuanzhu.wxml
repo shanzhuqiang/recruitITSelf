@@ -1,0 +1,25 @@
+<!--pages/myGuanzhu/myGuanzhu.wxml-->
+<view class='myGuanzhuWrap'>
+  <view class='itemBox' wx:for="{{ listData }}" wx:key="" data-id="{{ item.re_resume_id }}" bindtap='goInfo'>
+    <view class='firstRow'>
+      <view class='leftImgBox'>
+        <image class='leftImg' wx:if="{{ item.avatar }}" src='{{ item.avatar }}'></image>
+      </view>
+      <view class='rightBox'>
+        <view class='firstTitle'>
+          <text class='nameText'>{{ item.username }}</text>
+          <text class='typeName'>{{ item.title }}</text></view>
+        <view class='secondTags'>
+          <text style='padding-left: 0'>{{ item.work_years }}年</text>
+          <text class='middleTag'>{{ item.education }}</text>
+          <text>{{ item.mini_salary }}k-{{ item.max_salary }}k</text>
+        </view>
+        <view class='bottomTime'>最近活跃：{{ item.engineer_day }}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{ listData.length == 0 }}" class='noDataWrap'>
+    <image class='noData' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/noData.png'></image>
+    <view class='textWord'>暂无信息</view>
+  </view>
+</view>

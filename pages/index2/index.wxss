@@ -1,0 +1,191 @@
+
+/* pages/index/index.wxss */
+page{
+  height: 100%;
+}
+.indexWrapTwo .hallRow{
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #ddd;
+  position:  relative;
+}
+.indexWrapTwo .hallRow .leftName{
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+  height: 120rpx;
+  line-height: 120rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+.indexWrapTwo .hallRow .rightInput{
+  float: right;
+	font-size: 30rpx;
+  margin-right: 50rpx;
+  text-align: right;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #333
+}
+.indexWrapTwo .hallRow .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 46rpx;
+}
+.indexWrapTwo .bottomBox{
+  text-align: center;
+  padding-top: 50rpx;
+}
+.indexWrapTwo .bottomBox .rmbRadio{
+  margin-left: 10rpx;
+}
+.indexWrapTwo .fabu{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  margin: 90rpx auto 0;
+}
+.indexWrap{
+  height: 100%;
+  background: #fff;
+}
+.indexWrap .authMask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0);
+  z-index: 99
+}
+.indexWrap .homeTitle{
+  text-align: center;
+  font-size: 36rpx;
+  padding: 20rpx 0;
+	font-family: PingFangSC-Regular;
+}
+.indexWrap .chooseOneWrap{
+  text-align: center;
+  height: 315rpx;
+  padding: 60rpx 110rpx;
+}
+.indexWrap .chooseOneWrap .chooseOne{
+  width: 228rpx;
+  height: 315rpx;
+  float: left;
+}
+.indexWrap .chooseOneWrap .homeBtn{
+  float: right;
+  margin-top: 110rpx;
+}
+.indexWrap .chooseTwoWrap{
+  text-align: center;
+  height: 357rpx;
+  padding: 100rpx 110rpx 0;
+}
+.indexWrap .chooseTwoWrap .chooseTwo{
+  width: 264rpx;
+  height: 357rpx;
+  float: left;
+}
+.indexWrap .chooseTwoWrap .homeBtn{
+  float: right;
+  margin-top: 90rpx;
+}
+.indexWrap .chooseTwoWrap .homeBtn2{
+  margin-top: 60rpx;
+  float: right;
+	width: 196rpx;
+	height: 64rpx;
+	box-shadow: 0 4rpx 13rpx 0 rgba(26, 73, 210, 0.34);
+	border-radius: 4rpx;
+	border: solid 2rpx #5787f3;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #5787f3;
+  text-align: center;
+  line-height: 64rpx;
+}
+.indexWrap .homeBtn{
+  width: 200rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  background-color: #4c85fb;
+	box-shadow: 0 4rpx 13rpx 0 rgba(26, 73, 210, 0.34);
+	border-radius: 4rpx;
+  margin:  auto;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+}
+/* 不授权弹框 */
+.indexWrap .noAuthWrap{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 9999
+}
+.indexWrap .noAuthWrap .noAuthBox{
+  width: 600rpx;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10rpx;
+}
+.indexWrap .noAuthWrap .noAuthBox .titleNo{
+  text-align: center;
+	font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #333;
+  padding: 30rpx 0;
+}
+.indexWrap .noAuthWrap .noAuthBox .content{
+	font-family: PingFangSC-Regular;
+  text-align: center;
+  font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  color: #999;
+  padding-bottom: 30rpx;
+}
+.indexWrap .noAuthWrap .noAuthBox .bottomBtn{
+  border-top: 1rpx solid #ddd;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.indexWrap .noAuthWrap .noAuthBox .bottomBtn .leftBtn{
+  width: 50%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-right: 1rpx solid #ddd;
+  color: #666;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 26rpx;
+}
+.indexWrap .noAuthWrap .noAuthBox .bottomBtn .rightBtn{
+  width: 50%;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #2d8cf0;
+  text-align: center;
+  font-size: 26rpx;
+  background: #fff;
+}

@@ -1,0 +1,18 @@
+<!--pages/businessLicense/businessLicense.wxml-->
+<view class='businessLicenseWrap'>
+  <view class='title'>上传营业执照</view>
+  <view class='content'>向平台提交企业认证的相关资料请确保真实，账号仅限本人使用，否则您可能将承担相应的违法违规后果。</view>
+  <view class='threeRow'>您公司的全称是：<text>{{ name }}</text></view>
+  <view class='imgBox'>
+    <image class='businessLicense' src='{{ imgBox }}'></image>
+    <view class='updateBtnBox'  bindtap='chooseImg'>
+      <image class='camera2' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/camera2.png'></image>
+      <text class='textWord'>上传营业执照</text>
+    </view>
+  </view>
+  <view class='bottomTitle'>注意事项</view>
+  <view class='rowContent'>1、请上传<text>最新</text>的营业执照</view>
+  <view class='rowContent'>2、保证<text>清晰</text>可辨认</view>
+  <view class='rowContent'>3、请确保您上传的营业执照<text>真实有效</text>，否则可能会导致您的帐号被锁定</view>
+  <view class='confirmBtn {{ chooseOk ? "ok" : "" }}' bindtap='confirm'>提交</view>
+</view>

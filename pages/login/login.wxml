@@ -1,0 +1,42 @@
+<!--pages/login/login.wxml-->
+<view class='loginWrap'>
+  <view class='topImg'>
+    <image class='login' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/login.png'></image>
+  </view>
+  <view class='btnWrap'>
+    <view class='{{ typeBtn === "code" ? "active" : "" }}' data-id="code" bindtap='chooseType'>验证码登录</view>
+    <view class='{{ typeBtn === "password" ? "active" : "" }}' data-id="password" bindtap='chooseType'>密码登录</view>
+  </view>
+  <view class='inputWrap' wx:if="{{ typeBtn === 'code' }}">
+    <view class='rowItem'>
+      <image class='phone3' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/phone3.png'></image>
+      <input class='inputBox' type='number' maxlength='11' value='{{ mobile }}' placeholder='请输入有效手机号码' bindinput='mobileChange'></input>
+    </view>
+    <view class='rowItem'>
+      <image class='code2' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/code2.png'></image>
+      <input class='inputBox' type='number' placeholder='请输入验证码' bindinput='codeChange'></input>
+      <view class='getCode' bindtap='sendCode' wx:if="{{ !codeWord }}">获取验证码</view>
+      <i-count-down
+        class="countDownWrap"
+        countdown-class="countDown"
+        wx:if="{{ codeWord }}"
+        target="{{targetTime}}"
+        showSecond="{{ true }}"
+        clear-timer="{{clearTimer}}"
+        bindcallback="myLinsterner"
+      ></i-count-down>
+    </view>
+  </view>
+  <view class='inputWrap' wx:if="{{ typeBtn === 'password' }}">
+    <view class='rowItem'>
+      <image class='phone3' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/phone3.png'></image>
+      <input class='inputBox' type='number' maxlength='11' value='{{ mobile }}' placeholder='请输入有效手机号码' bindinput='mobileChange'></input>
+    </view>
+    <view class='rowItem'>
+      <image class='password2' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/password2.png'></image>
+      <input class='inputBox' type='password' placeholder='请输入密码' bindinput='passwordChange'></input>
+    </view>
+  </view>
+  <view class='loginBtn' bindtap='loginIn'>登录</view>
+  <view class='forget' bindtap='goPassword'>忘记密码？</view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-load-more": "../../dist/load-more/index"
+  },
+  "navigationBarTitleText": "名企专区",
+  "navigationBarBackgroundColor": "#fff"
+}

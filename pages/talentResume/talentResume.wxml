@@ -1,0 +1,76 @@
+<!--pages/talentResume/talentResume.wxml-->
+<view class='talentResumeWrap'>
+  <view class='filterWrap'>
+    <!-- <view class='colBox {{ topFilterBtn === "quyu" ? "active" : "" }}' bindtap='topFilter' data-id="quyu">
+      <text>区域</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "quyu" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view> -->
+    <view class='colBox {{ region[0] !== "全部" ? "active" : "" }}'>
+      <picker mode="region" bindcancel="bindcancel" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <text>区域</text>
+        <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ region[0] !== "全部" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+      </picker>
+    </view>
+    <view class='colBox {{ topFilterBtn === "jingyan" ? "active" : "" }}' bindtap='topFilter' data-id="jingyan">
+      <text>经验</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "jingyan" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <view class='colBox {{ topFilterBtn === "yuexin" ? "active" : "" }}' bindtap='topFilter' data-id="yuexin">
+      <text>月薪</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "yuexin" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+  </view>
+  <view class='itemWrap' wx:for="{{ listData }}" wx:key="" bindtap='goResumeDetail' data-id="{{ item.id }}">
+    <view class='firstRow'>
+      <view class='leftImgBox'>
+        <image class='leftImg' src='{{ item.avatar }}'></image>
+      </view>
+      <view class='rightBox'>
+        <view class='firstTitle'><text class='nameText'>{{ item.name }}</text><text class='typeName'>{{ item.job_name }}</text></view>
+        <view class='secondTags'>
+          <text style='padding-left: 0'>{{ item.work_yeas }}年</text>
+          <text class='middleTag'>{{ item.education_name }}</text>
+          <text>{{ item.salaryStr }}</text>
+        </view>
+        <view class='thirdTags'>
+          <text wx:if="{{ item.label1 }}">{{ item.label1 }}</text>
+          <text wx:if="{{ item.label2 }}">{{ item.label2 }}</text>
+          <text wx:if="{{ item.label3 }}">{{ item.label3 }}</text>
+        </view>
+      </view>
+    </view>
+    <view class='contentWrap'>
+      <view class='content'>
+        {{ item.introduction || "暂无信息" }}
+      </view>
+    </view>
+  </view>
+  <i-load-more tip="没有更多了" loading="{{ loading }}" />
+  <!-- 区域 -->
+  <view class='filterMask' wx:if="{{ topFilterBtn === 'quyu' && maskOnOff}}">
+    <view class='maskBody'>
+      <view class='title'>工作区域</view>
+      <view class='filterBtnWrap' wx:for="{{ quyuData }}" wx:key="">
+        <view class='filterBtn {{ quyuChoose == item.district_code ? "active" : ""}}' style='{{item.district_name === null ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id='{{ item.district_code }}' bindtap='quyuChooseFilter' wx:key="">{{ item.district_name }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 经验 -->
+  <view class='filterMask' wx:if="{{ topFilterBtn === 'jingyan' && maskOnOff }}">
+    <view class='maskBody'>
+      <view class='title'>工作经验</view>
+      <view class='filterBtnWrap' wx:for="{{ jingyanData }}" wx:key="">
+        <view class='filterBtn {{ jingyanChoose == item.id ? "active" : ""}}' wx:for="{{ item }}" data-id='{{ item.id }}' bindtap='jingyanChooseFilter' wx:key="">{{ item.name }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 月薪 -->
+  <view class='filterMask' wx:if="{{ topFilterBtn === 'yuexin' && maskOnOff }}">
+    <view class='maskBody'>
+      <view class='title'>月薪</view>
+      <view class='filterBtnWrap' wx:for="{{ yuexinData }}" wx:key="">
+        <view class='filterBtn {{ yuexinChoose == item.id ? "active" : ""}}' style='{{item.name === null ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id='{{ item.id }}' bindtap='yuexinChooseFilter' wx:key="">{{ item.name }}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+<!--pages/renzheng/renzheng.wxml-->
+<view class='renzhengWrap'>
+  <image class='tuiguangMoney' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/tuiguangMoney.png' bindtap='gotuiguang'></image>
+  <view class='title'>身份认证</view>
+  <view class='des'>认证身份将得现金奖励</view>
+  <view class='myShenfenWrap'>
+    <view class='myShenfen' style='{{ shenfen === "我的身份" ? "color: #999" : "color: #333" }}'>
+      {{ shenfen }}
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+  </view>
+  <view class='myShenfenWrap' wx:if="{{ shenfenKey == 'hr' }}" style='padding:0 15rpx'>
+    <view class='myShenfen' style='{{ gongsi === "选择公司" ? "color: #999" : "color: #333" }};' bindtap='openChooseCompany'>{{ gongsi }}
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image></view>
+  </view>
+  <view class='title'>个人信息</view>
+  <view class='des'>个人信息将得到绝对保护，仅限用于简历使用 </view>
+  <view class='rowWrap'>
+    <view class='firstRow'>
+        <input class='nameIpt' type='text' placeholder="真实姓名" bindinput='getName'/>
+        <view class='line'></view>
+        <view class='xingbie' style='{{ xingbie === "性别" ? "color: #999" : "color: #333" }}' bindtap='chooseXingbie'>{{ xingbie }}</view>
+        <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <input class='phoneIpt' type='number' placeholder="联系电话" maxlength='11' bindinput='getPhone'/>
+    </view>
+    <view class='hallRow'>
+      <picker mode="date" bindchange="bindDateChange">
+        <view class="picker" style='{{ birthday === "出生年月" ? "color: #999" : "color: #333" }}'>
+          {{birthday}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='finish' bindtap='finish'>完成</view>
+  <!-- <view class='finish' wx:if="{{ shenfen === '企业金主' || shenfen === '赏金猎人' }}" bindtap='finish'>完成</view> -->
+  <!-- <view class='nextStep' wx:if="{{ shenfen === 'IT精英'}}" bindtap='nextStep'>下一步</view> -->
+  <view style='height: 30rpx;'></view>
+  <i-drawer mode="right" visible="{{ showCompanyList }}" bind:close="toggleShowCompanyList">
+    <scroll-view class="showCompanyListWrap" scroll-y>
+      <view class="comSearchBox">
+        <input class="ipt" placeholder="输入公司关键字过滤" bindinput="comIptChange"></input>
+      </view>
+      <view class='companyItem' wx:for="{{ companyList }}" wx:key="" data-id="{{ item.id }}" data-name="{{ item.name }}" bindtap='chooseCompany'>{{ item.name }}</view>
+      <view style='height:106rpx;'></view>
+      <view class='bottomB' bindtap='bottomBtn'>
+        <text>未找到我的公司\n联系管理员</text>
+      </view>
+    </scroll-view>
+  </i-drawer>
+</view>

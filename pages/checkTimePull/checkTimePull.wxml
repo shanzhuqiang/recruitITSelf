@@ -1,0 +1,37 @@
+<!--pages/checkTimePull/checkTimePull.wxml-->
+<view class='checkTimePullWrap'>
+  <view class='addBoxWrap'>
+    <view class='title'>上传凭证</view>
+    <view class='addBox' bindtap='chooseImg'>
+      <image class='camera' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/camera.png'></image>
+      <text class='addText'>添加</text>
+    </view> 
+    <view class='addBox addBox2'>
+      <image class='imgBox' wx:if="{{imgBox !== ''}}" src='{{ imgBox }}'></image>
+    </view>
+  </view>
+  <view class='bottomWrap'>
+    <view class='title'>内容描述</view>
+    <view class='textareaWrap'>
+      <textarea class='textareaBox' placeholder='请输入内容描述' bindinput='contentChange'></textarea>
+    </view>
+  </view>
+  <view class='confirmBtn' bindtap='confirm'>提交</view>
+  <view class='checkMask' wx:if="{{ checkMaskBtn }}">
+    <view class='checkBox'>
+      <view class='firstRow'>
+        <image class='loading' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/loading.png'></image>
+        后台审核中...
+      </view>
+      <view class='secondRow'>
+        <view>审核结果将会微信通知你</view>
+        <view>(审核通过后即可查看工时核对进度)</view> 
+      </view>
+      <view class='threeRow'>
+        <view class='btn fl' bindtap='goHome'>返回首页</view>
+        <view class='btn fr' bindtap='backBtn'>我的任务</view>
+      </view>
+      <view class='fourRow'>如有疑问请联系<button class='kefuBtn' open-type="contact" bindcontact="handleContact">客服</button></view>
+    </view>
+  </view>
+</view>

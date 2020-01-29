@@ -1,0 +1,285 @@
+/**app.wxss**/
+.clearfix:after{
+  content:"";
+  height:0;
+  line-height:0;
+  display:block;
+  visibility:hidden;
+  clear:both
+}
+.clearfix{
+  zoom:1;
+}
+.bottonClass{
+  background: transparent;
+  margin: 0;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  padding: 0;
+}
+.bottonClass::after{
+  border: none;
+}
+/* 缺省 */
+.noDataWrap{
+  text-align: center;
+  padding-top: 200rpx;
+  position: relative;
+}
+.noDataWrap .noData{
+  width: 561rpx;
+  height: 420rpx;
+}
+.noDataWrap .textWord{
+  font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #999;
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
+}
+/* 底部导航 */
+.btootmNavWrap{
+	height: 98rpx;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 20px 0px rgba(224, 223, 223, 0.5);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	line-height: 24rpx;
+	color: #999;
+  z-index: 99;
+}
+.btootmNavWrap .btnBox{
+  width: 20%;
+  float: left;
+  height: 98rpx;
+  text-align: center;
+  position: relative;
+}
+.btootmNavWrap .btnBox .unReadNum{
+  position: absolute;
+  right: 40rpx;
+  top: 0;
+  font-size: 20rpx;
+  background: #f56c6c;
+  padding: 0 10rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+.btootmNavWrap .btnBox .imgBox{
+  height: 55rpx;
+  padding-top: 10rpx;
+}
+.btootmNavWrap .btnBox.active{
+  color: #333;
+}
+.btootmNavWrap .btnBox .homePng{
+  width: 43rpx;
+  height: 40rpx; 
+}
+.btootmNavWrap .btnBox .shangjin{
+  width: 35rpx;
+  height: 40rpx; 
+}
+.btootmNavWrap .btnBox .addfabu{
+  width: 114rpx;
+  height: 114rpx;
+  position: absolute;
+  left: 18rpx;
+  top: -50rpx;
+}
+.btootmNavWrap .btnBox .luntan{
+  width: 37rpx;
+  height: 33rpx; 
+  padding-top: 6rpx;
+}
+.btootmNavWrap .btnBox .my{
+  width: 34rpx;
+  height: 39rpx; 
+}
+/* 发布遮罩 */
+.releaseWrap{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  z-index: 999
+}
+.releaseWrap .iconBox{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 200rpx;
+  height: 200rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+.releaseWrap .iconBox .iconCol{
+  width: 180rpx;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #333;
+}
+.releaseWrap .iconBox .iconCol .fabuTiezi{
+  width: 152rpx;
+  height: 152rpx;
+}
+.releaseWrap .bottomClose{
+  text-align:  center;
+  position: absolute;
+  left: 0;
+  bottom: 44rpx;
+  height: 114rpx;
+  right: 0;
+}
+.releaseWrap .bottomClose .bottomCloseIcon{
+  width: 114rpx;
+  height: 114rpx
+}
+.mosaic {
+  color: transparent!important;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5)!important;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.overflow{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+/* 城市选择 */
+.cityChooseMask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 999999999;
+}
+.cityChooseMask .leftBox{
+  height: 100%;
+  width: 194rpx;
+  background: #f4f4f4;
+  float: left;
+}
+.cityChooseMask .rightBox{
+  margin-left: 194rpx;
+}
+.cityChooseMask .leftBox .item{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+  height: 84rpx;
+  line-height: 84rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.cityChooseMask .leftBox .item.active{
+	font-family: PingFangSC-Medium;
+  color: #333;
+  background: #fff;
+}
+.cityChooseMask .rightBox{
+  padding-left: 35rpx;
+}
+.cityChooseMask .rightBox .title{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+  padding: 20rpx 0 40rpx;
+}
+.cityChooseMask .rightBox .itemBox{
+ width: 150rpx;
+ height: 64rpx;
+ border: 1rpx solid #f0f0f0;
+ border-radius: 4rpx;
+ text-align: center;
+ line-height: 64rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #666666;
+  display: inline-block;
+  margin: 0 20rpx 20rpx 0;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.cityChooseMask .rightBox .itemBox .local{
+  width: 22rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+.cityChooseMask .rightBox .itemBox.active{
+	color: #2e70f9;
+	background-color: #e8eeff;
+}
+.cityChooseMask .rightBox .itemBox.active2{
+	color: #2e70f9;
+  background-color: #fff;
+}
+/* 岗位职责/任职要求 textarea */
+.textareaMaskBox{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 999999999;
+}
+.textareaMaskBox .bgRow{
+  height: 16rpx;
+  background: #f8f8f8;
+}
+.textareaMaskBox .textareaWrap{
+  padding: 0 30rpx;
+  height: 400rpx;
+}
+.textareaMaskBox .textareaBox{
+  width: 100%;
+  height: 379rpx;
+  padding: 10rpx 0;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	line-height: 24rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.textareaMaskBox .wordNum{
+  text-align: right;
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #999;
+  padding: 10rpx 40rpx 0;
+}
+.textareaMaskBox .saveBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+  margin: 127rpx auto 0;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+}

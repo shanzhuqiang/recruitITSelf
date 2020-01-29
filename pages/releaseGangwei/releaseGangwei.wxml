@@ -1,0 +1,122 @@
+<!--pages/releaseGangwei/releaseGangwei.wxml-->
+<view class='releaseGangweiWrap'>
+  <view class='hallRowWrap'>
+    <view class='hallRow'>
+      <view class='leftName'>岗位名称</view>
+      <input class='rightInput' placeholder='请输入岗位名称' bindinput='nameChange'></input>
+      <!-- <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image> -->
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>赏金</view>
+      <input class='rightInput' type='number' placeholder='请输入赏金' bindinput='rewardChange'></input>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>工作地点</view>
+      <input class='rightInput' placeholder='请输入工作地点' value='{{ address }}' disabled bindtap='openChooseCity'></input>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>经验要求</view>
+      <picker bindchange="jingyanChange" range="{{ jingyanArray }}" range-key="name">
+        <input class='rightInput' placeholder="请选择经验要求" value='{{ jingyan.name }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>学历</view>
+      <picker bindchange="xueliChange" range="{{ xueliArray }}" range-key="name">
+        <input class='rightInput' placeholder="请选择学历" value='{{ xueli.name }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>薪资</view>
+      <picker bindchange="xinziChange" range="{{ xinziArray }}" range-key="name">
+        <input class='rightInput' placeholder="请选择薪资类型" value='{{ xinzi.name }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow' wx:if="{{ xinzi.id == 1 }}">
+      <view class='leftName'>日薪</view>
+      <input class='rightInput' type="number" placeholder='请输入日薪' bindinput='rixinChange'></input>
+    </view>
+    <view class='hallRow' wx:if="{{ xinzi.id == 2 }}">
+      <view class='leftName'>月薪范围</view>
+      <picker bindchange="moneyChange" range="{{ moneyArray }}" range-key="name">
+        <input class='rightInput' placeholder="请选择月薪范围" value='{{ money.name }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+  </view>
+  <view class='itemWrap'>
+    <view class='hallRow' bindtap='goGangweizhize'>
+      <view class='leftName'>岗位职责</view>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow' bindtap='goRenzhiyaoqiu'>
+      <view class='leftName'>任职要求</view>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+  </view>
+  <view class='bottomBox'>
+    <view class='firstTitle'>技能标签</view>
+    <view class='tagWrap'>
+      <view class='tag' wx:for="{{ tagArray }}" wx:key="" bindtap='delTag' data-id="{{ item }}">{{ item }}</view>
+      <view class='addTagBtn' bindtap='addTag'>添加标签+</view>
+    </view>
+  </view>
+  <view class='bottomBtn' bindtap='saveRelease'>保存</view>
+  <view style="height: 40rpx"></view>
+  <i-modal title="添加标签" visible="{{ addTag }}" bind:ok="addTagOk" bind:cancel="addTagCancel">
+    <i-input i-class='inputBox' value="{{ tagVal }}" placeholder="最多15个字" maxlength="15" bind:change="tagValChange"/>
+  </i-modal>
+  <i-modal title="提示" visible="{{ maxlengthModal }}" bind:ok="maxlengthModalClose" show-cancel="{{ false }}">
+      <view>最多添加3个标签，请先删除</view>
+  </i-modal>
+  <i-modal title="提示" visible="{{ delModal }}" bind:ok="confirmDel" bind:cancel="cancelDel">
+      <view>确认删除该标签吗？</view>
+  </i-modal>
+  <!-- 城市选择 -->
+  <view class='cityChooseMask' wx:if="{{ cityChooseMask }}">
+    <view class='leftBox'>
+      <scroll-view scroll-y style="height: 100%;">
+        <view class='{{ chooseActive === "used" ? "active" : "" }} item' bindtap='chooseCity' data-id="used">常用</view>
+        <view class='{{ chooseActive === item.prov_code ? "active" : "" }} item' bindtap='chooseCity' wx:for="{{ cityList }}" data-id="{{ item.prov_code }}" wx:key="">{{ item.prov_name }}</view>
+      </scroll-view>
+    </view>
+    <view class='rightBox'>
+      <view wx:if='{{ chooseActive === "used" }}'>
+        <view class='title'>当前定位</view>
+        <view class='itemBox active2' data-id="{{ common.position_city.city_code }}" data-ida="{{ common.position_city.city_name }}" bindtap='chooseBtn'>
+          <image class='local' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/local.png'></image>
+          {{ common.position_city.city_name }}
+        </view>
+        <view class='title'>最近访问</view>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ common.rencent_visit }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+        <view class='title'>热门城市</view>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ common.hot_city }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+      </view>
+      <view wx:if='{{ chooseActive !== "used"}}'>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ areaList }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn'>{{ item.city_name }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 岗位职责 -->
+  <view class='textareaMaskBox' wx:if="{{ gangweiTextareaMaskBox }}">
+    <view class='bgRow'></view>
+    <view class='textareaWrap'>
+      <textarea maxlength="1000" bindinput="gangweiChange" value='{{ instruction }}' class='textareaBox' placeholder="请输入岗位职责" />
+    </view>
+    <view class='wordNum'>{{ instruction.length }}/1000字</view>
+    <view class='saveBtn' bindtap='choseGangwei'>保存</view>
+  </view>
+  <!-- 任职要求 -->
+  <view class='textareaMaskBox' wx:if="{{ yaoqiuTextareaMaskBox }}">
+    <view class='bgRow'></view>
+    <view class='textareaWrap'>
+      <textarea maxlength="1000" bindinput="zhizeChange" value='{{ requirement }}'  class='textareaBox' placeholder="请输入任职要求" />
+    </view>
+    <view class='wordNum'>{{ requirement.length }}/1000字</view>
+    <view class='saveBtn' bindtap='choseYaoqiu'>保存</view>
+  </view>
+</view>

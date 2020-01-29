@@ -1,0 +1,164 @@
+/* pages/renzheng/renzheng.wxss */
+.renzhengWrap{
+  padding: 20rpx 30rpx 0;
+}
+.renzhengWrap .showCompanyListWrap{
+	width:50vw;
+	height: 100vh;
+	background:#fff;
+  position: relative;
+}
+.renzhengWrap .showCompanyListWrap .comSearchBox{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  position: relative;
+}
+.renzhengWrap .showCompanyListWrap .comSearchBox .ipt{
+  position: absolute;
+  left: 20rpx;
+  right: 0;
+  height: 80rpx;
+  line-height: 80rpx;
+	font-size: 28rpx;
+	font-family: PingFangSC-Regular;
+}
+.renzhengWrap .showCompanyListWrap .companyItem{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #666;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.renzhengWrap .showCompanyListWrap .bottomB{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 90rpx;
+  text-align: center;
+  padding-top: 16rpx;
+  /* line-height: 90rpx; */
+  background-color: #4c85fb;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.renzhengWrap .tuiguangMoney{
+  display: block;
+  width: 690rpx;
+  height: 150rpx;
+  margin: 0 auto;
+}
+.renzhengWrap .title{
+	font-family: PingFangSC-Medium;
+	font-size: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+	color: #333;
+  padding: 53rpx 0 15rpx;
+}
+.renzhengWrap .des{
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+	color: #666;
+}
+.renzhengWrap .myShenfenWrap{
+  padding: 63rpx 15rpx 21rpx;
+}
+.renzhengWrap .myShenfenWrap .myShenfen{
+  position: relative;
+	font-family: PingFangSC-Regular;
+  height: 122rpx;
+  line-height: 122rpx;
+	font-size: 32rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.renzhengWrap .myShenfenWrap .myShenfen .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 46rpx;
+}
+.renzhengWrap .rowWrap{
+  padding: 40rpx 15rpx 0;
+}
+.renzhengWrap .rowWrap .firstRow{
+  position: relative;
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.renzhengWrap .rowWrap .firstRow .nameIpt{
+  position: absolute;
+  left: 20rpx;
+  top: 37rpx;
+  width: 300rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #333;
+}
+.renzhengWrap .rowWrap .firstRow .line{
+  height: 60rpx;
+  border-left: 1rpx solid #ddd;
+  position: absolute;
+  left: 50%;
+  top: 35rpx;
+}
+.renzhengWrap .rowWrap .firstRow .xingbie{
+  position: absolute;
+  left: 400rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+  width: 200rpx;
+}
+.renzhengWrap .rowWrap .firstRow .arrowR{
+  width: 14rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 46rpx;
+}
+.renzhengWrap .rowWrap .hallRow{
+  height: 120rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #ddd;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+  color: #333;
+  padding-left: 20rpx;
+}
+.renzhengWrap .rowWrap .hallRow .phoneIpt{
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.renzhengWrap .finish{
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+  width: 600rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  margin: 0 auto;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #ffffff;
+  margin-top: 30rpx
+}
+.renzhengWrap .nextStep{
+	font-family: PingFangSC-Regular;
+	font-size: 36rpx;
+	color: #2e70f9;
+  text-align: right;
+  padding:60rpx 50rpx 0 0;
+}

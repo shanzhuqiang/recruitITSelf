@@ -1,0 +1,126 @@
+/* pages/resume/resume.wxss */
+.resumeWrap .topBtnWrpa{
+  height: 86rpx;
+  line-height: 86rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  padding: 0 80rpx;
+}
+.resumeWrap .topBtnWrpa > view{
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #666;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+.resumeWrap .topBtnWrpa > view.active{
+	font-family: PingFangSC-Medium;
+}
+.resumeWrap .topBtnWrpa > view.active::after{
+	font-family: PingFangSC-Medium;
+  content: "";
+  position: absolute;
+  width: 40rpx;
+  height: 6rpx;
+  background: #2e70f9;
+  left: 50%;
+  margin-left: -20rpx;
+  bottom: 0rpx
+}
+.resumeWrap .itemWrap{
+  padding: 0 30rpx;
+  border-bottom: 16rpx solid #f8f8f8;
+}
+.resumeWrap .itemWrap .itemBox{
+  border-bottom: 1rpx solid #f0f0f0;
+  padding: 40rpx 0 40rpx;
+}
+.resumeWrap .itemWrap .itemBox .workName{
+	font-family: PingFangSC-Medium;
+	color: #333;
+	font-size: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+.resumeWrap .itemWrap .itemBox .leftImg{
+  height: 80rpx;
+  left: 80rpx;
+  float: left;
+  padding-left: 10rpx;
+}
+.resumeWrap .itemWrap .itemBox .leftImg .touxiang{
+  width: 80rpx;
+  height: 80rpx;
+}
+.resumeWrap .itemWrap .itemBox .rightText{
+  margin-left: 107rpx;
+}
+.resumeWrap .itemWrap .itemBox .rightText .firstRow .nameText{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+	color: #333;
+  max-width: 200rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.resumeWrap .itemWrap .itemBox .rightText .firstRow .typeName{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+  margin-left: 10rpx;
+}
+.resumeWrap .itemWrap .itemBox .rightText .secondRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+  padding: 10rpx 0 15rpx; 
+}
+.resumeWrap .itemWrap .itemBox .rightText .secondRow .line{
+  margin: 0 20rpx;
+}
+.resumeWrap .itemWrap .itemBox .rightText .threeRow{
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+	color: #999;
+}
+.resumeWrap .itemWrap .bottomRow{
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.resumeWrap .itemWrap .bottomRow .bottomBtn{
+	width: 136rpx;
+	height: 50rpx;
+  line-height: 50rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #cccccc;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #999;
+  float: right;
+  margin-top: 22rpx;
+}
+.resumeWrap .itemWrap .bottomRow .yoaqingBtn{
+	width: 136rpx;
+	height: 50rpx;
+  line-height: 50rpx;
+	border-radius: 4rpx;
+	border: solid 1rpx #4c85fb;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #4c85fb;
+  float: right;
+  margin: 22rpx 0 0 17rpx;
+}

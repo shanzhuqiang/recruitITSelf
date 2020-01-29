@@ -1,0 +1,121 @@
+<!--pages/bbs/bbs.wxml-->
+<view class='bbsWrap'>
+  <!-- <view class='headRow'>
+    <view class='serachIptWrap' bindtap='goHomeSearch'>
+      <image class='search' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/search.png'></image>
+      <input class='serachIpt' placeholder="你想搜什么？" disabled />
+    </view>
+  </view> -->
+  <view class='filterWrap'>
+    <view class='colBox {{ topFilterBtn == 1 ? "active" : "" }}' bindtap='topFilter' data-id="1">
+      <text>推荐</text>
+    </view>
+    <view class='colBox {{ topFilterBtn == 2 ? "active" : "" }}' bindtap='topFilter' data-id="2">
+      <text>关注</text>
+    </view>
+    <picker bindchange="shaixuanChange"  range="{{ shaixuanArray }}" range-key="name" value="{{ pickerVal }}">
+      <view class='colBox {{ topFilterBtn == 3 ? "active" : "" }}' bindtap='topFilter' data-id="3">
+        <text>筛选</text>
+        <image class='filterImg' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn == 3 ? imgSrc + "/filterTwo.png" : imgSrc + "/filter.png" }}'></image>
+      </view>
+    </picker>
+  </view>
+  <!-- 内容 -->
+  <view class='itemBox' wx:for="{{ listData }}" wx:key="" bindtap='goBbsInfo' data-id="{{ item.id }}">
+    <view class='topName'>
+      <image class='touxiang' src='{{ item.user_info.avatar }}'></image>
+      <view class='name'>{{ item.user_info.username }}</view>
+      <view class='shenfen {{ item.user_info.user_type == 1 ? "one" : item.user_info.user_type == 2 ? "two" : "three" }}'>{{ item.user_info.user_type == 1 ? 'IT精英' : item.user_info.user_type == 2 ? '企业金主' : '赏金猎人' }}</view>
+      <view class='time'>{{ item.publish_time }}</view>
+    </view>
+    <view class='title'>{{ item.title }}</view>
+    <view class='bottomBox' wx:if="{{ item.imgs.length == 0 }}">
+      <view class='content'>{{ item.content }}</view>
+    </view>
+    <view class='bottomBox' wx:if="{{ item.imgs.length > 0 }}">
+      <view class='left'>
+        <view class='content'>{{ item.content }}</view>
+      </view>
+      <view class='right'>
+        <image class='rightImg' src='{{ item.imgs[0] }}'></image>
+      </view>
+    </view>
+    <view class='bottomBtn'>
+      <view class='address overflow'>{{ item.address }}</view>
+      <view class='iconBox'>
+        <image class='shareIcon' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shareIcon.png'></image>
+        <text class='num'>{{ item.repost_count }}</text>
+      </view>
+      <view class='iconBox'>
+        <image class='heartIcon' wx:if="{{imgSrc !== '' && item.ic_collect == 1}}" src='{{ imgSrc }}/heartIcon2.png'></image>
+        <image class='heartIcon' wx:if="{{imgSrc !== '' && item.ic_collect == 2}}" src='{{ imgSrc }}/heartIcon.png'></image>
+        <text class='num'>{{ item.collect_count }}</text>
+      </view>
+      <view class='iconBox'>
+        <image class='discussIcon' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/discussIcon.png'></image>
+        <text class='num'>{{ item.message_count }}</text>
+      </view>
+    </view>
+  </view>
+  <i-load-more tip="没有更多了" loading="{{ loading }}" />
+  <!-- 页脚导航 -->
+  <view style='height: 90rpx;'></view>
+  <view class='btootmNavWrap'>
+    <view class='btnBox' bindtap='goHome'>
+      <view class='imgBox'>
+        <image class='homePng' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/home.png'></image>
+      </view>
+      <view>首页</view>
+    </view>
+    <view class='btnBox' bindtap='goBountyPlatform'>
+      <view class='imgBox'>
+        <image class='shangjin' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/shangjin.png'></image>
+      </view>
+      <view>赏金平台</view>
+    </view>
+    <view class='btnBox' bindtap='goRelease'>
+        <image class='addfabu' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/addfabu.png'></image>
+        <view class='imgBox'></view>
+        <view>发布</view>
+    </view>
+    <view class='btnBox active' bindtap='goBbs'>
+      <view class='imgBox'>
+        <image class='luntan' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/luntan2.png'></image>
+      </view>
+        <view>论坛</view>
+    </view>
+    <view class='btnBox' bindtap='goMy'>
+    <view class='unReadNum' wx:if="{{ unReadNum }}">{{ unReadNum }}</view>
+      <view class='imgBox'>
+        <image class='my' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/my.png'></image>
+      </view>
+        <view>我的</view>
+    </view>
+  </view>
+  <!-- 发布 -->
+  <view class='releaseWrap' wx:if="{{ releaseMark }}">
+    <view class='iconBox'>
+      <view class='iconCol' bindtap='goReleaseBbs'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuTiezi.png'></image>
+        </view>
+        <view>发布帖子</view>
+      </view>
+      <view class='iconCol' wx:if="{{ userType == 'hr' }}" bindtap='goReleaseProject'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuXiangmu.png'></image>
+        </view>
+        <view>外派需求</view>
+      </view>
+      <view class='iconCol' wx:if="{{ userType == 'hr' }}" bindtap='goReleaseGangwei'>
+        <view>
+          <image class='fabuTiezi' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/fabuGangwei.png'></image>
+        </view>
+        <view>入职需求</view>
+      </view>
+    </view>
+    <view class='bottomClose'>
+      <image class='bottomCloseIcon' bindtap='closeRelease' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/bottomClose.png'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-drawer": "../../dist/drawer/index"
+  },
+  "navigationBarTitleText": "项目详情",
+  "navigationBarBackgroundColor": "#fff"
+}

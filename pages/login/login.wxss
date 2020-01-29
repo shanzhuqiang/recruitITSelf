@@ -1,0 +1,121 @@
+/* pages/login/login.wxss */
+.loginWrap .topImg{
+  height: 160rpx;
+  text-align: center;
+  padding: 200rpx 0 40rpx;
+}
+.loginWrap .topImg .login{
+  height: 160rpx;
+  width: 160rpx;
+}
+.loginWrap .btnWrap{
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  padding: 0 100rpx;
+}
+.loginWrap .btnWrap > view{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 50%;
+  text-align: center;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #666;
+  position: relative;
+}
+.loginWrap .btnWrap > view.active{
+	font-family: PingFangSC-Medium;
+	color: #333;
+}
+.loginWrap .btnWrap > view.active::after{
+  content: "";
+  position: absolute;
+  width: 40rpx;
+  height: 6rpx;
+  background: #2e70f9;
+  left: 50%;
+  margin-left: -20rpx;
+  bottom: 0rpx
+}
+.loginWrap .inputWrap{
+  padding: 0 75rpx;
+}
+.loginWrap .inputWrap .rowItem{
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+}
+.loginWrap .inputWrap .rowItem .phone3{
+  width: 28rpx;
+  height: 40rpx;
+  float: left;
+  padding: 35rpx 0 0 30rpx;
+}
+.loginWrap .inputWrap .rowItem .code2{
+  width: 33rpx;
+  height: 38rpx;
+  float: left;
+  padding: 35rpx 0 0 30rpx;
+}
+.loginWrap .inputWrap .rowItem .password2{
+  width: 31rpx;
+  height: 38rpx;
+  float: left;
+  padding: 35rpx 0 0 30rpx;
+}
+.loginWrap .inputWrap .rowItem .inputBox{
+  margin: 0 140rpx 0 100rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.loginWrap .inputWrap .rowItem .getCode{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #2e70f9;
+}
+.loginWrap .inputWrap .rowItem .countDownWrap{
+  position: absolute;
+  right: 0;
+  top: 12rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #2e70f9;
+}
+.loginWrap .inputWrap .rowItem .countDownWrap .countDown{
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.loginWrap .loginBtn{
+	width: 600rpx;
+	height: 90rpx;
+  line-height: 90rpx;
+	background-color: #4c85fb;
+	box-shadow: 0 4rpx 16rpx 0 
+		rgba(26, 73, 210, 0.46);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 32rpx;
+	color: #fff;
+  text-align: center;
+  margin: 70rpx auto 0;
+}
+.loginWrap .forget{
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #7a91d5;
+  text-align: right;
+  padding: 35rpx 75rpx 0 0;
+}

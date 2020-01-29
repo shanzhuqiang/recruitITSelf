@@ -1,0 +1,87 @@
+<!--pages/editCompany/editCompany.wxml-->
+<view class='editCompanyWrap'>
+  <view class='hallRowWrap'>
+    <view class='hallRow'>
+      <view class='leftName'>公司名称</view>
+      <input class='rightInput' type='text' placeholder='请输入公司名称' bindinput='nameChange' value='{{ name }}'></input>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>所在城市</view>
+      <input class='rightInput' placeholder='请选择所在城市' disabled bindtap='openCityChoose' value='{{ addressCity }}'></input>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>融资情况</view>
+      <picker bindchange="rongziChange" range="{{ rongziArray }}" range-key="name">
+        <input class='rightInput' placeholder="请选择" value='{{ rongzi.name }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>企业规模</view>
+      <picker bindchange="guimoChange" range="{{ guimoArray }}" range-key="name">
+        <input class='rightInput' placeholder="请选择" value='{{ guimo.name }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>行业</view>
+      <picker bindchange="hangyeChange" range="{{ hangyeArray }}" range-key="name">
+        <input class='rightInput' placeholder="请选择" value='{{ hangye.name }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>公司地址</view>
+      <input class='rightInput' placeholder="{{ addressInfo == '' ? '请选择' : '已选择' }}" bindtap='addressChange' disabled/>
+      <!-- <picker bindchange="addressChange" mode="region">
+        <input class='rightInput' placeholder="请选择" value='{{ address }}' disabled/>
+      </picker> -->
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='textareaWrap'>
+      <textarea maxlength="1000" disabled value='{{ addressInfo }}' class='textareaBox' placeholder="详细地址" />
+    </view>
+    <view class='hallRow'>
+      <view class='leftName'>公司介绍</view>
+    </view>
+    <view class='textareaWrap' style='border-bottom: none'>
+      <textarea maxlength="1000" bindinput="introduceChange" class='textareaBox' placeholder="请输入公司介绍" />
+    </view>
+    <view class='addBoxWrap'>
+      <view class='addBox' bindtap='chooseImg'>
+        <image class='camera' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/camera.png'></image>
+        <text class='addText'>添加</text>
+      </view>
+      <view class='addBox addBox2'>
+        <image class='imgBox' wx:if="{{imgBox !== ''}}" src='{{ imgBox }}'></image>
+      </view>
+    </view>
+  </view>
+  <view class='saveBtn' bindtap='nextStep'>下一步</view>
+  <!-- 选择城市 -->
+  <view class='cityChooseMask' wx:if="{{ cityChooseMask }}">
+    <view class='leftBox'>
+      <scroll-view scroll-y style="height: 100%;">
+        <view class='{{ chooseActive === "used" ? "active" : "" }} item' bindtap='chooseCity' data-id="used">常用</view>
+        <view class='{{ chooseActive === item.prov_code ? "active" : "" }} item' bindtap='chooseCity' wx:for="{{ cityList }}" data-id="{{ item.prov_code }}" wx:key="">{{ item.prov_name }}</view>
+      </scroll-view>
+    </view>
+    <view class='rightBox'>
+      <view wx:if='{{ chooseActive === "used" }}'>
+        <view class='title'>当前定位</view>
+        <view class='itemBox active2' data-id="{{ common.position_city.city_code }}" data-ida="{{ common.position_city.city_name }}" bindtap='chooseBtn'>
+          <image class='local' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/local.png'></image>
+          {{ common.position_city.city_name }}
+        </view>
+        <view class='title'>最近访问</view>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ common.rencent_visit }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+        <view class='title'>热门城市</view>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ common.hot_city }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+      </view>
+      <view wx:if='{{ chooseActive !== "used" }}'>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ areaList }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn'>{{ item.city_name }}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-modal": "../../dist/modal/index",
+    "i-count-down": "../../dist/count-down/index"
+  },
+  "navigationBarTitleText": "金币投票",
+  "navigationBarBackgroundColor": "#fff"
+}

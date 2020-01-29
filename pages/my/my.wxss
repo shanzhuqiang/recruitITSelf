@@ -1,0 +1,280 @@
+/* pages/my/my.wxss */
+.myWrap{
+  padding-top: 10rpx;
+}
+.myWrap .topBoxWrap{
+  background: #fff;
+}
+.myWrap .topBox{
+	width: 690rpx;
+	height: 288rpx;
+	background-image: linear-gradient(90deg, 
+		#3c7bfd 0%, 
+		#80a9ff 100%), 
+	linear-gradient(
+		#ffffff, 
+		#ffffff);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0 5rpx 15rpx 0 
+		rgba(77, 119, 246, 0.14);
+	border-radius: 10rpx;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.myWrap .topBox .touxiang{
+  width: 110rpx;
+  height: 110rpx;
+  position: absolute;
+  top: 39rpx;
+  left: 35rpx;
+  border-radius: 50%;
+}
+.myWrap .topBox .firstRow{
+  position: absolute;
+  top: 40rpx;
+  left: 170rpx;
+}
+.myWrap .topBox .firstRow .one{
+	font-family: PingFangSC-Medium;
+	font-size: 34rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+	color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+.myWrap .topBox .firstRow .two{
+	background-image: linear-gradient(-90deg, 
+		#7afee2 0%, 
+		#3ac7a5 100%);
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #fff;
+  height: 34rpx;
+  line-height: 34rpx;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10rpx;
+  margin: 0 10rpx;
+}
+.myWrap .topBox .firstRow .three{
+  height: 34rpx;
+  line-height: 34rpx;
+	background-image: linear-gradient(77deg, 
+		#f54840 0%, 
+		#ffafab 100%), 
+	linear-gradient(
+		#222222, 
+		#222222);
+	background-blend-mode: normal, 
+		normal;
+	border-radius: 4rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 20rpx;
+	color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: 0 10rpx 0 5rpx;
+}
+.myWrap .topBox .firstRow .three .zuanshi{
+	width: 33rpx;
+	height: 29rpx;
+  vertical-align: middle;
+}
+.myWrap .topBox .renzhengWrap{
+	font-family: PingFangSC-Regular;
+	font-size: 22rpx;
+	line-height: 24rpx;
+	color: #fff;
+  position: absolute;
+  bottom: 160rpx;
+  left: 170rpx;
+}
+.myWrap .topBox .renzhengWrap .renzheng{
+	width: 21rpx;
+	height: 21rpx;
+  vertical-align: middle;
+}
+.myWrap .topBox .tongzhi{
+	font-family: SourceHanSansCN-Light;
+	font-size: 24rpx;
+	color: #fff;
+	width: 119rpx;
+	height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+	background-color: rgba(15, 76, 201, 0.3);
+	border-radius: 23rpx;
+  position: absolute;
+  top: 110rpx;
+  right: 30rpx;
+}
+.myWrap .topBox .tongzhi .unReadNum{
+  position: absolute;
+  font-size: 20rpx;
+  background: #f56c6c;
+  padding: 0 10rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  right: -10rpx;
+  top: -10rpx;
+}
+.myWrap .topBox .topBottomBox{
+  position: absolute;
+  top: 190rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+}
+.myWrap .topBox .topBottomBox view{
+  width: 50%;
+  line-height: 100rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+  text-align: center;
+}
+.myWrap .middleBox{
+  padding: 36rpx 30rpx 0;
+  display: flex;
+  height: 120rpx;
+  background: #fff;
+}
+.myWrap .middleBox > view{
+  width: 25%;
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #333;
+  text-align: center;
+  height: 41rpx;
+  position: relative;
+}
+.myWrap .middleBox > view .interviewCount{
+  position: absolute;
+  font-size: 20rpx;
+  background: #f56c6c;
+  padding: 0 10rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  right: 14%;
+  top: -10rpx;
+}
+.myWrap .middleBox > view > view{
+  padding-top: 10rpx;
+}
+.myWrap .middleBox > view .jianli{
+  width: 40rpx;
+  height: 39rpx;
+}
+.myWrap .middleBox > view .toudi{
+  width: 37rpx;
+  height: 40rpx;
+}
+.myWrap .middleBox > view .renwu{
+  width: 44rpx;
+  height: 41rpx;
+}
+.myWrap .middleBox > view .guanzhu2{
+  width: 47rpx;
+  height: 40rpx;
+}
+.myWrap .middleBox > view .fabu{
+  width: 43rpx;
+  height: 38rpx;
+}
+.myWrap .vipWrap{
+  background: #fff;
+  height: 112rpx;
+}
+.myWrap .vipWrap .vipGuanggao{
+  width: 690rpx;
+  height: 112rpx;
+  margin: 0 auto;
+  display: block;
+}
+.myWrap .listWrap{
+  padding: 0 30rpx;
+  background: #fff;
+  border-top: 16rpx solid #f8f8f8;
+}
+.myWrap .listWrap .listItem{
+  border-bottom: 1rpx solid #eee;
+  height: 120rpx;
+  line-height: 120rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #333;
+  position: relative;
+  padding-left: 60rpx;
+}
+.myWrap .listWrap .listItem .listItemBtn{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 99;
+}
+.myWrap .listWrap .listItem .listItemBtn::after{
+  border: none;
+}
+.myWrap .listWrap .listItem .arrowR{
+  position: absolute;
+  width: 14rpx;
+  height: 26rpx;
+  right: 25rpx;
+  top: 45rpx;
+}
+.myWrap .listWrap .listItem .downResume{
+  width: 32rpx;
+  height: 36rpx;
+  position: absolute;
+  left: 0;
+  top: 45rpx;
+}
+.myWrap .listWrap .listItem .company{
+  width: 33rpx;
+  height: 37rpx;
+  position: absolute;
+  left: 0;
+  top: 45rpx;
+}
+.myWrap .listWrap .listItem .renwuDay{
+  width: 37rpx;
+  height: 33rpx;
+  position: absolute;
+  left: 0;
+  top: 45rpx;
+}
+.myWrap .listWrap .listItem .guanzhu{
+  width: 36rpx;
+  height: 34rpx;
+  position: absolute;
+  left: 0;
+  top: 45rpx;
+}
+.myWrap .listWrap .listItem .tuiguangren, .myWrap .listWrap .listItem .kefu, .myWrap .listWrap .listItem .yijian{
+  width: 34rpx;
+  height: 34rpx;
+  position: absolute;
+  left: 0;
+  top: 45rpx;
+}
+.myWrap .listWrap .listItem .shezhi{
+  width: 40rpx;
+  height: 38rpx;
+  position: absolute;
+  left: 0;
+  top: 45rpx;
+}

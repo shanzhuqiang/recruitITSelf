@@ -1,0 +1,28 @@
+<!--pages/settingPhone/settingPhone.wxml-->
+<view class='settingPhoneWrap'>
+  <view class='listWrap'>
+    <view class='itemBox'>
+      <view class='first'>当前手机号</view>
+      <view class='second'>{{ oldMobile }}</view>
+    </view>
+    <view class='itemBox'>
+      <input class='iptBox' type='number' placeholder='请输入手机号码' disabled='{{ codeWord }}' maxlength='11' bindinput='newMobileChange'></input>
+      <view class='codeBtn' bindtap='sendCode'>
+        <i-count-down
+          class="countDownWrap"
+          countdown-class="countDown"
+          wx:if="{{ codeWord }}"
+          target="{{targetTime}}"
+          showSecond="{{ true }}"
+          clear-timer="{{clearTimer}}"
+          bindcallback="myLinsterner"
+        ></i-count-down>
+        <text wx:if="{{ !codeWord }}">获取验证码</text>
+      </view>
+    </view>
+    <view class='itemBox'>
+      <input class='iptBox' type='number' placeholder='请输入验证码' bindinput='codeChange'></input>
+    </view>
+  </view>
+  <view class='confirmBox' bindtap='confirm'>提交</view>
+</view>

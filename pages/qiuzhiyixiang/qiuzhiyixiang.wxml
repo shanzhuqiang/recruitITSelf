@@ -1,0 +1,72 @@
+<!--pages/qiuzhiyixiang/qiuzhiyixiang.wxml-->
+<view class='qiuzhiyixiangWrap'>
+  <view class='title'>填写求职意向</view>
+  <view class='des'>将根据您的意向推荐优质岗位</view>
+  <view class='listWrap'>
+    <view class='listItem'>
+      <view class='leftName'>期望职位</view>
+      <input class='iptBox' type='text' bindinput='changeReJob' placeholder="请输入"/>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem'>
+      <view class='leftName'>工作性质</view>
+      <picker bindchange="xingzhiChange" range="{{xingzhiArray}}">
+        <input class='iptBox' type='text' placeholder="请选择" value='{{ xingzhi }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem'>
+      <view class='leftName'>期望月薪</view>
+      <picker bindchange="yuexinChange" range="{{yuexinArray}}">
+        <input class='iptBox' type='text' placeholder="请选择" value='{{ yuexin }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem'>
+      <view class='leftName'>工作地点</view>
+      <input class='iptBox' type='text' placeholder="请选择" value='{{ address }}' bindtap='addressChange' disabled/>
+      <!-- <picker bindchange="addressChange" mode="region">
+      </picker> -->
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem'>
+      <view class='leftName'>当前状态</view>
+      <picker bindchange="zhuangtaiChange" range="{{zhuangtaiArray}}">
+        <input class='iptBox' type='text' placeholder="请选择" value='{{ zhuangtai }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+    <view class='listItem'>
+      <view class='leftName'>到岗时间</view>
+      <picker bindchange="shijianChange" range="{{shijianArray}}">
+        <input class='iptBox' type='text' placeholder="请选择" value='{{ shijian }}' disabled/>
+      </picker>
+      <image class='arrowR' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/arrowR.png'></image>
+    </view>
+  </view>
+  <view class='finish' bindtap='finish'>完成</view>
+  <view class='cityChooseMask' wx:if="{{ cityChooseMask }}">
+    <view class='leftBox'>
+      <scroll-view scroll-y style="height: 100%;">
+        <view class='{{ chooseActive === "used" ? "active" : "" }} item' bindtap='chooseCity' data-id="used">常用</view>
+        <view class='{{ chooseActive === item.prov_code ? "active" : "" }} item' bindtap='chooseCity' wx:for="{{ cityList }}" data-id="{{ item.prov_code }}" wx:key="">{{ item.prov_name }}</view>
+      </scroll-view>
+    </view>
+    <view class='rightBox'>
+      <view wx:if='{{ chooseActive === "used" }}'>
+        <view class='title'>当前定位</view>
+        <view class='itemBox active2' data-id="{{ common.position_city.city_code }}" data-ida="{{ common.position_city.city_name }}" bindtap='chooseBtn'>
+          <image class='local' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/local.png'></image>
+          {{ common.position_city.city_name }}
+        </view>
+        <view class='title'>最近访问</view>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ common.rencent_visit }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+        <view class='title'>热门城市</view>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ common.hot_city }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+      </view>
+      <view wx:if='{{ chooseActive !== "used" }}'>
+        <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ areaList }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn'>{{ item.city_name }}</view>
+      </view>
+    </view>
+  </view>
+</view>

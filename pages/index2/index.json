@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-modal": "../../dist/modal/index"
+  },
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#fff"
+}

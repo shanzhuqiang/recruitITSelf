@@ -1,0 +1,43 @@
+<!--pages/releaseBbs/releaseBbs.wxml-->
+<view class='releaseBbsWrap'>
+  <view class='topBoxWrap'>
+    <view class='topBox'>
+      <view class='inputBox'>
+        <input class='inputDiv' placeholder='标题' bindinput='titleChange'></input>
+      </view>
+      <view class='inputBox'>
+        <textarea class='textareaDiv' placeholder='内容' bindinput='contentChange'></textarea>
+      </view>
+      <view class='addBox' bindtap='chooseImg'>
+        <image class='camera' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/camera.png'></image>
+        <text class='addText'>添加</text>
+      </view>
+      <view class='addBox addBox2'>
+        <image class='imgBox' wx:if="{{imgBox !== ''}}" src='{{ imgBox }}'></image>
+      </view>
+    </view>
+  </view>
+  <view class='itemRowWrap'>
+    <view class='itemRow'>
+      <view class='leftName'>发布类别</view>
+      <picker bindchange="typesChange" range="{{ typesArray }}">
+        <input class='rightInput' placeholder="请选择您的发布类型" value='{{ types }}' disabled/>
+      </picker>
+    </view>
+    <view class='itemRow'>
+      <view class='leftName'>发布身份</view>
+      <picker bindchange="shenfenChange" range="{{ shenfenArray }}">
+        <input class='rightInput' placeholder="请选择你的发布身份" value='{{ shenfen }}' disabled/>
+      </picker>
+    </view>
+    <view class='itemRow'>
+      <view class='leftName'>所在位置</view>
+      <input class='rightInput' placeholder="请选择所在地址" value='{{ address }}' bindtap='addressChange' disabled/>
+    </view>
+  </view>
+  <!-- <view class='bottomOk'>
+    <image class='okImg' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/ok3.png'></image>
+    <view>我已阅读并同意<tex>《发布须知》</text></view>
+  </view> -->
+  <view class='releaseBtn' bindtap='confirm'>发布</view>
+</view>

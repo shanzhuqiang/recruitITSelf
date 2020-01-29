@@ -1,0 +1,44 @@
+<!--pages/enterprise/enterprise.wxml-->
+<view class='enterpriseWrap'>
+  <view class='filterWrap'>
+    <view class='colBox {{ topFilterBtn === "rongzi" ? "active" : "" }}' bindtap='topFilter' data-id="rongzi">
+      <text>融资</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "rongzi" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <view class='colBox {{ topFilterBtn === "guimo" ? "active" : "" }}' bindtap='topFilter' data-id="guimo">
+      <text>规模</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "guimo" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+    <view class='colBox {{ topFilterBtn === "hangye" ? "active" : "" }}' bindtap='topFilter' data-id="hangye">
+      <text>行业</text>
+      <image class='arrowDown' wx:if="{{imgSrc !== ''}}" src='{{ topFilterBtn === "hangye" ? imgSrc + "/arrowUp.png" : imgSrc + "/arrowDown.png" }}'></image>
+    </view>
+  </view>
+  <view class='itemBox' bindtap='goEnterpriseInfo' wx:for="{{ listData }}" data-id='{{ item.id }}' wx:key="{{ item.id }}">
+    <view class='topRow'>
+      <image class='enterpriseImg' src='{{ item.icon }}'></image>
+      <view class='rightTitle'>
+        <view class='topTitle'>{{ item.name }}</view>
+        <view class='downNum'>
+          <text>在招职位{{ item.job_num }}</text>
+          <text class='senondText'>在招项目{{ item.project_num }}</text>
+        </view>
+      </view>
+    </view>
+    <view class='downRow'>
+      <view class='tags'>{{ item.label1 }}</view>
+      <view class='tags'>{{ item.label2 }}</view>
+      <view class='tags'>{{ item.label3 }}</view>
+    </view>
+  </view>
+  <i-load-more tip="没有更多了" loading="{{ loading }}" />
+  <!-- 过滤遮罩 -->
+  <view class='filterMask' wx:if="{{ maskOnOff }}">
+    <view class='maskBody'>
+      <view class='title'>{{ filterTitle }}</view>
+      <view class='filterBtnWrap' wx:for="{{ filterList }}" wx:key="">
+        <view class='filterBtn {{ filterBtn === item.id ? "active" : ""}}' style='{{item.name === null ? "visibility:hidden" : ""}}' wx:for="{{ item }}" data-id='{{ item.id }}' bindtap='chooseFilter' wx:key="">{{ item.name }}</view>
+      </view>
+    </view>
+  </view>
+</view>

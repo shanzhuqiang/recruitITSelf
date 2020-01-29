@@ -1,0 +1,26 @@
+<!--pages/chooseCity/chooseCity.wxml-->
+<view class='chooseCityWrap'>
+  <view class='leftBox'>
+    <scroll-view scroll-y style="height: 100%;">
+      <view class='{{ chooseActive === "used" ? "active" : "" }} item' bindtap='chooseCity' data-id="used">常用</view>
+      <view class='{{ chooseActive === item.prov_code ? "active" : "" }} item' bindtap='chooseCity' wx:for="{{ cityList }}" data-id="{{ item.prov_code }}" wx:key="">{{ item.prov_name }}</view>
+    </scroll-view>
+  </view>
+  <view class='rightBox'>
+    <view wx:if='{{ chooseActive === "used" }}'>
+      <view class='title'>当前定位</view>
+      <view class='itemBox active2' data-id="{{ common.position_city.city_code }}">
+        <image class='local' wx:if="{{imgSrc !== ''}}" src='{{ imgSrc }}/local.png'></image>
+        {{ common.position_city.city_name }}
+      </view>
+      <view class='title'>最近访问</view>
+      <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ common.rencent_visit }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+      <view class='title'>热门城市</view>
+      <view class='itemBox {{ btnChoose === "" ? "active" : "" }}' data-id="" data-ida="全国" bindtap='chooseBtn'>全国</view>
+      <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ common.hot_city }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+    </view>
+    <view wx:if='{{ chooseActive !== "used" }}'>
+      <view class='itemBox {{ btnChoose === item.city_code ? "active" : "" }}' wx:for="{{ areaList }}" data-id="{{ item.city_code }}" data-ida="{{ item.city_name }}" bindtap='chooseBtn' wx:key="">{{ item.city_name }}</view>
+    </view>
+  </view>
+</view>
